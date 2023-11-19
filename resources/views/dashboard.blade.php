@@ -30,25 +30,27 @@
             </div>
 
 
-            <div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mx-8 my-2">
 
-                <div class="grid grid-cols-1 pl-6">
+            @foreach ($posts as $post)
+                <div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mx-8 my-2">
 
-                    <div class="container flex justify-start">
-                        <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
-                        <div class="my-auto">Nom Prénom</div>
-                    </div>
-                    <div class="pl-12">
-                        <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
-                            Tweet exemple Tweet exemple Tweet exemple Tweet exempleTweet exemple Tweet exempleTweet exemple
-                            Tweet exempleTweet exemple Tweet exemple wouhou trop bien Tailwind j'ai passé 4h pour ça
+                    <div class="grid grid-cols-1 pl-6">
+
+                        <div class="container flex justify-start">
+                            <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
+                            <div class="my-auto">Nom Prénom</div>
+                        </div>
+                        <div class="pl-12">
+                            <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
+                                {{ $post->content }}
+                            </div>
+                        </div>
+                        <div class="flex justify-end w-3/4">
+                            <button
+                                class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Répondre</button>
                         </div>
                     </div>
-                    <div class="flex justify-end w-3/4">
-                        <button
-                            class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Répondre</button>
-                    </div>
                 </div>
-            </div>
+        @endforeach
         </div>
     @endsection
