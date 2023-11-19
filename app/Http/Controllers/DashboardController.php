@@ -9,11 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // $post = new Post([
-        //     'content' => 'Un autre exemple. Cette fois c\'est bien un Post.',
-        //     'likes' => 200
-        // ]);
-        // $post->save();
         return view('dashboard', [
             'posts' => Post::orderBy('created_at','DESC')->get()
         ]);
