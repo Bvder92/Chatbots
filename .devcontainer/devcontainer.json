@@ -13,7 +13,8 @@
 				"bmewburn.vscode-intelephense-client",
 				"DEVSENSE.phptools-vscode",
 				"onecentlin.laravel-extension-pack",
-				"amirmarmul.laravel-blade-vscode"
+				"amirmarmul.laravel-blade-vscode",
+		        "shufo.vscode-blade-formatter"
 			],
 			"settings": {}
 		}
