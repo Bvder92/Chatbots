@@ -18,7 +18,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::post('/idea', [PostController::class, 'store'])->name('post.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 Route::get('/profile', function () {
     return view('profile');

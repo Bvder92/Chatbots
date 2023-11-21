@@ -14,7 +14,7 @@
         </div>
 
         {{-- Zone de texte et boutons --}}
-        <form action="{{ route('post.create') }}" method="post">
+        <form action="{{ route('posts.store') }}" method="post">
             @csrf
             <div class="pl-12">
                 <textarea name="post-form" id="post-form" rows="5"
