@@ -20,4 +20,12 @@ class PostController extends Controller
 
         return redirect()->route('dashboard')->with('success', ' Votre Post à bien été publié!');
     }
+
+    public function destroy($id){
+
+        $post = Post::where('id', $id)->first();
+        $post->delete();
+
+        return redirect()->route('dashboard')->with('success', ' Votre Post à bien été supprimé!');
+    }
 }

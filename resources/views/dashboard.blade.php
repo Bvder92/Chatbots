@@ -9,23 +9,35 @@
             @foreach ($posts as $post)
                 <div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mx-8">
 
-                    <div class="grid grid-cols-1 pl-6">
+                    <div class="grid grid-cols-2 pl-6">
 
                         <div class="container flex justify-start">
                             <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
                             <div class="my-auto">Nom Prénom</div>
                         </div>
-                        <div class="pl-12">
+                        <div class="flex justify-end pr-10">
+                            <form action=" {{ route('posts.destroy', $post->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button>X</button>
+                            </form>
+                        </div>
+                        <div class="pl-12 col-span-2">
                             <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
                                 {{ $post->content }}
                             </div>
                         </div>
-                        <div class="flex justify-start pl-14 mt-2 w-3/4">
+                        <div class="flex justify-start pl-14 mt-2 w-3/4 col-span-2">
                             <button
                                 class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Répondre</button>
                         </div>
                     </div>
                 </div>
-        @endforeach
+            @endforeach
+
+            <div>
+                {{ $posts->links() }}
+            </div>
+
         </div>
     @endsection
