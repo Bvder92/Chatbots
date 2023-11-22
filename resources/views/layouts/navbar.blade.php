@@ -1,6 +1,6 @@
 <header class="bg-cyan-800 text-white p-4">
     <div class="container mx-auto flex items-center justify-start">
-        <img src="logo.png" alt="Logo" class="h-8 w-8 mr-6">
+        <img src="{{ asset('logo.png') }}" alt="Logo" class="h-8 w-8 mr-6">
         <div class="mr-8 text-lg font-medium"> {{ config('app.name') }} </div>
 
         <!-- Liens de navigation -->

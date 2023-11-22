@@ -9,7 +9,7 @@
 
         {{-- Photo Profil et Nom --}}
         <div class="container flex justify-start">
-            <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
+            <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
             <div class="my-auto">Nom Prénom</div>
         </div>
 
@@ -17,11 +17,11 @@
         <form action="{{ route('posts.store') }}" method="post">
             @csrf
             <div class="pl-12">
-                <textarea name="post-form" id="post-form" rows="5"
+                <textarea name="content" id="content" rows="5"
                     class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4"></textarea>
             </div>
 
-            @error('post-form')
+            @error('content')
                 <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
 
             @enderror

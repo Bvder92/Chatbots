@@ -4,15 +4,8 @@
         <div class="grid grid-cols-1 gap-4 p-12 ">
 
             @include('include.success-message')
-            @include('include.submit-post')
+            @include('include.post-card')
 
-            @foreach ($posts as $post)
-                @include('include.post-card')
-            @endforeach
-
-            <div>
-                {{ $posts->links() }}
-            </div>
 
         </div>
     @endsection
