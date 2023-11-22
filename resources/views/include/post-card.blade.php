@@ -3,7 +3,7 @@
     <div class="grid grid-cols-2 pl-6">
 
         <div class="container flex justify-start">
-            <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
+            <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
             <div class="my-auto">Nom Prénom</div>
         </div>
         <div class="flex justify-end pr-10">
@@ -26,9 +26,7 @@
                     @csrf
                     <div class="pl-12">
                         <textarea name="content" id="content" rows="5"
-                            class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
-                            {{ $post->content }}
-                        </textarea>
+                            class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">{{ $post->content }}</textarea>
                     </div>
 
                     @error('content')

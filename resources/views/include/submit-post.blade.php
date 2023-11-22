@@ -9,7 +9,7 @@
 
         {{-- Photo Profil et Nom --}}
         <div class="container flex justify-start">
-            <img src="logo.png" alt="" class="h-10 w-10 mr-4 rounded-full">
+            <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
             <div class="my-auto">Nom Prénom</div>
         </div>
 
