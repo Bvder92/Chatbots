@@ -1,4 +1,4 @@
-FROM python:3
+FROM pytorch/pytorch
 
 WORKDIR /usr/src/app
 
@@ -6,8 +6,21 @@ WORKDIR /usr/src/app
 
 RUN pip install --upgrade pip
 
-RUN pip install --no-cache-dir chatterbot==1.0.5
+RUN pip install nltk
 
-COPY main.py .
+RUN pip install transformers
 
-CMD ["python", "./main.py"]
+COPY train.py .
+
+COPY chat.py .
+
+COPY intents.json .
+
+COPY model.py .
+
+COPY nltk_utils.py .
+
+CMD ["python", "./train.py"]
+
+CMD ["python", "./chat.py"]
+
