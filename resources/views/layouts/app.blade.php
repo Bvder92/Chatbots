@@ -7,34 +7,18 @@
 
     <title>{{ config('app.name') }}</title>
 
-    {{-- <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" --}}
-    {{-- crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     @vite('resources/css/app.css')
 </head>
 
 <body>
 
     @include('layouts.navbar')
-    <div class="py-6">
-        @yield('content')
+    <div class="py-6 px-8 container-fluid ">
+        <div class="grid grid-cols-4 gap-4">
+            @yield('content')
+        </div>
     </div>
     </div>
-    {{-- <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'background': '#ddfff8',
-                    }
-                }
-            }
-        }
-    </script> --}}
 </body>
 
 </html>
