@@ -8,6 +8,16 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container-fluid': {
+          maxWidth: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        },
+      })
+    },
+  ],
 }
 

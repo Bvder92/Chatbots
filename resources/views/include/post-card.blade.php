@@ -25,8 +25,7 @@
                     @method('put')
                     @csrf
                     <div class="pl-12">
-                        <textarea name="content" id="content" rows="5"
-                            class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">{{ $post->content }}</textarea>
+                        <textarea name="content" id="content" class="m-2 w3/4 resize-none border-1 border-gray-200 p-4">{{ $post->content }}</textarea>
                     </div>
 
                     @error('content')
@@ -38,16 +37,17 @@
                             class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Modifier</button>
                     </div>
                 </form>
+            @else
+                <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
+                    {{ $post->content }}
+                </div>
+            @endif
         </div>
-    @else
-        <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
-            {{ $post->content }}
+
+    </div>
+    @if (($edit ?? false) === false)
+        <div>
+            @include('include.comment-box')
         </div>
-    </div>
-    <div class="flex justify-start pl-14 mt-2 w-3/4 col-span-2">
-        <button
-            class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Répondre</button>
-    </div>
     @endif
-</div>
 </div>

@@ -1,4 +1,3 @@
-<div class="pl-8 text-2xl font-bold w-full"> Feed </div>
 
 <div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mt-8 mx-8">
 
