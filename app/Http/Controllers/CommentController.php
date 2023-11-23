@@ -14,6 +14,7 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->post_id = $id->id;
         $comment->content = request()->get("content");
+        $comment->save();
         return redirect()->route('posts.show', $id->id)->with('success', "Commentaire publié!");
     }
 }
