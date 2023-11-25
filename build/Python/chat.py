@@ -3,6 +3,7 @@ import json
 
 import torch
 
+from langdetect import detect
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
@@ -26,15 +27,15 @@ model.load_state_dict(model_state)
 model.eval()
 
 bot_name = "Sam"
-print("Let's chat! (type 'quit' to exit)")
+print("Lançons une conversation ! (type 'quit' to exit)")
 while True:
     # sentence = "do you use credit cards?"
-    sentence = input("You: ")
+    sentence = input("Vous: ")
     if sentence == "quit":
         break
-
-    sentence = tokenize(sentence)
-    X = bag_of_words(sentence, all_words)
+    detected_language = detect(sentence)
+    sentence = tokenize(sentence, language=detected_language)
+    X = bag_of_words(sentence, all_words, language=detected_language)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 

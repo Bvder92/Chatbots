@@ -44,6 +44,18 @@
       ]
     },
     {
+      "tag": "salutation",
+      "patterns": [
+        "Bonjour",
+        "Salut",
+        "Coucou"
+      ],
+      "responses": [
+        "Bonjour ! Comment puis-je vous aider ?",
+        "Salut ! Que puis-je faire pour vous ?"
+      ]
+    },
+    {
       "tag": "payments",
       "patterns": [
         "Do you take credit cards?",
@@ -57,18 +69,6 @@
       ]
     },
     {
-      "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
       "tag": "funny",
       "patterns": [
         "Tell me a joke!",
@@ -78,6 +78,42 @@
       "responses": [
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
         "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "drole",
+      "patterns": [
+        "Fais moi une blague",
+        "Fais moi rire",
+        "Divertis-moi"
+      ],
+      "responses": [
+        "Qu'est ce qui est jaune et qui attends? Jonhatan !",
+        "Que fait un crocodile quand il acoste une femelle? Il l'acoste !",
+        "Que fait une fraise sur un cheval? Tagada Tagada",
+        "C'est l'histoire d'un papier qui tombe à l'eau. Il crie 'Au secours ! J'ai pas pied !'",
+        "Quel est le bar préféré des espagnols? Le Bar-celone"
+      ]
+    },
+    {
+      "tag": "twittos",
+      "patterns": [
+        "Quoi"
+      ],
+      "responses": [
+        "Coubeh !",
+        "Feur !"
+    ]
+    },
+    {
+      "tag": "remerciement",
+      "patterns": [
+        "Merci beaucoup",
+        "Je vous suis reconnaissant",
+        "Merci pour votre aide"
+      ],
+      "responses": [
+        "De rien ! N'hésitez pas si vous avez d'autres questions."
       ]
     }
   ]

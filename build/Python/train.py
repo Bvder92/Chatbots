@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
+from langdetect import detect
 from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
 #from transformers import pipeline
@@ -23,7 +24,8 @@ for intent in intents['intents']:
     tags.append(tag)
     for pattern in intent['patterns']:
         # tokenize each word in the sentence
-        w = tokenize(pattern)
+        detected_language = detect(pattern)
+        w = tokenize(pattern, language=detected_language)
         # add to our words list
         all_words.extend(w)
         # add to xy pair
@@ -45,7 +47,9 @@ X_train = []
 y_train = []
 for (pattern_sentence, tag) in xy:
     # X: bag of words for each pattern_sentence
-    bag = bag_of_words(pattern_sentence, all_words)
+    pattern_sentence_str = str(pattern_sentence)
+    detected_language = detect(pattern_sentence_str)
+    bag = bag_of_words(pattern_sentence, all_words, language=detected_language)
     X_train.append(bag)
     # y: PyTorch CrossEntropyLoss needs only class labels, not one-hot
     label = tags.index(tag)

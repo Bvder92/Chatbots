@@ -10,6 +10,8 @@ RUN pip install nltk
 
 RUN pip install transformers
 
+RUN pip install langdetect
+
 COPY train.py .
 
 COPY chat.py .
