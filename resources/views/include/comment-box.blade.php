@@ -1,12 +1,14 @@
     <form action="{{ route('posts.comments.store', $post->id) }}" method="post">
         @csrf
-        <div class="container flex mb-4">
-            <div class="flex pl-14 mt-2 w-3/4">
-                <textarea name="content" id="content" rows="1" class="w-full border-2 border-gray-200 resize-none"></textarea>
+        <div class="mx-6 my-2">
+            <div class="">
+                <textarea name="content" id="content" rows="1"
+                    class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
+                    placeholder="Répondez ici!"></textarea>
             </div>
-            <div class="flex pl-14 mt-2 w-1/4">
-                <button type="submit"
-                    class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Répondre</button>
+            <div class="flex items-center justify-end gap-2 py-3">
+                <button type="submit" name="submit"
+                    class="btn-primary">Partager</button>
             </div>
         </div>
     </form>
