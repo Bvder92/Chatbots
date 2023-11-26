@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
@@ -30,6 +31,11 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 // Comments:
 Route::post('/posts/{id}/comments', [CommentController::class, 'store'])->name('posts.comments.store');
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+// User auth:
+Route::get('/register', [AuthController::class,'register'])->name('register'); // register page
+Route::post('/register', [AuthController::class,'store']); // submit form
+
+Route::get('/login', [AuthController::class,'login'])->name('login'); // register page
+Route::post('/login', [AuthController::class,'authenticate']); // submit form
+
+Route::post('/logout', [AuthController::class,'logout'])->name('logout'); // submit form

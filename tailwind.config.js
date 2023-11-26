@@ -9,6 +9,7 @@ export default {
     extend: {},
   },
   plugins: [
+    require('@tailwindcss/forms'),
     function ({ addComponents }) {
       addComponents({
         '.container-fluid': {

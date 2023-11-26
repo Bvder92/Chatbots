@@ -13,12 +13,7 @@
 <body>
 
     @include('layouts.navbar')
-    <div class="py-6 px-8 container-fluid ">
-        <div class="grid grid-cols-4 gap-4">
-            @yield('content')
-        </div>
-    </div>
-    </div>
+    @yield('content')
 </body>
 
 </html>

@@ -9,14 +9,16 @@ class PostController extends Controller
 {
     public function store(){
 
-        request()->validate([
+        $validated = request()->validate([
             'content' => 'required|min:2|max:255'
         ]);
 
-        $post = new Post([
-            'content' => request()->get('content','')
-        ]);
-        $post->save();
+        Post::create($validated);
+
+        // $post = new Post([
+        //     'content' => request()->get('content','')
+        // ]);
+        // $post->save();
 
         return redirect()->route('dashboard')->with('success', ' Votre Post à bien été publié!');
     }
@@ -39,12 +41,14 @@ class PostController extends Controller
 
     public function update(Post $id){
 
-        request()->validate([
+        $validated = request()->validate([
             'content' => 'required|min:2|max:255'
         ]);
 
-        $id->content = request()->get('content', '');
-        $id->save();
+        $id->update($validated);
+
+        // $id->content = request()->get('content', '');
+        // $id->save();
 
         return view('posts.show', ['post' => $id])->with('success', "Post mis à jour avec succès");
     }

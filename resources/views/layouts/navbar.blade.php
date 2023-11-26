@@ -6,7 +6,17 @@
         <!-- Liens de navigation -->
         <nav class="flex space-x-4">
             <a href="/" class="hover:text-gray-300">Accueil</a>
+            @guest
+            <a href="/login" class="hover:text-gray-300">Connection</a>
+            <a href="/register" class="hover:text-gray-300">Inscription</a>
+            @endguest
+            @auth
             <a href="/profile" class="hover:text-gray-300">Profil</a>
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit">Déconnexion</button>
+            </form>
+            @endauth
         </nav>
     </div>
 </header>
