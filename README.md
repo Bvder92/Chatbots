@@ -22,6 +22,12 @@ DB_USERNAME=sail
 DB_PASSWORD=password
 ```
 
+- Set app name:
+
+```
+APP_NAME=Chatbots
+```
+
 - Add this to the end:
 
 ```
@@ -37,4 +43,16 @@ WWWUSER=1000
 
 ```
 ./bin/vendor/sail artisan key:generate
+```
+
+### NPM init
+
+```
+npm install
+```
+
+### Start Vite with NPM
+
+```
+npm run dev
 ```
