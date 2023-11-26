@@ -9,14 +9,12 @@ class PostController extends Controller
 {
     public function store(){
 
-        request()->validate([
+        $validated = request()->validate([
             'content' => 'required|min:2|max:255'
         ]);
+        $validated['user_id'] = auth()->id();
 
-        $post = new Post([
-            'content' => request()->get('content','')
-        ]);
-        $post->save();
+        Post::create($validated);
 
         return redirect()->route('dashboard')->with('success', ' Votre Post à bien été publié!');
     }
@@ -30,6 +28,11 @@ class PostController extends Controller
 
     public function edit(Post $id){
 
+        // si l'utilisateur n'est pas le créateur du post
+        if(auth()->user()->id !== $id->user_id){
+           abort(404, "non");
+        }
+
         $edit = true;
         return view('posts.show', [
             'post' => $id,
@@ -39,18 +42,29 @@ class PostController extends Controller
 
     public function update(Post $id){
 
-        request()->validate([
+        // si l'utilisateur n'est pas le créateur du post
+        if(auth()->user()->id !== $id->user_id){
+           abort(404, "non");
+        }
+
+        $validated = request()->validate([
             'content' => 'required|min:2|max:255'
         ]);
 
-        $id->content = request()->get('content', '');
-        $id->save();
+        $id->update($validated);
+
+        // $id->content = request()->get('content', '');
+        // $id->save();
 
         return view('posts.show', ['post' => $id])->with('success', "Post mis à jour avec succès");
     }
 
     public function destroy(Post $id){
 
+        // si l'utilisateur n'est pas le créateur du post
+        if(auth()->user()->id !== $id->user_id){
+           abort(404, "non");
+        }
         $id->delete();
 
         return redirect()->route('dashboard')->with('success', ' Votre Post à bien été supprimé!');

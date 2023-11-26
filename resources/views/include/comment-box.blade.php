@@ -18,16 +18,18 @@
         <div class="grid grid-cols-2 pl-6">
             <div class="container flex justify-start">
                 <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
-                <div class="my-auto">Nom Prénom</div>
+                <div class="my-auto">{{ $comment->user->name }}</div>
             </div>
             <div class="flex justify-end pr-10">
-                <a href="" class="pr-2">Modifier</a>
                 <a href="" class="pr-2">Voir</a>
-                <form action="" method="post">
-                    @csrf
-                    @method('delete')
-                    <button>X</button>
-                </form>
+                @if (auth()->user()->id == $comment->user_id)
+                    <a href="" class="pr-2">Modifier</a>
+                    <form action="" method="post">
+                        @csrf
+                        @method('delete')
+                        <button>X</button>
+                    </form>
+                @endif
             </div>
             <div class="pl-12 col-span-2">
 
@@ -38,11 +40,8 @@
                     @method('put')
                     @csrf
                     <div class="pl-12">
-                        {{-- <textarea name="content" id="content" rows="5"
-                            class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">{{ $post->content }}</textarea> --}}
                         <div class="m-2 w3/4 resize-none border-1 border-gray-200 p-4">{{ $comment->content }}</div>
                     </div>
-
                 </form>
             </div>
         </div>
