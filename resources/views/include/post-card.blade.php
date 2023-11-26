@@ -4,16 +4,19 @@
 
         <div class="container flex justify-start">
             <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
-            <div class="my-auto">Nom Prénom</div>
+            <div class="my-auto">{{ $post->user->name }}</div>
         </div>
         <div class="flex justify-end pr-10">
-            <a href="{{ route('posts.edit', $post->id) }}" class="pr-2">Modifier</a>
             <a href="{{ route('posts.show', $post->id) }}" class="pr-2">Voir</a>
-            <form action=" {{ route('posts.destroy', $post->id) }}" method="post">
-                @csrf
-                @method('delete')
-                <button>X</button>
-            </form>
+
+            @if (auth()->user()->id == $post->user_id)
+                <a href="{{ route('posts.edit', $post->id) }}" class="pr-2">Modifier</a>
+                <form action=" {{ route('posts.destroy', $post->id) }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button>X</button>
+                </form>
+            @endif
         </div>
         <div class="pl-12 col-span-2">
 

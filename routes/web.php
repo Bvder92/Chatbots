@@ -22,20 +22,36 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 // Posts:
-Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-Route::put('/posts/{id}/', [PostController::class, 'update'])->name('posts.update');
-Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+Route::group(['prefix' => 'posts/', 'as' => 'posts.'], function () {
+
+    // Accès libre:
+    Route::post('/', [PostController::class, 'store'])->name('store');
+    Route::get('/{id}', [PostController::class, 'show'])->name('show');
+
+    // Nécéssaire d'être connecté:
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('/{id}/edit', [PostController::class, 'edit'])
+            ->name('edit')
+            ->middleware('auth');
+        Route::put('/{id}/', [PostController::class, 'update'])
+            ->name('update')
+            ->middleware('auth');
+        Route::delete('/{id}', [PostController::class, 'destroy'])
+            ->name('destroy')
+            ->middleware('auth');
+    });
+});
 
 // Comments:
-Route::post('/posts/{id}/comments', [CommentController::class, 'store'])->name('posts.comments.store');
+Route::post('/posts/{id}/comments', [CommentController::class, 'store'])
+    ->name('posts.comments.store')
+    ->middleware('auth');
 
 // User auth:
-Route::get('/register', [AuthController::class,'register'])->name('register'); // register page
-Route::post('/register', [AuthController::class,'store']); // submit form
+Route::get('/register', [AuthController::class, 'register'])->name('register'); // register page
+Route::post('/register', [AuthController::class, 'store']); // submit form action
 
-Route::get('/login', [AuthController::class,'login'])->name('login'); // register page
-Route::post('/login', [AuthController::class,'authenticate']); // submit form
+Route::get('/login', [AuthController::class, 'login'])->name('login'); // login page
+Route::post('/login', [AuthController::class, 'authenticate']); // login form action
 
-Route::post('/logout', [AuthController::class,'logout'])->name('logout'); // submit form
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); // logout form action

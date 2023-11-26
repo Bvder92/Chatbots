@@ -16,12 +16,17 @@
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Feed </div>
                     @include('include.submit-post')
 
-                    @foreach ($posts as $post)
-                        @include('include.post-card')
-                    @endforeach
+                    @auth
+                        @forelse ($posts as $post)
+                            @include('include.post-card')
+                        @empty
+                            <p class="text-center my-3">Aucun résultat</p>
+                        @endforelse
+                    @endauth
 
+                    {{-- Pagination: --}}
                     <div>
-                        {{ $posts->links() }}
+                        {{ $posts->withQueryString()->links() }}
                     </div>
 
                 </div>
