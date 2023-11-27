@@ -10,7 +10,7 @@
 
 
         {{-- Voir/Modifier/Supprimer --}}
-        <div class="flex justify-end">
+        {{-- <div class="flex justify-end">
             <a href="{{ route('posts.show', $post->id) }}" class="pr-2">Voir</a>
 
             @if (auth()->user()->id == $post->user_id)
@@ -21,7 +21,7 @@
                     <button>X</button>
                 </form>
             @endif
-        </div>
+        </div> --}}
 
         {{-- Contenu du post --}}
         <div class=" col-span-2">

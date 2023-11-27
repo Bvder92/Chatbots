@@ -13,16 +13,14 @@
         </div>
     </form>
 
-    @if (count($post->comments) > 0)
-        <hr class="mb-4">
-    @endif
     @foreach ($post->comments as $comment)
-        <div class="grid grid-cols-2 pl-6">
+        <hr class="mb-4">
+        <div class="grid grid-cols-2 pl-4">
             <div class="container flex justify-start">
                 <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
-                <div class="my-auto">{{ $comment->user->name }}</div>
+                <div class="my-auto font-medium">{{ $comment->user->name }}</div>
             </div>
-            <div class="flex justify-end pr-10">
+            {{-- <div class="flex justify-end pr-10">
                 <a href="" class="pr-2">Voir</a>
                 @if (auth()->user()->id == $comment->user_id)
                     <a href="" class="pr-2">Modifier</a>
@@ -32,8 +30,8 @@
                         <button>X</button>
                     </form>
                 @endif
-            </div>
-            <div class="pl-12 col-span-2">
+            </div> --}}
+            <div class="col-span-2">
 
                 {{-- On vérifie si on est en train de modifier ou juste consulter le post --}}
                 {{-- Par défaut, le flag edit est false. --}}
@@ -41,7 +39,7 @@
                 <form action="" method="post">
                     @method('put')
                     @csrf
-                    <div class="pl-12">
+                    <div class="">
                         <div class="m-2 w3/4 resize-none border-1 border-gray-200 p-4">{{ $comment->content }}</div>
                     </div>
                 </form>
