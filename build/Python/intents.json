@@ -33,27 +33,60 @@
 				"La superficie de la France est de 551 695 kilomètres carrés."
 			]
 		},
-		{
-			"tag": "conversations",
-			"patterns": [
-				"parlons de la France",
-				"parlons de politique",
-				"parlons de sport",
-				"parlons de cinéma",
-				"parlons de musique",
-				"parlons de littérature",
-				"parlons de culture"
-			],
-			"responses": [
-				"La France est un pays magnifique avec une riche histoire et culture.",
-				"La politique française est actuellement très turbulente.",
-				"Le sport est très populaire en France.",
-				"Le cinéma français est très apprécié dans le monde entier.",
-				"La musique française est très variée.",
-				"La littérature française est une des plus importantes du monde. A tu lu les misérables ?",
-				"La culture française est très riche et diversifiée."
-			]
-		},
+        {
+        "tag": "politique",
+            "patterns": [
+                "parlons de politique"
+            ],
+            "responses": [
+                "La politique française est actuellement très turbulente."
+            ]
+        },
+        {
+            "tag": "sport",
+            "patterns": [
+                "parlons de sport"
+            ],
+            "responses": [
+                "Le sport est très populaire en France."
+            ]
+        },
+        {
+            "tag": "cinema",
+            "patterns": [
+                "parlons de cinéma"
+            ],
+            "responses": [
+                "Le cinéma français est très apprécié dans le monde entier."
+            ]
+        },
+        {
+            "tag": "musique",
+            "patterns": [
+                "parlons de musique"
+            ],
+            "responses": [
+                "La musique française est très variée."
+            ]
+        },
+        {
+            "tag": "litterature",
+            "patterns": [
+                "parlons de littérature"
+            ],
+            "responses": [
+                "La littérature française est une des plus importantes du monde. As-tu lu les Misérables ?"
+            ]
+        },
+        {
+            "tag": "culture",
+            "patterns": [
+                "parlons de culture"
+            ],
+            "responses": [
+                "La culture française est très riche et diversifiée."
+            ]
+        },
 		{
 			"tag": "informations",
 			"patterns": [
@@ -133,24 +166,371 @@
               "De rien ! N'hésitez pas si vous avez d'autres questions."
             ]
         },
-		{
-			"tag": "culture_generale",
-			"patterns": [
-				"Quel est le sens de la vie ?",
-				"Qui est ton créateur ?",
-				"Qui est ton personnage préféré ?",
-				"What is the meaning of life?",
-				"Who is your creator?",
-				"Who is your favorite character?"
-			],
-			"responses": [
-				"Le sens de la vie est une question profonde, n'est-ce pas ?",
-				"Mon créateur est une équipe talentueuse d'ingénieurs et de développeurs.",
-				"Je n'ai pas de personnage préféré, j'aime aider tout le monde.",
-				"The meaning of life is a deep question, isn't it?",
-				"My creator is a talented team of engineers and developers.",
-				"I don't have a favorite character, I like helping everyone."
-			]
-		}
+        {
+            "tag": "sens_vie",
+            "patterns": [
+                "Quel est le sens de la vie ?",
+                "What is the meaning of life?"
+            ],
+            "responses": [
+                "Le sens de la vie est une question profonde, n'est-ce pas ?",
+                "The meaning of life is a deep question, isn't it?"
+            ]
+        },
+        {
+            "tag": "createur",
+            "patterns": [
+                "Qui est ton créateur ?",
+                "Who is your creator?"
+            ],
+            "responses": [
+                "Mon créateur est une équipe talentueuse d'ingénieurs et de développeurs.",
+                "My creator is a talented team of engineers and developers."
+            ]
+        },
+        {
+            "tag": "personnage_prefere",
+            "patterns": [
+                "Qui est ton personnage préféré ?",
+                "Who is your favorite character?"
+            ],
+            "responses": [
+                "Je n'ai pas de personnage préféré, j'aime aider tout le monde.",
+                "I don't have a favorite character, I like helping everyone."
+            ]
+        },
+        {
+            "tag": "jour",
+            "patterns": [
+              "comment s'est passée ta journée ?",
+              "parle-moi de ta journée",
+              "raconte-moi ce que tu as fait aujourd'hui"
+            ],
+            "responses": [
+              "Ma journée s'est bien passée, merci de demander. J'ai eu une réunion avec mon équipe, j'ai travaillé sur un projet et j'ai passé du temps avec ma famille. Et toi, comment s'est passée ta journée ?"
+            ]
+          },
+          {
+            "tag": "problème",
+            "patterns": [
+              "tu as eu des problèmes aujourd'hui ?",
+              "tu as rencontré des difficultés ?",
+              "tu as eu des soucis ?"
+            ],
+            "responses": [
+              "Oui, j'ai eu un petit problème avec mon ordinateur. Il a planté en plein milieu d'une réunion. Mais j'ai réussi à le redémarrer et tout est rentré dans l'ordre. Et toi, as-tu eu des problèmes aujourd'hui ?"
+            ]
+          },
+          {
+            "tag": "bonheur",
+            "patterns": [
+              "tu as été heureux aujourd'hui ?",
+              "tu as eu des moments de bonheur ?",
+              "tu as été content aujourd'hui ?"
+            ],
+            "responses": [
+              "Oui, j'ai été très heureux aujourd'hui. J'ai passé du temps avec ma famille et mes amis et on a beaucoup ri. Et toi, as-tu été heureux aujourd'hui ?"
+            ]
+          },
+          {
+            "tag": "émotion",
+            "patterns": [
+              "tu as ressenti des émotions aujourd'hui ?",
+              "tu as ressenti des sentiments aujourd'hui ?",
+              "tu as été touché aujourd'hui ?"
+            ],
+            "responses": [
+              "Oui, j'ai ressenti beaucoup d'émotions aujourd'hui. J'étais heureux, triste, en colère et même un peu jaloux. Et toi, as-tu ressenti des émotions aujourd'hui ?"
+            ]
+          },
+          {
+            "tag": "problèmes",
+            "patterns": [
+              "j'ai des problèmes",
+              "je traverse une période difficile",
+              "j'ai des soucis en ce moment",
+              "je suis préoccupé"
+            ],
+            "responses": [
+              "Je suis là pour vous écouter et vous soutenir. Parlez-moi de vos problèmes."
+            ]
+          },
+          {
+            "tag": "heureux",
+            "patterns": [
+              "je suis heureux",
+              "je suis trop content",
+              "j'ai passé une bonne journée",
+              "Je suis satisfait"
+            ],
+            "responses": [
+              "Je suis content d'entendre que vous êtes heureux. Racontez-moi ce qui vous a rendu heureux !"
+            ]
+          },
+          {
+            "tag": "triste",
+            "patterns": [
+              "je suis triste",
+              "je suis déprimé",
+              "j'ai passé une mauvaise journée"
+            ],
+            "responses": [
+              "Je suis désolé d'entendre que vous êtes triste. Racontez-moi ce qui vous rend triste !",
+              "Je suis la pour vous. Je peux vous faire des blagues si ça peut vous détendre",
+              "Cela arrive dans la vie. Gardez le cap vous allez surmontez ces problèmes !"
+            ]
+          },
+          {
+            "tag": "colère",
+            "patterns": [
+              "je suis en colère",
+              "je suis furieux",
+              "je suis frustré",
+              "Je suis énervé"
+            ],
+            "responses": [
+              "Je comprends que vous soyez en colère. Racontez-moi ce qui vous met en colère."
+            ]
+          },
+          {
+            "tag": "stressé",
+            "patterns": [
+              "je suis stressé",
+              "je suis anxieux",
+              "je suis tendu"
+            ],
+            "responses": [
+              "Je comprends que vous soyez stressé. Racontez-moi ce qui vous stresse."
+            ]
+          },
+          {
+            "tag": "fatigué",
+            "patterns": [
+              "je suis fatigué",
+              "je suis épuisé",
+              "je n'ai pas dormi"
+            ],
+            "responses": [
+              "Je comprends que vous soyez fatigué. Racontez-moi ce qui vous fatigue.",
+              "Je vous recommande de dormir. Cela peut aider à surmonter la fatigue"
+            ]
+          },
+          {
+            "tag": "malade",
+            "patterns": [
+              "je suis malade",
+              "je ne me sens pas bien",
+              "j'ai mal"
+            ],
+            "responses": [
+              "Je suis désolé d'entendre que vous êtes malade. Que vous arrive t-il ?",
+              "Prenez un doliprane mais n'en abusez pas ! Bon rétablissement :)"
+            ]
+        },
+            {
+                "tag": "capitale_chine",
+                "patterns": [
+                    "quelle est la capitale de la Chine ?"
+                ],
+                "responses": [
+                    "La capitale de la Chine est Pékin."
+                ]
+            },
+            {
+                "tag": "capitale_etats_unis",
+                "patterns": [
+                    "quelle est la capitale des États-Unis ?"
+                ],
+                "responses": [
+                    "La capitale des États-Unis est Washington D.C."
+                ]
+            },
+            {
+                "tag": "capitale_bresil",
+                "patterns": [
+                    "quelle est la capitale du Brésil ?"
+                ],
+                "responses": [
+                    "La capitale du Brésil est Brasilia."
+                ]
+            },
+            {
+                "tag": "capitale_japon",
+                "patterns": [
+                    "quelle est la capitale du Japon ?"
+                ],
+                "responses": [
+                    "La capitale du Japon est Tokyo."
+                ]
+            },
+            {
+                "tag": "capitale_allemagne",
+                "patterns": [
+                    "quelle est la capitale de l'Allemagne ?"
+                ],
+                "responses": [
+                    "La capitale de l'Allemagne est Berlin."
+                ]
+            },
+            {
+                "tag": "capitale_italie",
+                "patterns": [
+                    "quelle est la capitale de l'Italie ?"
+                ],
+                "responses": [
+                    "La capitale de l'Italie est Rome."
+                ]
+            },
+            {
+                "tag": "capitale_espagne",
+                "patterns": [
+                    "quelle est la capitale de l'Espagne ?"
+                ],
+                "responses": [
+                    "La capitale de l'Espagne est Madrid."
+                ]
+            },
+            {
+                "tag": "capitale_royaume_uni",
+                "patterns": [
+                    "quelle est la capitale du Royaume-Uni ?"
+                ],
+                "responses": [
+                    "La capitale du Royaume-Uni est Londres."
+                ]
+            },
+        {
+            "tag": "president_france",
+            "patterns": [
+                "qui est le président de la République française ?"
+            ],
+            "responses": [
+                "Le président de la République française est Emmanuel Macron."
+            ]
+        },
+        {
+            "tag": "date_revolution_francaise",
+            "patterns": [
+                "quelle est la date de la Révolution française ?"
+            ],
+            "responses": [
+                "La Révolution française a eu lieu le 14 juillet 1789."
+            ]
+        },
+        {
+            "tag": "population_france",
+            "patterns": [
+                "quelle est la population de la France ?"
+            ],
+            "responses": [
+                "La population de la France est de 67,2 millions d'habitants."
+            ]
+        },
+        {
+            "tag": "superficie_france",
+            "patterns": [
+                "quelle est la superficie de la France ?"
+            ],
+            "responses": [
+                "La superficie de la France est de 551 500 km²."
+            ]
+        },
+        {
+            "tag": "monnaie_france",
+            "patterns": [
+                "quelle est la monnaie de la France ?"
+            ],
+            "responses": [
+                "La monnaie de la France est l'euro."
+            ]
+        },
+        {
+            "tag": "drapeau_france",
+            "patterns": [
+                "quel est le drapeau de la France ?"
+            ],
+            "responses": [
+                "Le drapeau de la France est bleu, blanc, rouge."
+            ]
+        },
+        {
+            "tag": "hymne_national_france",
+            "patterns": [
+                "quelle est l'hymne national de la France ?"
+            ],
+            "responses": [
+                "L'hymne national de la France est La Marseillaise."
+            ]
+        },
+        {
+            "tag": "langue_officielle_france",
+            "patterns": [
+                "quelle est la langue officielle de la France ?"
+            ],
+            "responses": [
+                "La langue officielle de la France est le français."
+            ]
+        },
+        {
+            "tag": "religion_france",
+            "patterns": [
+                "quelle est la religion principale de la France ?"
+            ],
+            "responses": [
+                "La religion principale de la France est le catholicisme mais la France est laïque."
+            ]
+        },
+        {
+            "tag": "gastronomie_france",
+            "patterns": [
+                "quelle est la gastronomie française ?"
+            ],
+            "responses": [
+                "La gastronomie française est réputée dans le monde entier."
+            ]
+        },
+            {
+                "tag": "villes_importants_france",
+                "patterns": [
+                    "quelles sont les villes les plus importantes de France ?"
+                ],
+                "responses": [
+                    "Les villes les plus importantes en France sont Paris, Marseille, Lyon, Lille et Bordeaux."
+                ]
+            },
+            {
+                "tag": "monuments_celebres_france",
+                "patterns": [
+                    "quels sont les monuments les plus célèbres de France ?"
+                ],
+                "responses": [
+                    "Parmi les monuments les plus célèbres de France, on compte la Tour Eiffel, l'Arc de Triomphe, le Château de Versailles, le Palais des Tuileries et Fort Boyard."
+                ]
+            },
+            {
+                "tag": "evenements_importants_france",
+                "patterns": [
+                    "quels sont les événements historiques les plus importants de France ?"
+                ],
+                "responses": [
+                    "Parmi les événements historiques importants de France, on peut citer les victoires lors des coupes du monde de football 1998 et 2018. Allez les bleus !"
+                ]
+            },
+            {
+                "tag": "personnalites_francaises_celebres",
+                "patterns": [
+                    "quelles sont les personnalités françaises les plus célèbres ?"
+                ],
+                "responses": [
+                    "Il y a énormément de personnages célèbres dans l'histoire de la France. Nous pouvons citer Napoléon, Louis XIV, Jacques Chirac, Thomas Pesquet, Zinedine Zidane, les Daft Punk ou encore Charles de Gaulle."
+                ]
+            }
+
 	]
 }
+
+
+
+
+
+
