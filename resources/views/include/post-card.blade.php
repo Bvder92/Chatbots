@@ -1,12 +1,16 @@
 <div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mx-8">
 
-    <div class="grid grid-cols-2 pl-6">
+    <div class="grid grid-cols-2 ">
 
+        {{-- Photo + Nom --}}
         <div class="container flex justify-start">
-            <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
-            <div class="my-auto">{{ $post->user->name }}</div>
+            <img src="{{ asset('logo.png') }}" alt="" class="h-12 w-12 mr-4 rounded-full">
+            <div class="my-auto text-lg font-medium">{{ $post->user->name }}</div>
         </div>
-        <div class="flex justify-end pr-10">
+
+
+        {{-- Voir/Modifier/Supprimer --}}
+        {{-- <div class="flex justify-end">
             <a href="{{ route('posts.show', $post->id) }}" class="pr-2">Voir</a>
 
             @if (auth()->user()->id == $post->user_id)
@@ -17,8 +21,10 @@
                     <button>X</button>
                 </form>
             @endif
-        </div>
-        <div class="pl-12 col-span-2">
+        </div> --}}
+
+        {{-- Contenu du post --}}
+        <div class=" col-span-2">
 
             {{-- On vérifie si on est en train de modifier ou juste consulter le post --}}
             {{-- Par défaut, le flag edit est false. --}}
@@ -28,25 +34,28 @@
                     @method('put')
                     @csrf
                     <div class="pl-12">
-                        <textarea name="content" id="content" class="m-2 w3/4 resize-none border-1 border-gray-200 p-4">{{ $post->content }}</textarea>
+                        <textarea name="content" id="content" rows="1"
+                            class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
+                            placeholder="Enter any additional order notes..."></textarea>
                     </div>
 
                     @error('content')
                         <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
                     @enderror
 
-                    <div class="flex justify-start pl-14 mt-2 w-3/4">
-                        <button type="submit" name="submit"
-                            class="px-4 py-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-full">Modifier</button>
+                    <div class="flex items-center justify-end gap-2 py-3">
+                        <button type="submit" name="submit" class="btn-primary">Répondre</button>
                     </div>
                 </form>
             @else
-                <div class="m-2 w-3/4 resize-none border border-1 border-gray-200 p-4">
+                <div class="m-2 w-3/4 resize-none p-4">
                     {{ $post->content }}
                 </div>
+            @include('include.post-buttons')
             @endif
         </div>
 
+        {{-- Commenter + Commentaires --}}
     </div>
     @if (($edit ?? false) === false)
         <div>

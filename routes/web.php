@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -23,7 +24,6 @@ Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 // Posts:
 Route::group(['prefix' => 'posts/', 'as' => 'posts.'], function () {
-
     // Accès libre:
     Route::post('/', [PostController::class, 'store'])->name('store');
     Route::get('/{id}', [PostController::class, 'show'])->name('show');
@@ -55,3 +55,11 @@ Route::get('/login', [AuthController::class, 'login'])->name('login'); // login 
 Route::post('/login', [AuthController::class, 'authenticate']); // login form action
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); // logout form action
+
+// UserController:
+
+Route::group(['prefix' => 'users/', 'as' => 'users.', 'middleware' => ['auth']], function () {
+    Route::get('/{id}', [UserController::class, 'show'])->name('show');
+    Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
+    Route::put('/{id}/', [UserController::class, 'update'])->name('update');
+});

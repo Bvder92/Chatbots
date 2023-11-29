@@ -11,7 +11,7 @@
             <a href="/register" class="hover:text-gray-300">Inscription</a>
             @endguest
             @auth
-            <a href="/profile" class="hover:text-gray-300">Profil</a>
+            <a href="/users/{{ Auth::id() }}" class="hover:text-gray-300">Profil</a>
             <form action="{{ route('logout') }}" method="post">
                 @csrf
                 <button type="submit">Déconnexion</button>
