@@ -52,6 +52,8 @@
                     </div>
                 </div>
                 <div class="">
+                    @auth
+                    @if (Auth::id() !== $user->id)
                     <div class=" mt-0 mb-2 flex gap-4 justify-center">
                         <div class="">
                             <button class="btn-primary">Suivre</button>
@@ -60,8 +62,7 @@
                             <button class="btn-primary">Message</button>
                         </div>
                     </div>
-                    @auth
-                    @if (Auth::id() === $user->id)
+                    @else
                     <div class="mb-2 text-blueGray-600">
                     <a href="{{ route('users.edit', $user->id) }}">Modifier</a>
                     </div> @endif
