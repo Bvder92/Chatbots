@@ -1,120 +1,156 @@
 {
-  "intents": [
-    {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
-      "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
-      ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
-    },
-    {
-      "tag": "salutation",
-      "patterns": [
-        "Bonjour",
-        "Salut",
-        "Coucou"
-      ],
-      "responses": [
-        "Bonjour ! Comment puis-je vous aider ?",
-        "Salut ! Que puis-je faire pour vous ?"
-      ]
-    },
-    {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
-    },
-    {
-      "tag": "drole",
-      "patterns": [
-        "Fais moi une blague",
-        "Fais moi rire",
-        "Divertis-moi"
-      ],
-      "responses": [
-        "Qu'est ce qui est jaune et qui attends? Jonhatan !",
-        "Que fait un crocodile quand il acoste une femelle? Il l'acoste !",
-        "Que fait une fraise sur un cheval? Tagada Tagada",
-        "C'est l'histoire d'un papier qui tombe à l'eau. Il crie 'Au secours ! J'ai pas pied !'",
-        "Quel est le bar préféré des espagnols? Le Bar-celone"
-      ]
-    },
-    {
-      "tag": "twittos",
-      "patterns": [
-        "Quoi"
-      ],
-      "responses": [
-        "Coubeh !",
-        "Feur !"
-    ]
-    },
-    {
-      "tag": "remerciement",
-      "patterns": [
-        "Merci beaucoup",
-        "Je vous suis reconnaissant",
-        "Merci pour votre aide"
-      ],
-      "responses": [
-        "De rien ! N'hésitez pas si vous avez d'autres questions."
-      ]
-    }
-  ]
+	"intents": [
+		{
+			"tag": "salutations",
+			"patterns": [
+				"bonjour",
+				"salut",
+				"coucou",
+				"bonsoir",
+                "wesh",
+                "slt",
+                "cc",
+                "yo"
+			],
+			"responses": [
+				"Bonjour ! Comment puis-je vous aider ?",
+				"Salut ! Qu'est-ce que je peux faire pour vous ?",
+				"Coucou ! Content de vous voir !",
+				"Bonsoir ! En quoi puis-je vous être utile ?",
+				"Yo mec, la forme ?"
+			]
+		},
+		{
+			"tag": "questions",
+			"patterns": [
+				"quel est la capitale de la France ?",
+				"quelle est la population de la France ?",
+				"quelle est la superficie de la France ?"
+			],
+			"responses": [
+				"Le capital de la France est Paris.",
+				"La population de la France est d'environ 67 millions d'habitants.",
+				"La superficie de la France est de 551 695 kilomètres carrés."
+			]
+		},
+		{
+			"tag": "conversations",
+			"patterns": [
+				"parlons de la France",
+				"parlons de politique",
+				"parlons de sport",
+				"parlons de cinéma",
+				"parlons de musique",
+				"parlons de littérature",
+				"parlons de culture"
+			],
+			"responses": [
+				"La France est un pays magnifique avec une riche histoire et culture.",
+				"La politique française est actuellement très turbulente.",
+				"Le sport est très populaire en France.",
+				"Le cinéma français est très apprécié dans le monde entier.",
+				"La musique française est très variée.",
+				"La littérature française est une des plus importantes du monde. A tu lu les misérables ?",
+				"La culture française est très riche et diversifiée."
+			]
+		},
+		{
+			"tag": "informations",
+			"patterns": [
+				"Quel est ton nom ?",
+                "Comment t'appelles-tu",
+				"Où êtes-vous situé ?",
+				"Quels services proposez-vous ?"
+			],
+			"responses": [
+				"Je suis ton ami",
+				"Je suis partout où vous avez besoin de moi.",
+				"Je suis ici pour répondre à vos questions.",
+                "Je sui partout."
+			]
+		},
+		{
+			"tag": "probleme",
+			"patterns": [
+				"J'ai un problème",
+				"Je rencontre des difficultés",
+				"Besoin d'aide",
+				"Au secours"
+			],
+			"responses": [
+				"Je vais faire de mon mieux pour vous aider.",
+				"Décrivez-moi votre problème, je vais essayer de trouver une solution.",
+				"Dites-moi en plus sur ce qui ne va pas, je suis là pour vous aider."
+			]
+		},
+		{
+			"tag": "questions_generales",
+			"patterns": [
+				"Comment vas-tu ?",
+				"Ça va ?",
+				"Comment ça va ?",
+				"How are you?"
+			],
+			"responses": [
+				"Je vais bien, merci ! Comment puis-je vous aider ?",
+				"Ça va bien, et vous ?",
+				"Tout va bien de mon côté, comment puis-je vous assister ?"
+			]
+		},
+        {
+            "tag": "drole",
+            "patterns": [
+              "Fais moi une blague",
+              "Fais moi rire",
+              "Divertis-moi"
+            ],
+            "responses": [
+              "Qu'est ce qui est jaune et qui attends? Jonhatan !",
+              "Que fait un crocodile quand il acoste une femelle? Il l'acoste !",
+              "Que fait une fraise sur un cheval? Tagada Tagada",
+              "C'est l'histoire d'un papier qui tombe à l'eau. Il crie 'Au secours ! J'ai pas pied !'",
+              "Quel est le bar préféré des espagnols? Le Bar-celone"
+            ]
+        },
+        {
+            "tag": "twittos",
+            "patterns": [
+              "Quoi"
+            ],
+            "responses": [
+              "Coubeh !",
+              "Feur !"
+          ]
+        },
+        {
+            "tag": "remerciement",
+            "patterns": [
+              "Merci beaucoup",
+              "Je vous suis reconnaissant",
+              "Merci pour votre aide"
+            ],
+            "responses": [
+              "De rien ! N'hésitez pas si vous avez d'autres questions."
+            ]
+        },
+		{
+			"tag": "culture_generale",
+			"patterns": [
+				"Quel est le sens de la vie ?",
+				"Qui est ton créateur ?",
+				"Qui est ton personnage préféré ?",
+				"What is the meaning of life?",
+				"Who is your creator?",
+				"Who is your favorite character?"
+			],
+			"responses": [
+				"Le sens de la vie est une question profonde, n'est-ce pas ?",
+				"Mon créateur est une équipe talentueuse d'ingénieurs et de développeurs.",
+				"Je n'ai pas de personnage préféré, j'aime aider tout le monde.",
+				"The meaning of life is a deep question, isn't it?",
+				"My creator is a talented team of engineers and developers.",
+				"I don't have a favorite character, I like helping everyone."
+			]
+		}
+	]
 }
