@@ -23,6 +23,7 @@ services:
             - sail
         depends_on:
             - mysql
+            - python
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
@@ -48,9 +49,8 @@ services:
             retries: 3
             timeout: 5s
     python:
-        build: ./build/Python
-        ports:
-            - '5000:5000'
+        build:
+            context: ./build/Python
         networks:
             - sail
 networks:

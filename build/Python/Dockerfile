@@ -12,9 +12,9 @@ RUN pip install transformers
 
 RUN pip install langdetect
 
-COPY train.py .
+RUN pip install flask
 
-COPY chat.py .
+COPY train.py .
 
 COPY intents.json .
 
@@ -22,7 +22,8 @@ COPY model.py .
 
 COPY nltk_utils.py .
 
-CMD ["python", "./train.py"]
+COPY app.py .
 
-CMD ["python", "./chat.py"]
+RUN python3 train.py
 
+CMD ["python3", "app.py"]

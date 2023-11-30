@@ -1,3 +1,5 @@
+from flask import Flask
+from flask import jsonify, request
 import random
 import json
 import torch
@@ -5,7 +7,7 @@ from langdetect import detect
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
-from flask import Flask, request, jsonify
+app = Flask(__name__)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
