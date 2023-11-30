@@ -18,7 +18,7 @@ class ChatBotTestController extends Controller{
         return view('chatbot', ['botResponse' => $botResponse]);
     }
 
-    public function chatbot2(Request $request)
+    public function chatbot2(string $message)
     {
         // Créer une instance du client Guzzle
         $client = new Client();
@@ -28,7 +28,7 @@ class ChatBotTestController extends Controller{
 
         // Données à envoyer dans la requête POST
         $data = [
-            'message' => $request->input('message'),
+            'message' => $message,
         ];
 
         try {
@@ -40,11 +40,14 @@ class ChatBotTestController extends Controller{
             // Récupérer le contenu de la réponse
             $contenu = $response->getBody()->getContents();
 
+            $botResponse = json_decode($contenu, true);
+            $botResponse = $botResponse['response'] ?? "Erreur: aucune réponse";
+            return view('chatbot', ['botResponse' => $botResponse]);
+
             // Exemple : retourner le contenu dans la réponse de votre Laravel
-            return response()->json(['resultat' => $contenu]);
         } catch (\Exception $e) {
             // Gérer les erreurs, par exemple en renvoyant un message d'erreur
-            return response()->json(['erreur' => $e->getMessage()], 500);
+            return response()->json(['err' => $e->getMessage()], 500);
         }
     }
 }
