@@ -10,7 +10,7 @@
 
             <main class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
                 <div class="max-w-xl lg:max-w-3xl">
-                    <img src="{{ asset('logo.png') }}" alt="logo" class="h-8 sm:h-10">
+                    {{-- <img src="{{ asset('logo.png') }}" alt="logo" class="h-8 sm:h-10"> --}}
 
                     <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                         Bienvenue! 🤖

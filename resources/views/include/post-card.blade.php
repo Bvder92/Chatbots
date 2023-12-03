@@ -4,8 +4,10 @@
 
         {{-- Photo + Nom --}}
         <div class="container flex justify-start">
-            <img src="{{ asset('logo.png') }}" alt="" class="h-12 w-12 mr-4 rounded-full">
-            <div class="my-auto text-lg font-medium">{{ $post->user->name }}</div>
+            <img src="{{ $post->user->getImageURL() }}" alt="" class="h-12 w-12 mr-4 rounded-full">
+            <div class="my-auto text-lg font-medium">
+                <a href="{{  route('users.show', $post->user->id) }}">{{ $post->user->name }}</a>
+            </div>
         </div>
 
 

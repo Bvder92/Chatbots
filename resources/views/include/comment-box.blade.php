@@ -17,7 +17,7 @@
         <hr class="mb-4">
         <div class="grid grid-cols-2 pl-4">
             <div class="container flex justify-start">
-                <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
+                <img src="{{ $comment->user->getImageURL() }}" alt="" class="h-10 w-10 mr-4 rounded-full">
                 <div class="my-auto font-medium">{{ $comment->user->name }}</div>
             </div>
             {{-- <div class="flex justify-end pr-10">
