@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatBotTestController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
@@ -63,3 +64,5 @@ Route::group(['prefix' => 'users/', 'as' => 'users.', 'middleware' => ['auth']],
     Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
     Route::put('/{id}/', [UserController::class, 'update'])->name('update');
 });
+
+Route::get('/chatbot/{message}', [ChatBotTestController::class, 'chatbot2'])->name('chatbot');
