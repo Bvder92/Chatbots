@@ -5,6 +5,7 @@ use App\Http\Controllers\ChatBotTestController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -58,11 +59,14 @@ Route::post('/login', [AuthController::class, 'authenticate']); // login form ac
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); // logout form action
 
 // UserController:
-
 Route::group(['prefix' => 'users/', 'as' => 'users.', 'middleware' => ['auth']], function () {
     Route::get('/{id}', [UserController::class, 'show'])->name('show');
     Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
     Route::put('/{id}/', [UserController::class, 'update'])->name('update');
 });
+
+// Abonnements:
+Route::post('users/{user}/follow', [FollowerController::class, 'follow'])->middleware('auth')->name('users.follow');
+Route::post('users/{user}/unfollow', [FollowerController::class, 'unfollow'])->middleware('auth')->name('users.unfollow');
 
 Route::get('/chatbot/{message}', [ChatBotTestController::class, 'chatbot2'])->name('chatbot');

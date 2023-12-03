@@ -32,7 +32,7 @@ class UserController extends Controller
             $validated['image'] = $imagePath;
 
             //suppression de l'ancienne image:
-            Storage::disk('public')->delete($id->image);
+            Storage::disk('public')->delete($id->image ?? '');
         }
 
         $id->update($validated);

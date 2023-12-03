@@ -3,6 +3,11 @@
 
 <section class="pt-16">
     <div class="w-full px-4 mx-auto">
+
+        <form action=" {{ route('users.update', $user->id) }} " method="post" enctype="multipart/form-data">
+            @csrf
+            @method('put')
+
         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
             <div class="px-6">
                 <div class="flex flex-wrap justify-center">
@@ -16,15 +21,25 @@
                         <div class="flex justify-center py-4 lg:pt-4 pt-8">
                             <div class=" p-3 ">
 
+                                    {{-- Modifier Image Profil --}}
+                                    <input type="file" name="image" id="image" class="m-4 text-sm">
+                                        @error('name')
+                                            <span class="text-red-600">{{ $message }}</span>
+                                        @enderror
+
                                     {{-- Nom utilisateur --}}
                                 <h3 class="text-xl font-semibold leading-normal text-blueGray-700 mb-2">
-                                        {{ $user->name }}
+                                        <input type="text" name="name" value="{{ $user->name }}" class="m-4">
+                                        @error('name')
+                                            <span class="text-red-600">{{ $message }}</span>
+                                        @enderror
                                 </h3>
 
                                     {{-- bouton 'Modifier' --}}
                                 @if (Auth::id() === $user->id)
                                     <div class="text-sm text-gray-600 text-center">
-                                        <a href="{{ route('users.edit', $user->id) }}">Modifier</a>
+                                            <a href="{{ route('users.show', $user->id) }}">Annuler</a>
+                                            <button class="btn-primary">Sauvegarder</button>
                                     </div>
                                 @endif
                             </div>
@@ -53,40 +68,13 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- Bouton 'Suivre' ou 'Désabonner' si l'on est pas sur son propre profil --}}
-                <div class="">
-                    @auth
-                    @if (Auth::id() !== $user->id)
-                    <div class=" mt-0 mb-2 flex gap-4 justify-center">
-                        <div class="">
-
-                            @if(Auth::user()->follows($user))
-                                <form action="{{ route('users.unfollow', $user->id) }}" method="post">
-                                    @csrf
-                                    <button class="btn-primary" type="submit">Se désabonner</button>
-                                </form>
-                            @else
-                                <form action="{{ route('users.follow', $user->id) }}" method="post">
-                                    @csrf
-                                    <button class="btn-primary" type="submit">Suivre</button>
-                                </form>
-                            @endif
-
-                        </div>
-                        <div class="">
-                            <button class="btn-primary">Message</button>
-                        </div>
-                    </div>
-                    @endif
-                    @endauth
-                </div>
                 <div class="mt-4 py-4 border-t border-blueGray-200 text-center">
                     <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
-                            <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                            {{ $user->bio }}
-                            </p>
+                                <input type="textarea" value="{{ $user->bio }}" name="bio">
+                                    @error('bio')
+                                        <span class="text-red-600">{{ $message }}</span>
+                                    @enderror
                         </div>
                     </div>
                 </div>
@@ -100,5 +88,6 @@
                 </div>
             </div>
         </div>
+        </form>
     </div>
 </section>

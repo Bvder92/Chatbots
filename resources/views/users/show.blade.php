@@ -12,7 +12,11 @@
                 <div class="grid grid-cols-1 gap-4 p-2 ">
 
                     @include('include.success-message')
-                    @include('include.user-card')
+                    @if ($editing ?? false)
+                        @include('include.user-edit-card')
+                    @else
+                        @include('include.user-card')
+                    @endif
                 </div>
             </div>
 
