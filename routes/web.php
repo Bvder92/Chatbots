@@ -5,10 +5,10 @@ use App\Http\Controllers\ChatBotTestController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +21,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-//Dashboard
+//Dashboard & Feed
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/feed', FeedController::class)->middleware('auth')->name('feed');
 
 // Posts:
 Route::group(['prefix' => 'posts/', 'as' => 'posts.'], function () {

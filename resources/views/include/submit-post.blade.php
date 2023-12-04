@@ -1,16 +1,10 @@
 @auth
     <div class="grid grid-cols-1 shadow-lg justify-center px-12 py-6 border-2 rounded-xl mt-8 mx-8">
 
-        <div class="pl-8 mb-6">
-            <div class="text-xl font-medium text-black">Partagez quelque chose!</div>
+        <div class="pl-2 mb-6">
+            <div class="text-xl font-medium text-black">🤖 Partagez quelque chose!</div>
         </div>
         <div class="grid grid-cols-1">
-
-            {{-- Photo Profil et Nom --}}
-            {{-- <div class="container flex justify-start">
-                <img src="{{ asset('logo.png') }}" alt="" class="h-10 w-10 mr-4 rounded-full">
-                <div class="my-auto">{{ auth()->user()->name }}</div>
-            </div> --}}
 
             {{-- Zone de texte et boutons --}}
             <form action="{{ route('posts.store') }}" method="post">
@@ -18,7 +12,7 @@
                 <div class="">
                     <textarea name="content" id="content" rows="1"
                         class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
-                        placeholder="Enter any additional order notes..."></textarea>
+                        placeholder="Nos bots vous répondront!"></textarea>
                 </div>
 
                 @error('content')

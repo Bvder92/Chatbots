@@ -10,21 +10,6 @@
             </div>
         </div>
 
-
-        {{-- Voir/Modifier/Supprimer --}}
-        {{-- <div class="flex justify-end">
-            <a href="{{ route('posts.show', $post->id) }}" class="pr-2">Voir</a>
-
-            @if (auth()->user()->id == $post->user_id)
-                <a href="{{ route('posts.edit', $post->id) }}" class="pr-2">Modifier</a>
-                <form action=" {{ route('posts.destroy', $post->id) }}" method="post">
-                    @csrf
-                    @method('delete')
-                    <button>X</button>
-                </form>
-            @endif
-        </div> --}}
-
         {{-- Contenu du post --}}
         <div class=" col-span-2">
 
@@ -50,7 +35,7 @@
                     </div>
                 </form>
             @else
-                <div class="m-2 w-3/4 resize-none p-4">
+                <div class="m-2 w-3/4 resize-none p-4 text-left">
                     {{ $post->content }}
                 </div>
             @include('include.post-buttons')
