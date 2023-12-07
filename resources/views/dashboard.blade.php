@@ -15,7 +15,12 @@
 
                     @include('include.success-message')
 
+                    @if($feed ?? false)
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Feed </div>
+                    @else
+                    <div class="px-8 pt-8 text-2xl font-bold w-full"> Accueil</div>
+
+                    @endif
                     @include('include.submit-post')
 
                     @auth

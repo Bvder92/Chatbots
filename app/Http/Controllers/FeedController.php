@@ -27,7 +27,8 @@ class FeedController extends Controller
 
 
         return view('dashboard', [
-            'posts' => $posts->paginate(5)
+            'posts' => $posts->paginate(5),
+            'feed' => true
         ]);
     }
 }

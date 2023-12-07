@@ -1,4 +1,4 @@
-    <form action="{{ route('posts.comments.store', $post->id) }}" method="post">
+    <form action="{{ route('posts.comments.store', $post->id, auth()->user()) }}" method="post">
         @csrf
         <div class="mx-6 my-2">
             <div class="">

@@ -21,6 +21,14 @@ class CommentController extends Controller
         return redirect()->route('posts.show', $id->id)->with('success', "Commentaire publié!");
     }
 
+    public function botStore(Post $id, string $content, User $user) {
+        $comment = new Comment();
+        $comment->post_id = $id->id;
+        $comment->content = $content;
+        $comment->user_id = $user->id;
+        $comment->save();
+    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }

@@ -42,7 +42,8 @@ class ChatBotTestController extends Controller{
 
             $botResponse = json_decode($contenu, true);
             $botResponse = $botResponse['response'] ?? "Erreur: aucune réponse";
-            return view('chatbot', ['botResponse' => $botResponse]);
+            //return view('chatbot', ['botResponse' => $botResponse]);
+            return $botResponse;
 
             // Exemple : retourner le contenu dans la réponse de votre Laravel
         } catch (\Exception $e) {

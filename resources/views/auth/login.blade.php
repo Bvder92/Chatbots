@@ -55,7 +55,7 @@
 
                             <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                                 Vous n'avez pas de compte?
-                                <a href="#" class="text-gray-700 underline">Inscription</a>.
+                                <a href="{{ route('register')}} " class="text-gray-700 underline">Inscription</a>.
                             </p>
                         </div>
                     </form>
