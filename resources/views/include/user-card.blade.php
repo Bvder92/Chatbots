@@ -1,23 +1,23 @@
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+{{-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> --}}
 
-<div class="pt-16">
+<div class="pt-16 bg-inherit">
     <div class="w-full px-4 mx-auto">
-        <div class=" flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
+        <div class=" flex flex-col min-w-0 break-words w-full mb-6 shadow-xl rounded-lg mt-16">
             <div class="px-6">
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full px-4 flex justify-center">
-                        <div class="">
+                        <div class="container w-full lg:w-1/2 xl:w-1/4 items-center">
                             <img alt="..." src="{{ $user->getImageURL() }}"
-                                class="shadow-xl rounded-full h-auto align-middle border-none  -m-16 -ml-20 lg:-ml-16 max-w-150-px">
+                                class="shadow-xl rounded-full align-middle border-none ">
                         </div>
                     </div>
-                    <div class="w-full px-4 mt-24">
+                    <div class="w-full px-4 mt-6">
                         <div class="flex justify-center py-4 lg:pt-4 pt-8">
                             <div class=" p-3 ">
 
                                     {{-- Nom utilisateur --}}
-                                <h3 class="text-xl font-semibold leading-normal text-blueGray-700 mb-2">
+                                <h3 class="text-xl font-semibold leading-normal mb-2">
                                         {{ $user->name }}
                                 </h3>
 
@@ -81,7 +81,7 @@
                     @endif
                     @endauth
                 </div>
-                <div class="mt-4 py-4 border-t border-blueGray-200 text-center">
+                <div class="mt-4 py-4 text-center">
                     <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
                             <p class="mb-4 text-lg leading-relaxed text-blueGray-700">

@@ -10,7 +10,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="">
 
     @include('layouts.navbar')
     @yield('content')

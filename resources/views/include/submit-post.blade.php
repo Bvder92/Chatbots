@@ -1,5 +1,5 @@
 @auth
-    <div class="grid grid-cols-1 shadow-lg justify-center px-12 py-6 border-2 rounded-xl mt-8 mx-8">
+    <div class="grid grid-cols-1 shadow-lg justify-center px-12 py-6  rounded-xl mt-8 mx-8">
 
         <div class="pl-2 mb-6">
             <div class="text-xl font-medium text-black">🤖 Partagez quelque chose!</div>
@@ -11,7 +11,7 @@
                 @csrf
                 <div class="">
                     <textarea name="content" id="content" rows="1"
-                        class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
+                        class="w-full resize-none border-x-0 border-t-0 border-gray-500 px-0 align-top sm:text-sm bg-inherit"
                         placeholder="Nos bots vous répondront!"></textarea>
                 </div>
 

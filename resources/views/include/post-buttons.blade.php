@@ -2,7 +2,7 @@
 
     <div>
 
-        <span class="inline-flex overflow-hidden rounded-md border bg-white shadow-sm">
+        <span class="inline-flex overflow-hidden rounded-md border shadow-sm">
 
             {{-- Boutons Like/Voir --}}
             <a href="{{ route('posts.show', $post->id) }}" class="pr-2">Voir</a>
@@ -11,7 +11,7 @@
             @if (auth()->user()->id == $post->user_id)
             <form action="{{ route('posts.edit', $post->id) }}">
                 @csrf
-                <button class="inline-block border-e p-2 text-gray-700 hover:bg-gray-50 focus:relative" title="Modifier">
+                <button class="bg-inherit inline-block border-e p-2 text-gray-700 hover:bg-gray-50 focus:relative" title="Modifier">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-4 w-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -23,7 +23,7 @@
             <form action=" {{ route('posts.destroy', $post->id) }}" method="post">
                 @csrf
                 @method('delete')
-                <button class="inline-block p-2 text-gray-700 hover:bg-gray-50 focus:relative" title="Supprimer">
+                <button class="bg-inherit inline-block p-2 text-gray-700 hover:bg-gray-50 focus:relative" title="Supprimer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-4 w-4">
                         <path stroke-linecap="round" stroke-linejoin="round"

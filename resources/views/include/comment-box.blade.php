@@ -3,7 +3,7 @@
         <div class="mx-6 my-2">
             <div class="">
                 <textarea name="content" id="content" rows="1"
-                    class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
+                    class="w-full resize-none border-x-0 border-t-0 border-gray-500 px-0 align-top sm:text-sm bg-inherit"
                     placeholder="Répondez ici!"></textarea>
             </div>
             <div class="flex items-center justify-end gap-2 py-3">

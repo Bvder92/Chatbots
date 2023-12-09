@@ -6,9 +6,22 @@
     .btn-primary {
        @apply px-3 py-1.5 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-xl
     }
+
+    .bg-gradient{
+        @apply bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-50 via-emerald-200 to-indigo-400 bg-fixed
+    }
+    .circle {
+        width: 450px;
+        height: 450px;
+        background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
+        filter: blur(120px);
+    }
 }
 @layer base {
     html {
       font-family: "Proxima Nova", system-ui, sans-serif;
+    }
+    input {
+        background-color: inherit;
     }
   }

@@ -4,13 +4,13 @@
         <div class="grid grid-cols-4">
             <div class="">
                 <div class="fixed w-1/4 ">
-                    <div class="border-2 border-gray-200 mx-4 shadow-lg rounded-xl">
+                    <div class="mx-4 shadow-lg rounded-xl">
                     @include('include.sidebar')
                     </div>
                 </div>
             </div>
 
-            <div class="container border-2 rounded-xl shadow-lg col-span-2">
+            <div class="container rounded-xl shadow-lg col-span-2">
                 <div class="grid grid-cols-1 gap-4 p-2 ">
 
                     @include('include.success-message')
@@ -21,7 +21,7 @@
 
             <div class="">
                 <div class="fixed w-1/4">
-                    <div class="border-2 border-gray-200 mx-4 shadow-lg rounded-xl">
+                    <div class="mx-4 shadow-lg rounded-xl">
                         @include('include.search-bar')
                     </div>
                 </div>

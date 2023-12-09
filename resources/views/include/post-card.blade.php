@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 shadow-lg justify-center p-8 border-2 rounded-xl mx-8">
+<div class="grid grid-cols-1 shadow-lg justify-center p-8 rounded-xl mx-8">
 
     <div class="grid grid-cols-2 ">
 
@@ -22,8 +22,8 @@
                     @csrf
                     <div class="pl-12">
                         <textarea name="content" id="content" rows="1"
-                            class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm"
-                            placeholder="Enter any additional order notes..."></textarea>
+                            class="w-full resize-none border-x-0 border-t-0 border-gray-200 px-0 align-top sm:text-sm bg-inherit"
+                            placeholder="{{ $post->content }}"></textarea>
                     </div>
 
                     @error('content')
@@ -31,7 +31,7 @@
                     @enderror
 
                     <div class="flex items-center justify-end gap-2 py-3">
-                        <button type="submit" name="submit" class="btn-primary">Répondre</button>
+                        <button type="submit" name="submit" class="btn-primary">Modifier</button>
                     </div>
                 </form>
             @else
