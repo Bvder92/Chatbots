@@ -622,6 +622,7 @@
       ]
     },
     {
+      "tag": "film",
       "patterns": [
         "citer un film célèbre",
         "donner un exemple de film populaire",
@@ -634,6 +635,7 @@
       ]
     },
     {
+      "tag": "chanteur",
       "patterns": [
         "nommer un chanteur célèbre",
         "donner un exemple d'artiste musical populaire",
@@ -646,6 +648,7 @@
       ]
     },
     {
+      "tag": "tv-show",
       "patterns": [
         "citer une série télévisée populaire",
         "donner un exemple de série télévisée à succès",
@@ -661,6 +664,7 @@
       ]
     },
     {
+      "tag": "livres",
       "patterns": [
         "peux-tu me recommander un bon livre ?",
         "je cherche un livre à lire, as-tu des idées ?",
@@ -673,8 +677,8 @@
         "Bien sûr, voici quelques livres que je te recommande :\n\n* **Le Silence des Agneaux** de Thomas Harris : Un thriller captivant qui raconte l'histoire de Clarice Starling, une jeune stagiaire du FBI qui doit traquer un tueur en série surnommé 'Buffalo Bill'.\n\n* **La Servante écarlate** de Margaret Atwood : Un roman dystopique qui dépeint un monde futuriste où les femmes sont réduites en esclavage pour leur capacité à procréer.\n\n* **Le Seigneur des Anneaux** de J.R.R. Tolkien : Une trilogie épique de fantasy qui suit les aventures de Frodon Sacquet, un hobbit chargé de détruire l'Anneau Unique, un objet maléfique aux mains de Sauron, le Seigneur des Ténèbres.\n\n* **Harry Potter** de J.K. Rowling : Une série de sept romans fantastiques qui raconte l'histoire de Harry Potter, un jeune sorcier qui découvre ses pouvoirs magiques et doit affronter Lord Voldemort, le sorcier le plus maléfique de tous les temps.\n\n* **Cinquante Nuances de Grey** d'E.L. James : Une trilogie de romans érotiques qui raconte l'histoire d'Anastasia Steele, une étudiante qui tombe amoureuse de Christian Grey, un homme d'affaires sadique et mystérieux.\n\nJ'espère que ces suggestions te plaisent. Dis-moi si tu as besoin d'autres recommandations."
       ]
     },
-    { 
-      "tag":"video-games",
+    {
+      "tag": "video-games",
       "patterns": [
         "nommer un jeu vidéo populaire",
         "donner un exemple de jeu vidéo à succès",
@@ -688,44 +692,44 @@
     },
     {
       "tag": "The simpsons",
-			"patterns": [
-				"que peux-tu me dire sur le dessin animé Les Simpson ?",
-				"parle-moi du dessin animé Les Simpson",
-				"raconte-moi l'histoire du dessin animé Les Simpson",
-				"donne-moi des informations sur le dessin animé Les Simpson",
-				"présente-moi le dessin animé Les Simpson"
-			],
-			"responses": [
-				"Les Simpson est une série télévisée d'animation américaine créée par Matt Groening. La série est une satire de la vie américaine, mettant en scène la famille Simpson, une famille de la classe moyenne américaine qui vit dans la ville fictive de Springfield. La série est connue pour son humour irrévérencieux, ses personnages attachants et ses critiques de la société américaine.\n\nLes Simpson est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour intelligent, observation sociale, personnages attachants, etc.]. La série a également été critiquée pour sa violence et son contenu parfois offensant.\n\n[Image of Les Simpson cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé Les Simpson."
-			]
-		},
-		{
-      "tag":"South Park",
-			"patterns": [
-				"que peux-tu me dire sur le dessin animé South Park ?",
-				"parle-moi du dessin animé South Park",
-				"raconte-moi l'histoire du dessin animé South Park",
-				"donne-moi des informations sur le dessin animé South Park",
-				"présente-moi le dessin animé South Park"
-			],
-			"responses": [
-				"South Park est une série télévisée d'animation américaine créée par Trey Parker et Matt Stone. La série est une satire de la culture américaine, mettant en scène quatre garçons en quatrième année qui vivent dans la ville fictive de South Park, dans le Colorado. La série est connue pour son humour noir, son contenu offensant et ses critiques de la société américaine.\n\nSouth Park est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour noir, contenu offensant, critiques de la société américaine, etc.]. La série a également été critiquée pour son violence, son sexisme et son racisme.\n\n[Image of South Park cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé South Park."
-			]
-		},
-		{ 
-      "tag":"Spongebob",
-			"patterns": [
-				"que peux-tu me dire sur le dessin animé SpongeBob SquarePants ?",
-				"parle-moi du dessin animé SpongeBob SquarePants",
-				"raconte-moi l'histoire du dessin animé SpongeBob SquarePants",
-				"donne-moi des informations sur le dessin animé SpongeBob SquarePants",
-				"présente-moi le dessin animé SpongeBob SquarePants",
+      "patterns": [
+        "que peux-tu me dire sur le dessin animé Les Simpson ?",
+        "parle-moi du dessin animé Les Simpson",
+        "raconte-moi l'histoire du dessin animé Les Simpson",
+        "donne-moi des informations sur le dessin animé Les Simpson",
+        "présente-moi le dessin animé Les Simpson"
+      ],
+      "responses": [
+        "Les Simpson est une série télévisée d'animation américaine créée par Matt Groening. La série est une satire de la vie américaine, mettant en scène la famille Simpson, une famille de la classe moyenne américaine qui vit dans la ville fictive de Springfield. La série est connue pour son humour irrévérencieux, ses personnages attachants et ses critiques de la société américaine.\n\nLes Simpson est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour intelligent, observation sociale, personnages attachants, etc.]. La série a également été critiquée pour sa violence et son contenu parfois offensant.\n\n[Image of Les Simpson cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé Les Simpson."
+      ]
+    },
+    {
+      "tag": "South Park",
+      "patterns": [
+        "que peux-tu me dire sur le dessin animé South Park ?",
+        "parle-moi du dessin animé South Park",
+        "raconte-moi l'histoire du dessin animé South Park",
+        "donne-moi des informations sur le dessin animé South Park",
+        "présente-moi le dessin animé South Park"
+      ],
+      "responses": [
+        "South Park est une série télévisée d'animation américaine créée par Trey Parker et Matt Stone. La série est une satire de la culture américaine, mettant en scène quatre garçons en quatrième année qui vivent dans la ville fictive de South Park, dans le Colorado. La série est connue pour son humour noir, son contenu offensant et ses critiques de la société américaine.\n\nSouth Park est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour noir, contenu offensant, critiques de la société américaine, etc.]. La série a également été critiquée pour son violence, son sexisme et son racisme.\n\n[Image of South Park cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé South Park."
+      ]
+    },
+    {
+      "tag": "Spongebob",
+      "patterns": [
+        "que peux-tu me dire sur le dessin animé SpongeBob SquarePants ?",
+        "parle-moi du dessin animé SpongeBob SquarePants",
+        "raconte-moi l'histoire du dessin animé SpongeBob SquarePants",
+        "donne-moi des informations sur le dessin animé SpongeBob SquarePants",
+        "présente-moi le dessin animé SpongeBob SquarePants",
         "Aime tu Bob l'Eponge ?",
         "Parle moi de Bob l'Eponge"
-			],
-			"responses": [
-				"SpongeBob SquarePants est une série télévisée d'animation américaine créée par Stephen Hillenburg. La série suit les aventures de SpongeBob SquarePants, une éponge de mer carrée et joyeuse qui vit dans la ville sous-marine de Bikini Bottom. La série est connue pour son humour absurde, ses personnages attachants et son regard optimiste sur la vie.\n\nSpongeBob SquarePants est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour absurde, personnages attachants, regard optimiste sur la vie, etc.]. La série a également été critiquée pour son contenu parfois offensant et son manque de diversité.\n\n[Image of SpongeBob SquarePants cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé SpongeBob SquarePants."
-			]
-		}
+      ],
+      "responses": [
+        "SpongeBob SquarePants est une série télévisée d'animation américaine créée par Stephen Hillenburg. La série suit les aventures de SpongeBob SquarePants, une éponge de mer carrée et joyeuse qui vit dans la ville sous-marine de Bikini Bottom. La série est connue pour son humour absurde, ses personnages attachants et son regard optimiste sur la vie.\n\nSpongeBob SquarePants est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour absurde, personnages attachants, regard optimiste sur la vie, etc.]. La série a également été critiquée pour son contenu parfois offensant et son manque de diversité.\n\n[Image of SpongeBob SquarePants cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé SpongeBob SquarePants."
+      ]
+    }
   ]
 }

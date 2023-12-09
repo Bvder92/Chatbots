@@ -49,7 +49,7 @@ def get_response(input):
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
     else:
-        return "I don't understand..."
+        return "Je n'ai pas bien compris..."
 
 
 @app.route('/api/chatbot', methods=['POST'])
