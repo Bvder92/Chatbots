@@ -80,8 +80,9 @@ Route::post('users/{user}/unfollow', [FollowerController::class, 'unfollow'])->m
 // });
 
 // Chat:
-Route::get('/chat', [App\Http\Controllers\ChatsController::class, 'index']);
-Route::get('/messages', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
+Route::get('/chat', [App\Http\Controllers\ChatsController::class, 'index'])->name('chat.index');
+Route::get('/chat/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'chatbox'])->name('chat.chatbox');
+Route::get('/messages/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
 Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
 
 

@@ -14,8 +14,8 @@ use App\Models\Message;
 
 class MessageSent implements ShouldBroadcast
 {
-    public $user;
-    // public $recipient;
+    public $sender;
+    public $recipient;
     public $message;
 
     use Dispatchable, InteractsWithSockets, SerializesModels;
@@ -23,12 +23,12 @@ class MessageSent implements ShouldBroadcast
     /**
      * Create a new event instance.
      */
-    //public function __construct(User $user, User $recipient, Message $message)
-    public function __construct(User $user, Message $message)
+    //public function __construct(User $user, Message $message)
+    public function __construct(User $sender, User $recipient, Message $message)
     {
 
-        $this->user = $user;
-        //$this->recipient = $user;
+        $this->sender = $sender;
+        $this->recipient = $recipient;
         $this->message = $message;
 
     }

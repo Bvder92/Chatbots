@@ -19,24 +19,59 @@ class ChatsController extends Controller
 
     public function index()
     {
-        $uid = User::find(1);
-        return view('chat.chat', ['uid'=> $uid]);
+        $user = Auth::user();
+
+        $users = User::whereIn('id', function ($query) use ($user) {
+            $query->select('user_id')
+                ->from('messages')
+                ->where('recipient_id', $user->id);
+                // ->union(
+                //     $query->select('recipient_id')
+                //         ->from('messages')
+                //         ->where('user_id', $user->id)
+                //);
+        })->get();
+
+    return view('chat.index', compact('users') );
+    }
+    public function chatbox($recipient_id)
+    {
+        $recipient = User::find($recipient_id);
+        return view('chat.chatbox', ['recipient'=> $recipient]);
     }
 
-    public function fetchMessages()
+    public function fetchMessages($recipient_id)
     {
-        return Message::with('user')->get();
+        $user = Auth::user();
+
+        // messages sent by User to recipient:
+        $sentMessages = $user->sentMessages()->where('recipient_id', $recipient_id)->with('sender', 'recipient')->get();
+
+        // messages received by User from recipient:
+        $receivedMessages = $user->receivedMessages()->where('user_id', $recipient_id)->with('sender', 'recipient')->get();
+
+        return $sentMessages->merge($receivedMessages);
     }
 
     public function sendMessage(Request $request)
     {
-        $user = Auth::user();
-        $message = $user->sentMessages()->create([
-            'message' => $request->input('message'),
-            'recipient_id' => $request->input('recipient_id')
+
+        $validated = $request->validate([
+            'recipient'=> 'required',
+            'message'=> 'required',
         ]);
-        broadcast(new MessageSent($user, $message))->toOthers();
-        return ['status' => 'Message Sent!'];
+
+        $user = Auth::user();
+        $recipient = User::find($request->input('recipient')['id']);
+
+        $message = Message::create([
+            'user_id' => $user->id,
+            'recipient_id' => $recipient->id,
+            'message' => $validated['message']
+        ]);
+
+        broadcast(new MessageSent($user, $recipient, $message))->toOthers();
+        return ['status' => 'Message Sent!' /* 'user' => $user, 'recipient' => $recipientId, 'msg'=> $text */ ] ;
     }
 }
 

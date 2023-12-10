@@ -1,3 +1,18 @@
+@php
+    //$recipient = request()->route('recipient'); // récupère le recipient_id dans l'URL
+    //$recipient_id  = $recipient->id;
+@endphp
+<script>
+    window.recipientId = {{ $recipient->id }}; // on le met dans une globale JS
+    console.log('RecipientId: ');
+    if(window.recipientId == ""){
+        console.log('empty!');
+    }
+    else{
+        console.log(window.recipientId);
+    }
+</script>
+
 @extends('layouts.app')
 @section('content')
     <div class="py-24 container-fluid ">
@@ -9,15 +24,15 @@
                     </div>
                 </div>
             </div>
-            <div class="container-flex">
+            <div class="container-flex col-span-2">
                 <div class="bg-sky-300 rounded-lg container ">
-                    <div class="font-bolg text-lg m-4">Chats</div>
+                    <div class="font-bolg text-lg m-4">Discussion</div>
                     <div class="bg-sky-500 rounded-lg p-4">
                         <chat-messages :messages="messages"></chat-messages>
                     </div>
                     <div class="bg-sky-100 rounded-lg p-4">
                         {{--  <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form> --}}
-                        <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" :recipient={{ $uid }} ></chat-form>
+                        <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}" :recipient={{ $recipient }} ></chat-form>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
             <div class="clearfix">
                 <div class="flex justify-start">
                     <strong>
-                        {{ message.user.name }}
+                        {{ message.sender.name }}
                     </strong>
                 </div>
                 <p>

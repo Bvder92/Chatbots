@@ -24,21 +24,34 @@ const app = createApp({
         }
     },
     created() {
-        this.fetchMessages();
+        const recipientId = window.recipientId;
+        console.log('Time to fetch...');
+
+        this.fetchMessages(recipientId);
         window.Echo.private('chat')
             .listen('MessageSent', (e) => {
                 this.messages.push({
                     message: e.message.message,
-                    user: e.user
+                    sender: e.sender,
+                    recipient: e.recipient
                 });
             });
     },
     methods: {
-        fetchMessages() {
-            //GET request to the messages route in our Laravel server to fetch all the messages
-            axios.get('/messages').then(response => {
+        fetchMessages(recipientId) {
+            /* requete GET vers la méthode fetchMessages($recipient_id) du controlleur.
+             * retourne les messages envoyés par l'utilisateur connecté à l'utilisateur 'recipientId'.
+             */
+            console.log(`Fetching messages for recipient: ${recipientId}`);
+            const url = `/messages/${recipientId}`
+            console.log(`URL: ${url}`);
+            axios.get(url).then(response => {
                 //Save the response in the messages array to display on the chat view
                 this.messages = response.data;
+                console.log(`Fetch successful. Messages:`);
+                console.log(this.messages);
+                //console.log(JSON.stringify(response.data, null, 2));
+
             });
         },
         addMessage(message) {
@@ -47,6 +60,8 @@ const app = createApp({
             console.log(message);
             console.log('End of message.');
             this.messages.push(message);
+            console.log('pushed, messages is now:');
+            console.log(this.messages);
             //POST request to the messages route with the message data in order for our Laravel server to broadcast it.
             axios.post('/messages', message).then(response => {
                 console.log(response.data);
