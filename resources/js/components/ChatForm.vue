@@ -19,7 +19,7 @@
 <script>
 export default {
   //Takes the "user" props from <chat-form> … :user="{{ Auth::user() }}"></chat-form> in the parent chat.blade.php.
-  props: ["user"],
+  props: ["user", "recipient"],
   data() {
     return {
       newMessage: "",
@@ -30,10 +30,15 @@ export default {
       //Emit a "messagesent" event including the user who sent the message along with the message content
       this.$emit("messagesent", {
         user: this.user,
-        //recipient: this.recipient,
-      //newMessage is bound to the earlier "btn-input" input field
+        recipient: this.recipient,
+        //newMessage is bound to the earlier "btn-input" input field
         message: this.newMessage,
       });
+        console.log('***messagesent event***');
+        console.log(this.user);
+        console.log(this.recipient);
+        console.log(this.message);
+        console.log('*** end ***');
       //Clear the input
       this.newMessage = "";
     },

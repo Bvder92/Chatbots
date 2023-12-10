@@ -66,19 +66,19 @@ class User extends Authenticatable
         return $this->followings()->where('user_id', $user->id)->exists();
     }
 
-    // public function sentMessages()
-    // {
-    //     return $this->hasMany(Message::class, 'user_id');
-    // }
-
-    // public function receivedMessages()
-    // {
-    //     return $this->hasMany(Message::class,'recipient_id');
-    // }
-    public function messages()
+    public function sentMessages()
     {
-        return $this->hasMany(Message::class);
+        return $this->hasMany(Message::class, 'user_id');
     }
+
+    public function receivedMessages()
+    {
+        return $this->hasMany(Message::class,'recipient_id');
+    }
+    // public function messages()
+    // {
+    //     return $this->hasMany(Message::class);
+    // }
 
     public function getImageURL(){
         if($this->image){

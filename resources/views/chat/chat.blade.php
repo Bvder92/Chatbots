@@ -16,7 +16,8 @@
                         <chat-messages :messages="messages"></chat-messages>
                     </div>
                     <div class="bg-sky-100 rounded-lg p-4">
-                        <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form>
+                        {{--  <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form> --}}
+                        <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" :recipient={{ $uid }} ></chat-form>
                     </div>
                 </div>
             </div>

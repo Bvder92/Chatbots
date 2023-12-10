@@ -31,8 +31,9 @@ class ChatsController extends Controller
     public function sendMessage(Request $request)
     {
         $user = Auth::user();
-        $message = $user->messages()->create([
-            'message' => $request->input('message')
+        $message = $user->sentMessages()->create([
+            'message' => $request->input('message'),
+            'recipient_id' => $request->input('recipient_id')
         ]);
         broadcast(new MessageSent($user, $message))->toOthers();
         return ['status' => 'Message Sent!'];
