@@ -1,13 +1,13 @@
 import numpy as np
 import random
 import json
-
+import nltk
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-
+from nltk.translate.bleu_score import sentence_bleu
 from langdetect import detect
-from nltk_utils import bag_of_words, tokenize, stem
+from nltk_utils import bag_of_words, tokenize, stem, is_question
 from model import NeuralNet
 #from transformers import pipeline
 
@@ -23,7 +23,7 @@ def get_positive_examples(intents):
     for intent in intents['intents']:
         for pattern in intent['patterns']:
             if is_question(pattern):
-                positive_examples.append((question, intent['tag']))
+                positive_examples.append((pattern, intent['tag']))
     return positive_examples
 
 def get_negative_examples(positive_examples):
@@ -34,7 +34,7 @@ def get_negative_examples(positive_examples):
             negative_examples.append(negative_example)
     return negative_examples
 
-def generate_negative_example(quesion, all_words, tags):
+def generate_negative_example(question, all_words, tags):
     words = question.split()
     new_words = words.copy()
     random_index = random.randrange(len(words))
@@ -47,8 +47,8 @@ def generate_negative_example(quesion, all_words, tags):
     new_question = ' '.join(new_question)
 
     similarity = 0
-    for positive_quesion, _ in positive_examples:
-        current_similarity = nltk.translate.bleu_score([positive_quesion], [new_question])
+    for positive_question, _ in positive_examples:
+        current_similarity = sentence_bleu(positive_question, new_question)
         if current_similarity > similarity:
             similarity = current_similarity
         

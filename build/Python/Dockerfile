@@ -14,6 +14,8 @@ RUN pip install langdetect
 
 RUN pip install flask
 
+RUN pip install requests
+
 COPY train.py .
 
 COPY intents.json .
@@ -24,6 +26,12 @@ COPY nltk_utils.py .
 
 COPY app.py .
 
-RUN python3 train.py
+COPY wiki.py .
 
-CMD ["python3", "app.py"]
+COPY chatold.py .
+#RUN python3 train.py
+
+#CMD ["python3", "app.py"]
+
+CMD ["python3", "wiki.py"]
+
