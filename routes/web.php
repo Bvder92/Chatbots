@@ -1,14 +1,16 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ChatBotTestController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\FeedController;
-use App\Http\Controllers\FollowerController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FeedController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PusherController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FollowerController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ChatBotTestController;
+use App\Http\Controllers\ChatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,4 +72,18 @@ Route::group(['prefix' => 'users/', 'as' => 'users.', 'middleware' => ['auth']],
 Route::post('users/{user}/follow', [FollowerController::class, 'follow'])->middleware('auth')->name('users.follow');
 Route::post('users/{user}/unfollow', [FollowerController::class, 'unfollow'])->middleware('auth')->name('users.unfollow');
 
-Route::get('/chatbot/{message}', [ChatBotTestController::class, 'chatbot2'])->name('chatbot');
+// Chat test:
+// Route::group(['prefix' => 'chat/', 'as' => 'chat.', 'middleware' => ['auth']], function() {
+//     Route::get('/', [ChatsController::class, 'index' ])->name('index');
+//     Route::post('/broadcast', [PusherController::class,'broadcast'])->name('broadcast');
+//     Route::post('/receive', [PusherController::class,'receive'])->name('receive');
+// });
+
+// Chat:
+Route::get('/chat', [App\Http\Controllers\ChatsController::class, 'index'])->name('chat.index');
+Route::get('/chat/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'chatbox'])->name('chat.chatbox');
+Route::get('/messages/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
+Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
+
+
+//Route::get('/chatbot/{message}', [ChatBotTestController::class, 'chatbot2'])->name('chatbot');

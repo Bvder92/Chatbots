@@ -8,12 +8,15 @@
     <title>🤖 {{ config('app.name') }}</title>
 
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 
 <body class="">
 
-    @include('layouts.navbar')
-    @yield('content')
+    <div id="app">
+        @include('layouts.navbar')
+        @yield('content')
+    </div>
 
 </body>
 
