@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Events\MessageSent;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ChatsController extends Controller
 {
@@ -44,13 +45,23 @@ class ChatsController extends Controller
     {
         $user = Auth::user();
 
+        $first = DB::table('messages')->where('user_id', $user->id)->where('recipient_id', $recipient_id);
+
+        $second = DB::table('messages')->where('user_id', $recipient_id)->where('recipient_id', $user->id)->union($first)->orderBy('created_at','asc');
+
+        $second = $second->get();
+
+        return $second;
+
         // messages sent by User to recipient:
-        $sentMessages = $user->sentMessages()->where('recipient_id', $recipient_id)->with('sender', 'recipient')->get();
+        //$sentMessages = $user->sentMessages()->where('recipient_id', $recipient_id)->with('sender', 'recipient')->get();
 
         // messages received by User from recipient:
-        $receivedMessages = $user->receivedMessages()->where('user_id', $recipient_id)->with('sender', 'recipient')->get();
+        //$receivedMessages = $user->receivedMessages()->where('user_id', $recipient_id)->with('sender', 'recipient')->get();
 
-        return $sentMessages->merge($receivedMessages);
+        //$merged = $sentMessages->merge($receivedMessages);
+        //return $merged->sortBy('updated_at');
+        //return $merged;
     }
 
     public function sendMessage(Request $request)

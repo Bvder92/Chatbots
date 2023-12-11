@@ -50,8 +50,7 @@ const app = createApp({
                 this.messages = response.data;
                 console.log(`Fetch successful. Messages:`);
                 console.log(this.messages);
-                //console.log(JSON.stringify(response.data, null, 2));
-
+                console.log(JSON.stringify(response.data, null, 2));
             });
         },
         addMessage(message) {

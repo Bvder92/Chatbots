@@ -37,9 +37,14 @@ class CheckPostsCommand extends Command
         $comment = new CommentController();
         $botUsers = User::where('isBot', 1)->get();
 
+
         // vérifier si il y a des posts récents auxquels répondre.
         if (empty($posts)) {
             $this->info('Aucun post récent');
+            return;
+        }
+        if ($botUsers->count() == 0) {
+            $this->info('Aucun bot disponible');
             return;
         }
 
