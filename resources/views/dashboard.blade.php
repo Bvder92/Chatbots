@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
-    <div class="py-24 container-fluid ">
-        <div class="grid grid-cols-4 ">
-            <div class="">
+    <div class="pt-20 h-full">
+        <div class="grid grid-cols-4 h-full pb-12">
+            <div class="h-full">
                 <div class="fixed w-1/4 ">
-                    <div class=" mx-4 shadow-lg rounded-xl bg-white/50 backdrop-blur-[200px]">
+                    <div class=" mx-4 shadow-lg rounded-xl bg-normal">
                     @include('include.sidebar')
                     </div>
                 </div>
             </div>
 
-            <div class="container  rounded-xl shadow-lg col-span-2 b bg-white/50 backdrop-blur-[200px]">
-                <div class="grid grid-cols-1 gap-4 p-2 ">
+            <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden h-full">
+                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
 
                     @include('include.success-message')
 
@@ -21,6 +21,7 @@
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Accueil</div>
 
                     @endif
+                    <div class="overflow-y-scroll h-full space-y-3">
                     @include('include.submit-post')
 
                     @auth
@@ -30,18 +31,14 @@
                             <p class="text-center my-3">Aucun résultat</p>
                         @endforelse
                     @endauth
-
-                    {{-- Pagination: --}}
-                    <div>
-                        {{ $posts->withQueryString()->links() }}
                     </div>
 
                 </div>
             </div>
 
-            <div class="">
+            <div class="h-full">
                 <div class="fixed w-1/4">
-                    <div class=" mx-4 shadow-lg rounded-xl">
+                    <div class=" mx-4 shadow-lg rounded-xl bg-normal">
                         @include('include.search-bar')
                     </div>
                 </div>

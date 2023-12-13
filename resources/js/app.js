@@ -30,6 +30,7 @@ const app = createApp({
         this.fetchMessages(recipientId);
         window.Echo.private('chat')
             .listen('MessageSent', (e) => {
+                console.log('PULLED!');
                 this.messages.push({
                     message: e.message.message,
                     sender: e.sender,
@@ -50,7 +51,6 @@ const app = createApp({
                 this.messages = response.data;
                 console.log(`Fetch successful. Messages:`);
                 console.log(this.messages);
-                console.log(JSON.stringify(response.data, null, 2));
             });
         },
         addMessage(message) {
@@ -65,7 +65,11 @@ const app = createApp({
             axios.post('/messages', message).then(response => {
                 console.log(response.data);
             });
-        }
+        },
+        dismissAlert(){
+            const alert = document.getElementById("alert-3");
+            alert.style.display = 'none';
+        },
     }
 });
 

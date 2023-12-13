@@ -16,12 +16,27 @@
         background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
         filter: blur(120px);
     }
+    .bg-clear{
+        @apply bg-opacity-20 bg-white backdrop-blur-[10px]
+    }
+    .bg-normal{
+        @apply bg-opacity-40 bg-white backdrop-blur-[50px]
+    }
 }
 @layer base {
-    html {
-      font-family: "Proxima Nova", system-ui, sans-serif;
-    }
-    input {
-        background-color: inherit;
-    }
+  html {
+    font-family: "Proxima Nova", system-ui, sans-serif;
   }
+  input {
+      background-color: inherit;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}

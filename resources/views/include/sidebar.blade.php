@@ -6,6 +6,6 @@
         <a href="{{ route('feed') }}">Feed</a>
     </div>
     <div>
-        <a href="{{ route('dashboard') }}">Messages</a>
+        <a href="{{ route('chat.index') }}">Messages</a>
     </div>
 </div>

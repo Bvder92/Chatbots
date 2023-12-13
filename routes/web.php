@@ -84,6 +84,8 @@ Route::get('/chat', [App\Http\Controllers\ChatsController::class, 'index'])->nam
 Route::get('/chat/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'chatbox'])->name('chat.chatbox');
 Route::get('/messages/{recipient_id}', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
 Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
-
+Route::get('/oui', function() {
+    return view('chat.oui');
+});
 
 //Route::get('/chatbot/{message}', [ChatBotTestController::class, 'chatbot2'])->name('chatbot');

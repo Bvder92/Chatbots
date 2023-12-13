@@ -33,6 +33,10 @@ export default {
         recipient: this.recipient,
         //newMessage is bound to the earlier "btn-input" input field
         message: this.newMessage,
+
+        user_id: this.sender.id,
+        recipient_id: this.recipient.id,
+        created_at: 'à l\'instant'
       });
         console.log('***messagesent event***');
         console.log(this.user);

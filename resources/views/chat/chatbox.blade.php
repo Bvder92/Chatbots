@@ -15,22 +15,25 @@
 
 @extends('layouts.app')
 @section('content')
-    <div class="py-24 container-fluid ">
-        <div class="grid grid-cols-3 ">
-            <div class="">
+    <div class="pt-20 h-full">
+        <div class="grid grid-cols-4 h-full pb-12">
+            <div class="h-full">
                 <div class="fixed w-1/4 ">
-                    <div class=" mx-4 shadow-lg rounded-xl bg-white/50 backdrop-blur-[200px]">
+                    <div class=" mx-4 shadow-lg rounded-xl bg-normal">
                         @include('include.sidebar')
                     </div>
                 </div>
             </div>
-            <div class="container-flex col-span-2">
-                <div class="bg-sky-300 rounded-lg container ">
-                    <div class="font-bolg text-lg m-4">Discussion</div>
-                    <div class="bg-sky-500 rounded-lg p-4">
-                        <chat-messages :messages="messages"></chat-messages>
+
+            <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden h-full">
+                <div class="overflow-hidden h-full flex flex-col">
+
+                    <div class="font-bold text-lg m-4">Discussion</div>
+
+                    <div class="bg-normal overflow-hidden rounded-lg m-4 flex-grow">
+                        <chat-messages :messages="messages" :recipient="{{ $recipient }}" :user="{{ $user }}"></chat-messages>
                     </div>
-                    <div class="bg-sky-100 rounded-lg p-4">
+                    <div class="bg-normal mt-auto rounded-lg m-4">
                         {{--  <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form> --}}
                         <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}" :recipient={{ $recipient }} ></chat-form>
                     </div>

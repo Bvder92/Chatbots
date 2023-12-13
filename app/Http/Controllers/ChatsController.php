@@ -24,33 +24,43 @@ class ChatsController extends Controller
 
         $users = User::whereIn('id', function ($query) use ($user) {
             $query->select('user_id')
-                ->from('messages')
-                ->where('recipient_id', $user->id);
-                // ->union(
-                //     $query->select('recipient_id')
-                //         ->from('messages')
-                //         ->where('user_id', $user->id)
-                //);
+            ->from('messages')
+            ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
+            ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
         })->get();
 
-    return view('chat.index', compact('users') );
+        // suppression de l'utilisateur actuel:
+        $userToRemove = $users->where('id', $user->id)->first();
+
+        if ($userToRemove) {
+            $users = $users->reject(function ($item) use ($userToRemove) {
+                return $item->id === $userToRemove->id;
+            });
+        }
+
+        return view('chat.index', compact('users') );
     }
     public function chatbox($recipient_id)
     {
+        $user = Auth::user();
         $recipient = User::find($recipient_id);
-        return view('chat.chatbox', ['recipient'=> $recipient]);
+        return view('chat.chatbox', ['recipient'=> $recipient, 'user' => $user]);
     }
 
     public function fetchMessages($recipient_id)
     {
         $user = Auth::user();
 
+        // $users = User::whereIn('id', function ($query) use ($user) {
+        //     $query->select('user_id')
+        //     ->from('messages')
+        //     ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
+        //     ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
+        // })->get();
+
         $first = DB::table('messages')->where('user_id', $user->id)->where('recipient_id', $recipient_id);
-
         $second = DB::table('messages')->where('user_id', $recipient_id)->where('recipient_id', $user->id)->union($first)->orderBy('created_at','asc');
-
         $second = $second->get();
-
         return $second;
 
         // messages sent by User to recipient:

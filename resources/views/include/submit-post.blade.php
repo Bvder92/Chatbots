@@ -1,5 +1,5 @@
 @auth
-    <div class="grid grid-cols-1 shadow-lg justify-center px-12 py-6  rounded-xl mt-8 mx-8">
+    <div class="grid grid-cols-1 shadow-lg justify-center px-12 py-6  rounded-xl mt-8 mx-8 bg-normal">
 
         <div class="pl-2 mb-6">
             <div class="text-xl font-medium text-black">🤖 Partagez quelque chose!</div>
