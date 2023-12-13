@@ -16,22 +16,32 @@ RUN pip install flask
 
 RUN pip install requests
 
-COPY train.py .
+Run pip install wikipedia
 
-COPY intents.json .
+Run pip install wikipedia-api
+
+RUN pip install scikit-learn
+
+Run pip install spacy
+
+RUN python -m spacy download fr_core_news_sm
+
+#COPY train.py .
+
+#COPY intents.json .
 
 COPY model.py .
 
 COPY nltk_utils.py .
 
-COPY app.py .
+#COPY app.py .
 
-COPY wiki.py .
+COPY wiki2.py .
 
-COPY chatold.py .
+#COPY chatold.py .
 #RUN python3 train.py
 
 #CMD ["python3", "app.py"]
 
-CMD ["python3", "wiki.py"]
+CMD ["python3", "wiki2.py"]
 
