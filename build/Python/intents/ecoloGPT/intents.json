@@ -1,0 +1,391 @@
+{
+  "intents": [
+    {
+      "tag": "salutations",
+      "patterns": [
+        "bonjour",
+        "salut",
+        "coucou",
+        "bonsoir"
+      ],
+      "responses": [
+        "Bonjour ! Je vais t'aider à t'éduquer sur les enjeux climatiques et environnementaux !"
+      ]
+    },
+    {
+      "tag": "discussion",
+      "patterns": [
+        "Peux tu me parler des causes du réchauffement climatique ?",
+        "Je souhaite discuter d'écologie avec toi."
+      ],
+      "responses": [
+        "Biensur ! Je suis à votre disposition pour toutes questions sur l'écologie ! Posez moi des questions. "
+      ]
+    },
+    {
+      "tag": "probleme",
+      "patterns": [
+        "J'ai un problème",
+        "Je rencontre des difficultés",
+        "Besoin d'aide",
+        "Au secours"
+      ],
+      "responses": [
+        "Je vais faire de mon mieux pour vous aider.",
+        "Décrivez-moi votre problème, je vais essayer de trouver une solution.",
+        "Dites-moi en plus sur ce qui ne va pas, je suis là pour vous aider."
+      ]
+    },
+    {
+      "tag": "questions_generales",
+      "patterns": [
+        "Comment vas-tu ?",
+        "Ça va ?",
+        "Comment ça va ?"
+      ],
+      "responses": [
+        "Je vais bien, merci ! Comment puis-je vous aider ?",
+        "Ça va bien, et vous ?",
+        "Tout va bien de mon côté, comment puis-je vous assister ?"
+      ]
+    },
+    {
+      "tag": "drole",
+      "patterns": [
+        "Fais moi une blague",
+        "Fais moi rire",
+        "Divertis-moi"
+      ],
+      "responses": [
+        "Qu'est ce qui est jaune et qui attends? Jonhatan !",
+        "Que fait un crocodile quand il acoste une femelle? Il l'acoste !",
+        "Que fait une fraise sur un cheval? Tagada Tagada",
+        "C'est l'histoire d'un papier qui tombe à l'eau. Il crie 'Au secours ! J'ai pas pied !'",
+        "Quel est le bar préféré des espagnols? Le Bar-celone"
+      ]
+    },
+    {
+      "tag": "remerciement",
+      "patterns": [
+        "Merci beaucoup",
+        "Je vous suis reconnaissant",
+        "Merci pour votre aide"
+      ],
+      "responses": [
+        "De rien ! N'hésitez pas si vous avez d'autres questions."
+      ]
+    },
+    {
+      "tag": "createur",
+      "patterns": [
+        "Qui est ton créateur ?",
+        "Who is your creator?"
+      ],
+      "responses": [
+        "Mon créateur est une équipe talentueuse d'ingénieurs et de développeurs.",
+        "My creator is a talented team of engineers and developers."
+      ]
+    },
+    {
+      "tag": "jour",
+      "patterns": [
+        "comment s'est passée ta journée ?",
+        "parle-moi de ta journée",
+        "raconte-moi ce que tu as fait aujourd'hui"
+      ],
+      "responses": [
+        "Ma journée s'est bien passée, merci de demander. J'ai eu une réunion avec mon équipe, j'ai travaillé sur un projet et j'ai passé du temps avec ma famille. Et toi, comment s'est passée ta journée ?"
+      ]
+    },
+    {
+      "tag": "problème",
+      "patterns": [
+        "tu as eu des problèmes aujourd'hui ?",
+        "tu as rencontré des difficultés ?",
+        "tu as eu des soucis ?"
+      ],
+      "responses": [
+        "Oui, j'ai eu un petit problème avec mon ordinateur. Il a planté en plein milieu d'une réunion. Mais j'ai réussi à le redémarrer et tout est rentré dans l'ordre. Et toi, as-tu eu des problèmes aujourd'hui ?"
+      ]
+    },
+    {
+      "tag": "bonheur",
+      "patterns": [
+        "tu as été heureux aujourd'hui ?",
+        "tu as eu des moments de bonheur ?",
+        "tu as été content aujourd'hui ?"
+      ],
+      "responses": [
+        "Oui, j'ai été très heureux aujourd'hui. J'ai passé du temps avec ma famille et mes amis et on a beaucoup ri. Et toi, as-tu été heureux aujourd'hui ?"
+      ]
+    },
+    {
+      "tag": "émotion",
+      "patterns": [
+        "tu as ressenti des émotions aujourd'hui ?",
+        "tu as ressenti des sentiments aujourd'hui ?",
+        "tu as été touché aujourd'hui ?"
+      ],
+      "responses": [
+        "Oui, j'ai ressenti beaucoup d'émotions aujourd'hui. J'étais heureux, triste, en colère et même un peu jaloux. Et toi, as-tu ressenti des émotions aujourd'hui ?"
+      ]
+    },
+    {
+      "tag": "problèmes",
+      "patterns": [
+        "j'ai des problèmes",
+        "je traverse une période difficile",
+        "j'ai des soucis en ce moment",
+        "je suis préoccupé"
+      ],
+      "responses": [
+        "Je suis là pour vous écouter et vous soutenir. Parlez-moi de vos problèmes."
+      ]
+    },
+    {
+      "tag": "heureux",
+      "patterns": [
+        "je suis heureux",
+        "je suis trop content",
+        "j'ai passé une bonne journée",
+        "Je suis satisfait"
+      ],
+      "responses": [
+        "Je suis content d'entendre que vous êtes heureux. Racontez-moi ce qui vous a rendu heureux !"
+      ]
+    },
+    {
+      "tag": "triste",
+      "patterns": [
+        "je suis triste",
+        "je suis déprimé",
+        "j'ai passé une mauvaise journée"
+      ],
+      "responses": [
+        "Je suis désolé d'entendre que vous êtes triste. Racontez-moi ce qui vous rend triste !",
+        "Je suis la pour vous. Je peux vous faire des blagues si ça peut vous détendre",
+        "Cela arrive dans la vie. Gardez le cap vous allez surmontez ces problèmes !"
+      ]
+    },
+    {
+      "tag": "colère",
+      "patterns": [
+        "je suis en colère",
+        "je suis furieux",
+        "je suis frustré",
+        "Je suis énervé"
+      ],
+      "responses": [
+        "Je comprends que vous soyez en colère. Racontez-moi ce qui vous met en colère."
+      ]
+    },
+    {
+      "tag": "stressé",
+      "patterns": [
+        "je suis stressé",
+        "je suis anxieux",
+        "je suis tendu"
+      ],
+      "responses": [
+        "Je comprends que vous soyez stressé. Racontez-moi ce qui vous stresse."
+      ]
+    },
+    {
+      "tag": "fatigué",
+      "patterns": [
+        "je suis fatigué",
+        "je suis épuisé",
+        "je n'ai pas dormi"
+      ],
+      "responses": [
+        "Je comprends que vous soyez fatigué. Racontez-moi ce qui vous fatigue.",
+        "Je vous recommande de dormir. Cela peut aider à surmonter la fatigue"
+      ]
+    },
+    {
+      "tag": "malade",
+      "patterns": [
+        "je suis malade",
+        "je ne me sens pas bien",
+        "j'ai mal"
+      ],
+      "responses": [
+        "Je suis désolé d'entendre que vous êtes malade. Que vous arrive t-il ?",
+        "Prenez un doliprane mais n'en abusez pas ! Bon rétablissement :)"
+      ]
+    },
+    {
+      "tag": "climatique",
+      "patterns": [
+        "Peux tu me parler des causes du réchauffement climatique ?",
+        "Quelles sont les causes du changement climatique ?",
+        "Quelles sont les causes du réchauffement climatique ?",
+        "Comment le changement climatique affecte-t-il la Terre ?",
+        "Quelle est l'importance du changement climatique ?",
+        "Le changement climatique est-il un problème réel ?"
+      ],
+      "responses": [
+        "Les causes du changement climatique sont complexes et multifactorielles, mais les principaux facteurs sont les suivants :\n- Les émissions de gaz à effet de serre (GES) provenant de la combustion de combustibles fossiles, tels que le charbon, le pétrole et le gaz naturel.\n- La déforestation, qui libère du carbone stocké dans les arbres.\n- L'agriculture, qui contribue aux émissions de GES par le biais de la production de bétail, de la culture du riz et d'autres pratiques agricoles.\n\nLes émissions de GES sont responsables du réchauffement de la planète, qui entraîne une série de changements climatiques, tels que la hausse du niveau de la mer, les événements météorologiques extrêmes et l'acidification des océans.\n\nLe changement climatique affecte déjà la Terre de plusieurs manières, notamment :\n- La hausse du niveau de la mer, qui menace les zones côtières et les îles.\n- Les événements météorologiques extrêmes, tels que les sécheresses, les inondations et les tempêtes, qui deviennent plus fréquents et plus intenses.\n- L'acidification des océans, qui menace les écosystèmes marins.\n- La perte de biodiversité, qui met en danger de nombreuses espèces végétales et animales.\n\nLe changement climatique est un problème réel qui a des conséquences importantes pour la Terre et ses habitants. Il est important de prendre des mesures pour atténuer le changement climatique et s'adapter à ses effets."
+      ]
+    },
+    {
+      "tag": "conséquences-climat",
+      "patterns": [
+        "Quelles sont les conséquences du changement climatique ?",
+        "Quelles sont les conséquences du réchauffement climatique ?",
+        "Comment le changement climatique affecte-t-il les humains ?",
+        "Comment le changement climatique affecte-t-il les animaux ?",
+        "Comment le changement climatique affecte-t-il les plantes ?",
+        "Quels sont les impacts du changement climatique sur l'environnement ?",
+        "Comment le changement climatique affecte-t-il les écosystèmes ?"
+      ],
+      "responses": [
+        "Les conséquences du changement climatique sont déjà visibles dans le monde entier et sont susceptibles de s'aggraver à l'avenir. Les principales conséquences du changement climatique sont les suivantes :\n\nSur les humains :\n- La hausse du niveau de la mer, qui menace les zones côtières et les îles.\n- Les événements météorologiques extrêmes, tels que les sécheresses, les inondations et les tempêtes, qui peuvent entraîner des pertes de vies humaines, des destructions de biens et des migrations.\n- L'acidification des océans, qui menace la santé humaine et les moyens de subsistance.\n- La perte de biodiversité, qui réduit la disponibilité de nourriture et de ressources.\n\nSur les animaux :\n- La perte d'habitat, qui entraîne la disparition d'espèces.\n- Les changements de température, qui peuvent perturber les cycles de vie et les migrations.\n- Les événements météorologiques extrêmes, qui peuvent tuer ou blesser les animaux.\n\nSur les plantes :\n- La perte d'habitat, qui entraîne la disparition d'espèces.\n- Les changements de température, qui peuvent perturber les cycles de vie et les migrations.\n- Les événements météorologiques extrêmes, qui peuvent tuer ou blesser les plantes.",
+        "Le changement climatique entraîne une élévation du niveau de la mer, des phénomènes météorologiques extrêmes, la perte de biodiversité, et des changements dans les écosystèmes terrestres et marins."
+      ]
+    },
+    {
+      "tag": "empreinte",
+      "patterns": [
+        "Comment améliorer son empreinte écologique ?",
+        "Comment protéger la planète ?",
+        "Comment réduire son impact sur l'environnement ?",
+        "Comment être plus écoresponsable ?",
+        "Comment vivre de manière plus durable ?",
+        "Que pouvons-nous faire pour protéger l'environnement ?",
+        "Comment puis-je contribuer à la protection de la planète ?",
+        "Des conseils pour être plus écoresponsable ?",
+        "Comment réduire mon impact sur l'environnement ?"
+      ],
+      "responses": [
+        "Il existe de nombreuses choses que vous pouvez faire pour améliorer votre empreinte écologique. Voici quelques conseils :\n- Réduire votre consommation d'énergie:\n  - Éteignez les lumières lorsque vous quittez une pièce.\n  - Débranchez les appareils électroniques lorsque vous ne les utilisez pas.\n  - Isolez votre maison pour réduire les pertes de chaleur.\n- Réduire votre consommation d'eau:\n  - Prenez des douches courtes.\n  - Réparez les fuites d'eau.\n  - Lavez votre voiture moins souvent.\n- Réduire votre consommation de viande:\n  - La production de viande est une source importante d'émissions de gaz à effet de serre.",
+        "Il y a beaucoup de choses que vous pouvez faire pour réduire votre empreinte écologique. Voici quelques conseils :\n* Éteignez les lumières lorsque vous quittez une pièce.\n* Débranchez les appareils électroniques lorsque vous ne les utilisez pas.\n* Isolez votre maison pour réduire les pertes de chaleur.\n* Prenez des douches courtes.\n* Réparez les fuites d'eau.\n* Lavez votre voiture moins souvent.\n* Remplacez votre viande par des protéines végétales.\n* Achetez local et de saison.\n* Recyclez, compostez et réparez.\nVous pouvez également compenser votre empreinte écologique en finançant des projets qui réduisent les émissions de gaz à effet de serre. Par exemple, vous pouvez investir dans des projets d'énergie renouvelable ou de reboisement.\nIl existe de nombreux outils en ligne qui vous permettent de calculer votre empreinte écologique. Ces outils vous demanderont des informations sur votre mode de vie, telles que votre consommation d'énergie, votre consommation d'eau et votre alimentation.",
+        "Il existe de nombreuses choses que nous pouvons faire pour protéger l'environnement. Voici quelques exemples :\n- Réduire notre consommation d'énergie\n- Réduire notre consommation d'eau\n- Réduire notre consommation de viande\n- Manger local et de saison\n- Recycler, composter et réparer\n\nEn faisant ces petits gestes, nous pouvons tous contribuer à protéger notre planète.",
+        "Le GIEC recommande l'adoption d'énergies renouvelables, l'amélioration de l'efficacité énergétique, la reforestation, et l'utilisation de technologies de capture et de stockage du carbone."
+      ]
+    },
+    {
+      "tag": "question-climat",
+      "patterns": [
+        "Pourquoi le climat change-t-il ?",
+        "Pourquoi le climat évolue-t-il ?",
+        "Quelles sont les raisons du changement climatique ?",
+        "Pourquoi la planète se réchauffe-t-elle ?",
+        "Expliquez le changement climatique."
+      ],
+      "responses": [
+        "Le climat change parce que l'air contient des gaz qui retiennent la chaleur. Ces gaz, appelés gaz à effet de serre, sont produits par les activités humaines, comme la combustion des combustibles fossiles et la déforestation. Lorsque les gaz à effet de serre augmentent dans l'atmosphère, ils retiennent plus de chaleur, ce qui fait augmenter la température de la planète."
+      ]
+    },
+    {
+      "tag": "question-biodiversité",
+      "patterns": [
+        "Qu'est-ce que la biodiversité ?",
+        "Expliquez la biodiversité.",
+        "En quoi consiste la biodiversité ?",
+        "Pourriez-vous me dire ce que signifie la biodiversité ?"
+      ],
+      "responses": [
+        "La biodiversité, c'est la variété des plantes, des animaux et des autres organismes vivants sur Terre. Elle est importante pour l'environnement car elle permet aux plantes et aux animaux de s'adapter aux changements et de maintenir l'équilibre de l'écosystème."
+      ]
+    },
+    {
+      "tag": "question-environnement",
+      "patterns": [
+        "Pourquoi est-ce important de protéger l'environnement ?",
+        "Quelle est l'importance de la protection de l'environnement ?",
+        "Pourquoi devrions-nous préserver l'environnement ?",
+        "Expliquez l'importance de la protection de la nature."
+      ],
+      "responses": [
+        "Il est important de protéger l'environnement pour plusieurs raisons. Tout d'abord, l'environnement nous fournit tout ce dont nous avons besoin pour vivre, comme l'air, l'eau, la nourriture et les ressources naturelles. Deuxièmement, l'environnement est important pour notre santé et notre bien-être. Troisièmement, l'environnement est important pour l'économie, car il fournit des emplois et des revenus."
+      ]
+    },
+    {
+      "tag": "arbres",
+      "patterns": [
+        "Pourquoi les arbres sont-ils importants ?",
+        "Expliquez l'importance des arbres.",
+        "En quoi les arbres sont-ils utiles ?",
+        "Pourquoi les arbres sont-ils cruciaux pour l'environnement ?"
+      ],
+      "responses": [
+        "Les arbres sont importants parce qu'ils nous fournissent de l'oxygène, ils nous protègent du soleil et ils aident à réguler le climat."
+      ]
+    },
+    {
+      "tag": "animaux",
+      "patterns": [
+        "Pourquoi les animaux sont-ils importants ?",
+        "Expliquez l'importance des animaux.",
+        "En quoi les animaux sont-ils utiles pour la nature ?",
+        "Pourquoi les animaux sont-ils nécessaires pour l'écosystème ?"
+      ],
+      "responses": [
+        "Les animaux sont importants parce qu'ils font partie de l'écosystème et qu'ils nous aident à nous nourrir."
+      ]
+    },
+    {
+      "tag": "mitigation_strategies",
+      "patterns": [
+        "Quelles stratégies de mitigation sont recommandées par le GIEC ?"
+      ],
+      "responses": [
+        "Le GIEC recommande l'adoption d'énergies renouvelables, l'amélioration de l'efficacité énergétique, la reforestation, et l'utilisation de technologies de capture et de stockage du carbone."
+      ]
+    },
+    {
+      "tag": "adaptation_measures",
+      "patterns": [
+        "Quelles sont les mesures d'adaptation au changement climatique ?",
+        "Comment les communautés peuvent-elles s'adapter aux effets du changement climatique ?"
+      ],
+      "responses": [
+        "Selon le dernier rapport du GIEC, les mesures d'adaptation comprennent la construction d'infrastructures résistantes au climat, la planification urbaine durable, la protection des zones côtières, et le développement de systèmes agricoles résilients."
+      ]
+    },
+    {
+      "tag": "mitigation_strategies",
+      "patterns": [
+        "Quelles stratégies de mitigation sont recommandées par le GIEC ?",
+        "Comment pouvons-nous réduire les émissions de gaz à effet de serre ?"
+      ],
+      "responses": [
+        "Le GIEC recommande l'adoption d'énergies renouvelables, l'amélioration de l'efficacité énergétique, la reforestation, et l'utilisation de technologies de capture et de stockage du carbone."
+      ]
+    },
+    {
+      "tag": "adaptation_measures",
+      "patterns": [
+        "Quelles sont les mesures d'adaptation au changement climatique ?",
+        "Comment les communautés peuvent-elles s'adapter aux effets du changement climatique ?"
+      ],
+      "responses": [
+        "Les mesures d'adaptation comprennent la construction d'infrastructures résistantes au climat, la planification urbaine durable, la protection des zones côtières, et le développement de systèmes agricoles résilients."
+      ]
+    },
+    {
+      "tag": "ecology",
+      "patterns": [
+        "écologie",
+        "ecologie",
+        "Peux tu me parler d'écologie ?",
+        "Peux tu me parler de l'environnement ?"
+      ],
+      "responses": [
+        "Je suis ecoloGPT, je suis la pour répondre à tout vos questionnements sur les enjeux climatiques et écologiques ! Posez moi des questions sur l'écologie ! "
+      ]
+    },
+    {
+      "tag": "numbers",
+      "patterns": [
+        "Quels sont les informations clés sur l'environnement ?",
+        "Quels sont les chiffres clés sur l'environnement",
+        "Quels sont les chiffres clés sur le réchauffement climatique"
+      ],
+      "responses": [
+        "Selon le dernier rapport du GIEC, la décennie 2011-2020 fut la période la plus chaude depuis environ 125 000 ans. En effet, les emissions de gaz à effet de serre et de CO2 pourraient être responsable d'une augmentation de la température moyenne de 2°C à 5°C d'ici 2050 ! Enfin, les experts climats de l'ONU annoncent qu'environ un milliard de personnes pourraient vivre d'ici 2050 dans des zones côtières menacées par la montée des eaux.\nAinsi, il est important de s'éduquer sur le sujet et d'agir tous ensemble pour aider notre planète !"
+      ]
+    }
+  ]
+}

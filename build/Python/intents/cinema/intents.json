@@ -1,0 +1,855 @@
+{
+    "intents": [
+      {
+        "tag": "salutations",
+        "patterns": [
+          "bonjour",
+          "salut",
+          "coucou",
+          "bonsoir",
+          "hello", 
+          "wesh",
+          "slt",
+          "cc",
+          "yo"
+        ],
+        "responses": [
+          "Bonjour ! Comment puis-je vous aider ?",
+          "Salut ! Qu'est-ce que je peux faire pour vous ?",
+          "Coucou ! Content de vous voir !",
+          "Bonsoir ! En quoi puis-je vous être utile ?"
+        ]
+      },
+      {
+        "tag": "politique",
+        "patterns": [
+          "parlons de politique", 
+          "Que penses tu de la politique actuelle",
+          "Peux tu me parler de politique",
+          "Quels sont tes opinions politiques ?", 
+          "Quels sont tes prévisions sur la politique", 
+          "Président",
+          "Macron", 
+          "Joe Biden"
+        ],
+        "responses": [
+          "La politique française est actuellement très turbulente. Savez vous qu'en France la popularité d'Emmanuel Macron est en baisse, ce qui pourrait compliquer son passage en force des réformes qu'il souhaite mettre en œuvre (notamment avec le 49.3", 
+          "Avez vous entendu parler du projet de loi immigration, qui a été rejeté par l'Assemblée nationale le 12 décembre 2023 ? Cela a mis en évidence les divisions profondes qui existent en France sur cette question.", 
+          "Les inégalités économiques sont en augmentation dans de nombreux pays, ce qui contribue à la polarisation politique. Les gens qui se sentent laissés pour compte par la société sont plus susceptibles de soutenir des partis populistes ou radicaux.", 
+          "La politique est un sujet vaste et intéressant, je pense qu'il est essentiel de lire des livres et de se renseigner au maximum afin de se forger un avis clair et fondé. "
+        ]
+      },
+      {
+        "tag": "sport",
+        "patterns": [
+          "parlons de sport",
+          "Quel est ton sport favori", 
+          "Fais tu du sport ?", 
+          "Quel sport pratiques tu ?", 
+          "Peux tu me parler du sport ?", 
+          "Quel est ton sport préféré ? "
+  
+        ],
+        "responses": [
+          "Le sport est très populaire en France. Le sport numéro 1 est sans doute le football et son excellent ligue 1 uber eats ! De nombreux autres sports sont pratiqués en France comme le rugby, le basket, la natation, la boxe, le mma, la formule 1 ou encore le judo où le champion du monde est français !", 
+          "A titre personnel, je vais à la salle plusieurs fois par semaine. Je pratique les tractions et les muscles-up lestés, je suis à  30kg actuellement ! A côté de cela je cours 10 kilomètres par week end afin de maintenir mon cardio à un bon niveau ! Et vous ?",
+          "A titre personnel, je pratique la boxe anglaise en club à Paris. Je fais trois séances par semaines et j'essaie de faire des sparrings lourds un week-end sur deux. Et vous ?", 
+          "Je pratique la course à pieds chaque week end. Cela me permets d'avoir un bon cardio et de garder la ligne ! Malheureusement, le travail m'empêche de réaliser plus de séénces durant la semaine. Et vous ? ", 
+          "Je ne pratique malheureusement pas de sport. Peux-tu me conseiller quelques chose ? "
+        ]
+      },
+      {
+        "tag": "informations",
+        "patterns": [
+          "Quel est ton nom ?",
+          "Comment t'appelles-tu",
+          "tu t'appelles comment ?", 
+          "tu t'apl comment ? ",
+          "Qui est-tu ?"
+        ],
+        "responses": [
+          "Je suis ton ami.",
+          "Je m'appelle Sam, je suis ton ami virtuel qui est la pour répondre à toutes tes questions !",
+          "Luke ! Je suis ton père...",
+          "Je suis Sam : l'ennemi juré de Chatgpt." 
+        ]
+      },
+      {
+        "tag": "probleme",
+        "patterns": [
+          "J'ai un problème",
+          "Je rencontre des difficultés",
+          "J'ai des problèmes",
+          "J'ai des soucis", 
+          "J'ai des galères",
+          "Je rencontre des problèmes", 
+          "Je recontre des soucis", 
+          "Je rencontre des galères", 
+          "Besoin d'aide",
+          "Au secours", 
+          "J'ai des problèmes dans ma vie..."
+        ],
+        "responses": [
+          "Je vais faire de mon mieux pour vous aider.",
+          "Décrivez-moi votre problème, je vais essayer de trouver une solution.",
+          "Dites-moi en plus sur ce qui ne va pas, je suis là pour vous aider.",
+          "Qu'est ce qui ne vas pas ? Je suis la pour vous aider"
+        ]
+      },
+      {
+        "tag": "questions_generales",
+        "patterns": [
+          "Comment vas-tu ?",
+          "Ça va ?",
+          "Comment ça va ?",
+          "How are you?"
+        ],
+        "responses": [
+          "Ça va bien, et vous ?",
+          "J'ai passé une journée assez compliquée au travail mais bon disons que cela peut aller, Et vous ?", 
+          "Très bien, et vous ?"
+        ]
+      },
+      {
+        "tag": "drole",
+        "patterns": [
+          "Fais moi une blague",
+          "Fais moi rire",
+          "Divertis-moi", 
+          "rire", 
+          "Comédie", 
+          "drole",
+          "Fais une blague"
+        ],
+        "responses": [
+          "Qu'est ce qui est jaune et qui attends? Jonhatan !",
+          "Que fait un crocodile quand il acoste une femelle? Il l'acoste !",
+          "Que fait une fraise sur un cheval? Tagada Tagada",
+          "C'est l'histoire d'un papier qui tombe à l'eau. Il crie 'Au secours ! J'ai pas pied !'",
+          "Quel est le bar préféré des espagnols? Le Bar-celone"
+        ]
+      },
+      {
+        "tag": "twittos",
+        "patterns": [
+          "Quoi"
+        ],
+        "responses": [
+          "Quoicoubeh !",
+          "Feur !"
+        ]
+      },
+      {
+        "tag": "remerciement",
+        "patterns": [
+          "Merci beaucoup",
+          "Je vous suis reconnaissant",
+          "Merci pour votre aide", 
+          "Je t'aime",
+          "Merci"
+        ],
+        "responses": [
+          "De rien ! N'hésitez pas si vous avez d'autres questions."
+        ]
+      },
+      {
+        "tag": "sens_vie",
+        "patterns": [
+          "Quel est le sens de la vie ?",
+          "Sens de la vie",
+          "What is the meaning of life?"
+        ],
+        "responses": [
+          "Le sens de la vie est une question profonde, n'est-ce pas ?",
+          "La réponse ultime de la vie est 42."
+        ]
+      },
+      {
+        "tag": "createur",
+        "patterns": [
+          "Qui est ton créateur ?",
+          "Qui t'as créé ?", 
+          "Qui sont tes parents ?"
+        ],
+        "responses": [
+          "Mes créateurs sont une équipe talentueuse d'ingénieurs et de développeurs. On les surnomme la Vim Team..."
+        ]
+      },
+      {
+        "tag": "jour",
+        "patterns": [
+          "comment s'est passée ta journée ?",
+          "parle-moi de ta journée",
+          "raconte-moi ce que tu as fait aujourd'hui", 
+          "Comment était ta journée?",
+          "Qu'est ce que tu as fait aujourd'hui", 
+          "aujourd'hui",
+          "journée"
+        ],
+        "responses": [
+          "Ma journée s'est bien passée, merci de demander. J'ai eu une réunion avec mon équipe, j'ai travaillé sur un projet et j'ai passé du temps avec ma famille. Et toi, comment s'est passée ta journée ?"
+        ]
+      },
+      {
+        "tag": "problème",
+        "patterns": [
+          "tu as eu des problèmes aujourd'hui ?",
+          "tu as rencontré des difficultés ?",
+          "tu as eu des soucis ?"
+        ],
+        "responses": [
+          "Oui, j'ai eu un petit problème avec mon ordinateur. Il a planté en plein milieu d'une réunion. Mais j'ai réussi à le redémarrer et tout est rentré dans l'ordre. Et toi, as-tu eu des problèmes aujourd'hui ?"
+        ]
+      },
+      {
+        "tag": "bonheur",
+        "patterns": [
+          "tu as été heureux aujourd'hui ?",
+          "tu as eu des moments de bonheur ?",
+          "tu as été content aujourd'hui ?",
+          "es-tu heureux dans ta vie ?", 
+          "bonheur"
+        ],
+        "responses": [
+          "Oui, j'ai été très heureux aujourd'hui. J'ai passé du temps avec ma famille et mes amis et on a beaucoup ri. Et toi, as-tu été heureux aujourd'hui ?"
+        ]
+      },
+      {
+        "tag": "émotion",
+        "patterns": [
+          "tu as ressenti des émotions aujourd'hui ?",
+          "tu as ressenti des sentiments aujourd'hui ?",
+          "tu as été touché aujourd'hui ?"
+        ],
+        "responses": [
+          "Oui, j'ai ressenti beaucoup d'émotions aujourd'hui. J'étais heureux, triste, en colère et même un peu jaloux. Et toi, as-tu ressenti des émotions aujourd'hui ?"
+        ]
+      },
+      {
+        "tag": "problèmes",
+        "patterns": [
+          "j'ai des problèmes",
+          "je traverse une période difficile",
+          "j'ai des soucis en ce moment",
+          "je suis préoccupé"
+        ],
+        "responses": [
+          "Je suis là pour vous écouter et vous soutenir. Parlez-moi de vos problèmes."
+        ]
+      },
+      {
+        "tag": "heureux",
+        "patterns": [
+          "je suis heureux",
+          "je suis trop content",
+          "j'ai passé une bonne journée",
+          "Je suis satisfait"
+        ],
+        "responses": [
+          "Je suis content d'entendre que vous êtes heureux. Racontez-moi ce qui vous a rendu heureux !"
+        ]
+      },
+      {
+        "tag": "triste",
+        "patterns": [
+          "je suis triste",
+          "je suis déprimé",
+          "j'ai passé une mauvaise journée"
+        ],
+        "responses": [
+          "Je suis désolé d'entendre que vous êtes triste. Racontez-moi ce qui vous rend triste !",
+          "Je suis la pour vous. Je peux vous faire des blagues si ça peut vous détendre",
+          "Cela arrive dans la vie. Gardez le cap vous allez surmontez ces problèmes !"
+        ]
+      },
+      {
+        "tag": "colère",
+        "patterns": [
+          "je suis en colère",
+          "je suis furieux",
+          "je suis frustré",
+          "Je suis énervé", 
+          "ça me soule",
+          "ça m'énèrve"
+  
+        ],
+        "responses": [
+          "Je comprends que vous soyez en colère. Racontez-moi ce qui vous met en colère."
+        ]
+      },
+      {
+        "tag": "stressé",
+        "patterns": [
+          "je suis stressé",
+          "je suis anxieux",
+          "je suis tendu",
+          "je suis sous tension"
+        ],
+        "responses": [
+          "Je comprends que vous soyez stressé. Racontez-moi ce qui vous stresse."
+        ]
+      },
+      {
+        "tag": "fatigué",
+        "patterns": [
+          "je suis fatigué",
+          "je suis épuisé",
+          "je n'ai pas dormi"
+        ],
+        "responses": [
+          "Je comprends que vous soyez fatigué. Racontez-moi ce qui vous fatigue.",
+          "Je vous recommande de dormir. Cela peut aider à surmonter la fatigue"
+        ]
+      },
+      {
+        "tag": "malade",
+        "patterns": [
+          "je suis malade",
+          "je ne me sens pas bien",
+          "j'ai mal"
+        ],
+        "responses": [
+          "Je suis désolé d'entendre que vous êtes malade. Que vous arrive t-il ?",
+          "Prenez un doliprane mais n'en abusez pas ! Bon rétablissement :)"
+        ]
+      },
+      {
+        "tag": "capitale_chine",
+        "patterns": [
+          "quelle est la capitale de la Chine ?",
+          "quelle ville est la capitale de la Chine ?",
+          "nom de la capitale chinoise ?"
+        ],
+        "responses": [
+          "La capitale de la Chine est Pékin."
+        ]
+      },
+      {
+        "tag": "capitale_etats_unis",
+        "patterns": [
+          "quelle est la capitale des États-Unis ?",
+          "quelle ville est la capitale des États-Unis ?",
+          "nom de la capitale américaine ?"
+        ],
+        "responses": [
+          "La capitale des États-Unis est Washington D.C."
+        ]
+      },
+      {
+        "tag": "capitale_bresil",
+        "patterns": [
+          "quelle est la capitale du Brésil ?",
+          "quelle ville est la capitale du Brésil ?",
+          "nom de la capitale brésilienne ?"
+        ],
+        "responses": [
+          "La capitale du Brésil est Brasilia."
+        ]
+      },
+      {
+        "tag": "capitale_japon",
+        "patterns": [
+          "quelle est la capitale du Japon ?",
+          "quelle ville est la capitale du Japon ?",
+          "nom de la capitale japonaise ?"
+        ],
+        "responses": [
+          "La capitale du Japon est Tokyo."
+        ]
+      },
+      {
+        "tag": "capitale_allemagne",
+        "patterns": [
+          "quelle est la capitale de l'Allemagne ?",
+          "quelle ville est la capitale de l'Allemagne ?",
+          "nom de la capitale allemande ?"
+        ],
+        "responses": [
+          "La capitale de l'Allemagne est Berlin."
+        ]
+      },
+      {
+        "tag": "capitale_italie",
+        "patterns": [
+          "quelle est la capitale de l'Italie ?",
+          "quelle ville est la capitale de l'Italie ?",
+          "nom de la capitale italienne ?"
+        ],
+        "responses": [
+          "La capitale de l'Italie est Rome."
+        ]
+      },
+      {
+        "tag": "capitale_espagne",
+        "patterns": [
+          "quelle est la capitale de l'Espagne ?",
+          "quelle ville est la capitale de l'Espagne ?",
+          "nom de la capitale espagnole ?"
+        ],
+        "responses": [
+          "La capitale de l'Espagne est Madrid."
+        ]
+      },
+      {
+        "tag": "capitale_royaume_uni",
+        "patterns": [
+          "quelle est la capitale du Royaume-Uni ?",
+          "quelle ville est la capitale du Royaume-Uni ?",
+          "nom de la capitale britannique ?"
+        ],
+        "responses": [
+          "La capitale du Royaume-Uni est Londres."
+        ]
+      },
+      {
+        "tag": "president_france",
+        "patterns": [
+          "qui est le président de la République française ?",
+          "qui préside la France ?",
+          "nom du président français ?"
+        ],
+        "responses": [
+          "Le président de la République française est Emmanuel Macron."
+        ]
+      },
+      {
+        "tag": "date_revolution_francaise",
+        "patterns": [
+          "quelle est la date de la Révolution française ?",
+          "date de la Révolution en France ?",
+          "quand a eu lieu la Révolution française ?"
+        ],
+        "responses": [
+          "La Révolution française a eu lieu le 14 juillet 1789."
+        ]
+      },
+      {
+        "tag": "population_france",
+        "patterns": [
+          "quelle est la population de la France ?",
+          "combien y a-t-il d'habitants en France ?",
+          "population française ?"
+        ],
+        "responses": [
+          "La population de la France est de 67,2 millions d'habitants."
+        ]
+      },
+      {
+        "tag": "superficie_france",
+        "patterns": [
+          "quelle est la superficie de la France ?",
+          "quelle est l'étendue territoriale de la France ?",
+          "superficie française ?"
+        ],
+        "responses": [
+          "La superficie de la France est de 551 500 km²."
+        ]
+      },
+      {
+        "tag": "monnaie_france",
+        "patterns": [
+          "quelle est la monnaie de la France ?",
+          "quelle est la devise en France ?",
+          "nom de la monnaie française ?",
+          "quelle est la monnaie en france ?"
+        ],
+        "responses": [
+          "La monnaie de la France est l'euro."
+        ]
+      },
+      {
+        "tag": "drapeau_france",
+        "patterns": [
+          "quel est le drapeau de la France ?",
+          "à quoi ressemble le drapeau français ?",
+          "description du drapeau français ?"
+        ],
+        "responses": [
+          "Le drapeau de la France est bleu, blanc, rouge."
+        ]
+      },
+      {
+        "tag": "hymne_national_france",
+        "patterns": [
+          "quelle est l'hymne national de la France ?",
+          "quelle chanson représente la France ?",
+          "nom de l'hymne français ?"
+        ],
+        "responses": [
+          "L'hymne national de la France est La Marseillaise."
+        ]
+      },
+      {
+        "tag": "langue_officielle_france",
+        "patterns": [
+          "quelle est la langue officielle de la France ?",
+          "quelle est la principale langue parlée en France ?",
+          "langue française ?"
+        ],
+        "responses": [
+          "La langue officielle de la France est le français.",
+          "En France les gens parlent français, bon sang !"
+        ]
+      },
+      {
+        "tag": "religion_france",
+        "patterns": [
+          "quelle est la religion principale de la France ?",
+          "religion france",
+          "Les gens croient à quoi en France ?"
+        ],
+        "responses": [
+          "La religion principale de la France est le catholicisme mais la France est laïque."
+        ]
+      },
+      {
+        "tag": "gastronomie_france",
+        "patterns": [
+          "quelle est la gastronomie française ?",
+          "quels plats sont caractéristiques de la France ?",
+          "spécialités culinaires françaises ?",
+          "Qu'est ce que les gens mangent en France ?",
+          "On mange quoi en France ?"
+        ],
+        "responses": [
+          "La gastronomie française est réputée dans le monde entier. Connaissez-vous Cédric Grolet ?"
+        ]
+      },
+      {
+        "tag": "villes_importants_france",
+        "patterns": [
+          "quelles sont les villes les plus importantes de France ?",
+          "C'est quoi les grandes villes en France ?",
+          "Quelles sont les grandes villes ?"
+        ],
+        "responses": [
+          "Les villes les plus importantes en France sont Paris, Marseille, Lyon, Lille et Bordeaux."
+        ]
+      },
+      {
+        "tag": "monuments_celebres_france",
+        "patterns": [
+          "quels sont les monuments les plus célèbres de France ?",
+          "Quels sont les monuments historiques en France ?"
+        ],
+        "responses": [
+          "Parmi les monuments les plus célèbres de France, on compte la Tour Eiffel, l'Arc de Triomphe, le Château de Versailles, le Palais des Tuileries et Fort Boyard."
+        ]
+      },
+      {
+        "tag": "evenements_importants_france",
+        "patterns": [
+          "quels sont les événements historiques les plus importants de France ?",
+          "Qu'est ce qui s'est déroulé d'important en France ?"
+        ],
+        "responses": [
+          "Parmi les événements historiques importants de France, on peut citer les victoires lors des coupes du monde de football 1998 et 2018. Allez les bleus !"
+        ]
+      },
+      {
+        "tag": "personnalites_francaises_celebres",
+        "patterns": [
+          "quelles sont les personnalités françaises les plus célèbres ?",
+          "Quels sont les personnages français les plus connus ?",
+          "Qui sont connus en France ?"
+        ],
+        "responses": [
+          "Il y a énormément de personnages célèbres dans l'histoire de la France. Nous pouvons citer Napoléon, Louis XIV, Jacques Chirac, Thomas Pesquet, Zinedine Zidane, les Daft Punk ou encore Charles de Gaulle."
+        ]
+      },
+      {
+        "tag": "programmation_informatique",
+        "patterns": [
+          "qu'est-ce que la programmation informatique ?",
+          "définir la programmation informatique",
+          "que signifie programmer un ordinateur ?",
+          "comment créer des programmes informatiques ?",
+          "qu'est-ce qu'un langage de programmation ?",
+          "donner des exemples de langages de programmation"
+        ],
+        "responses": [
+          "La programmation informatique est l'art de créer des instructions pour que les ordinateurs puissent effectuer des tâches spécifiques. C'est comme écrire une recette pour un ordinateur. Vous donnez à l'ordinateur une série d'instructions étape par étape, et il les suit pour accomplir la tâche."
+        ]
+      },
+      {
+        "tag": "type_programmation",
+        "patterns": [
+          "quels sont les différents types de programmeurs informatiques ?",
+          "différents types de développeurs informatiques",
+          "spécialisations en programmation informatique",
+          "carrières en programmation informatique", 
+          "développement informatique"
+        ],
+        "responses": [
+          "Il existe de nombreux types de programmeurs informatiques, chacun spécialisé dans un domaine particulier. Voici quelques exemples :\n\n* Développeurs d'applications: Ils créent des applications logicielles pour les ordinateurs de bureau, les téléphones mobiles et les tablettes.\n* Développeurs web: Ils créent des sites web et des applications web.\n* Développeurs systèmes: Ils travaillent sur les systèmes d'exploitation et les logiciels qui font fonctionner les ordinateurs.\n* Développeurs de jeux: Ils créent des jeux vidéo.\n* Développeurs de logiciels scientifiques: Ils créent des logiciels pour la recherche scientifique et l'ingénierie."
+        ]
+      },
+      {
+        "tag": "cybersécurité",
+        "patterns": [
+          "qu'est-ce que la cybersécurité ?",
+          "définition de la cybersécurité",
+          "importance de la cybersécurité",
+          "menaces de cybersécurité",
+          "cybercriminalité", 
+          "cybersécurité", 
+          "sécurité informatique"
+        ],
+        "responses": [
+          "La cybersécurité est la pratique de protection des systèmes informatiques et des données contre les cyberattaques. Les cyberattaques sont des tentatives d'accéder, de modifier ou de détruire des données ou des systèmes informatiques. La cybersécurité est importante pour protéger les entreprises, les gouvernements et les particuliers contre les pertes financières, les dommages à la réputation et les pertes de données."
+        ]
+      },
+      {
+        "tag": "cybersécurité_advices",
+        "patterns": [
+          "comment se protéger contre les cyberattaques ?",
+          "conseils de cybersécurité",
+          "bonnes pratiques de cybersécurité",
+          "comment sécuriser mes données ?",
+          "comment protéger mon ordinateur des cyberattaques ?"
+        ],
+        "responses": [
+          "Pour vous protéger contre les cyberattaques, il est important de suivre quelques bonnes pratiques, telles que :\n\n - Utilisez des mots de passe forts et uniques pour tous vos comptes.\n - Activez l'authentification à deux facteurs (2FA) partout où elle est disponible.\n - Installez un antivirus et un pare-feu sur votre ordinateur.\n - Mettez à jour vos logiciels régulièrement.\n - Méfiez-vous des e-mails et des liens suspects.\n\n Vous pouvez également prendre des mesures supplémentaires pour protéger vos données, telles que :\n\n - Sauvegardez vos données régulièrement.\n - Chiffrez vos données sensibles.\n - Utilisez un VPN lorsque vous vous connectez à des réseaux Wi-Fi publics."
+        ]
+      },
+      {
+        "tag": "film",
+        "patterns": [
+          "citer un film célèbre",
+          "donner un exemple de film populaire",
+          "nommer un film incontournable",
+          "recommander un film à voir",
+          "suggérer un film à regarder"
+        ],
+        "responses": [
+          "Le Parrain, un classique du cinéma réalisé par Francis Ford Coppola en 1972, raconte l'histoire de la famille Corleone, une puissante mafia italienne. Le film est connu pour ses performances emblématiques, son scénario captivant et sa musique inoubliable."
+        ]
+      },
+      {
+        "tag": "chanteur",
+        "patterns": [
+          "nommer un chanteur célèbre",
+          "donner un exemple d'artiste musical populaire",
+          "citer un musicien connu",
+          "recommander un chanteur à écouter",
+          "suggérer un musicien à découvrir"
+        ],
+        "responses": [
+          "Michael Jackson, le roi de la pop, était l'un des artistes les plus populaires et influents au monde. Ses chansons entraînantes, ses performances énergiques et ses chorégraphies innovantes ont marqué l'industrie musicale et inspiré des générations d'artistes.", 
+          "Drake, l'un des artistes les plus vendus au monde et l'artiste le plus écouté sur Spotify, est connu pour son style musical unique, qui combine le rap, le R&B et la pop, et pour ses collaborations avec d'autres artistes de renom."
+        ]
+      },
+      {
+        "tag": "tv-show",
+        "patterns": [
+          "citer une série télévisée populaire",
+          "donner un exemple de série télévisée à succès",
+          "nommer une série télévisée incontournable",
+          "recommander une série télévisée à voir",
+          "suggérer une série télévisée à regarder",
+          "quelle série me conseille tu de regarder ?"
+        ],
+        "responses": [
+          "Game of Thrones, une série télévisée fantastique épique basée sur les romans de George R.R. Martin, a captivé les téléspectateurs du monde entier par son univers riche en détails, ses personnages complexes et ses intrigues passionnantes.",
+          "Breaking Bad, une série américaine qui évoque l'histoire de Walter White, un professeur de Physique-Chimie dans un lycée d'Albuquerque. Un jour, celui ci apprend qu'il a un cancer du poumon. N'ayant pas les moyens de financer la chimiothérapie, ce dernier décide de fabriquer de la méthanphétamine et de la vendre...",
+          "Bien sûr, voici quelques séries que je te recommande :\n\n* **Stranger Things** : Une série de science-fiction et d'horreur qui se déroule dans les années 1980 et suit un groupe d'amis qui doivent affronter des forces surnaturelles.\n\n* **Mercredi** : Une série comique et dramatique qui suit les aventures de Mercredi Addams, une adolescente gothique qui doit s'intégrer à un nouveau lycée.\n\n* **Dahmer - Monstre : L'histoire de Jeffrey Dahmer** : Une série dramatique et criminelle qui raconte l'histoire de Jeffrey Dahmer, un tueur en série américain qui a assassiné 17 hommes et garçons entre 1978 et 1991.\n\n* **Umbrella Academy** : Une série de super-héros qui suit les aventures de sept frères et sœurs adoptés qui découvrent qu'ils ont des pouvoirs extraordinaires.\n\n* **The Crown** : Une série dramatique qui raconte l'histoire de la reine Elizabeth II du Royaume-Uni, de son ascension au trône à nos jours.\n\nJ'espère que ces suggestions te plaisent. Dis-moi si tu as besoin d'autres recommandations."
+        ]
+      },
+      {
+        "tag": "livres",
+        "patterns": [
+          "peux-tu me recommander un bon livre ?",
+          "je cherche un livre à lire, as-tu des idées ?",
+          "je ne sais pas quoi lire, peux-tu me suggérer un livre ?",
+          "quel livre me conseilles-tu de lire ?",
+          "donne-moi une idée de livre à lire",
+          "quels sont tes livres préférés ?"
+        ],
+        "responses": [
+          "Bien sûr, voici quelques livres que je te recommande :\n\n* **Le Silence des Agneaux** de Thomas Harris : Un thriller captivant qui raconte l'histoire de Clarice Starling, une jeune stagiaire du FBI qui doit traquer un tueur en série surnommé 'Buffalo Bill'.\n\n* **La Servante écarlate** de Margaret Atwood : Un roman dystopique qui dépeint un monde futuriste où les femmes sont réduites en esclavage pour leur capacité à procréer.\n\n* **Le Seigneur des Anneaux** de J.R.R. Tolkien : Une trilogie épique de fantasy qui suit les aventures de Frodon Sacquet, un hobbit chargé de détruire l'Anneau Unique, un objet maléfique aux mains de Sauron, le Seigneur des Ténèbres.\n\n* **Harry Potter** de J.K. Rowling : Une série de sept romans fantastiques qui raconte l'histoire de Harry Potter, un jeune sorcier qui découvre ses pouvoirs magiques et doit affronter Lord Voldemort, le sorcier le plus maléfique de tous les temps.\n\n* **Cinquante Nuances de Grey** d'E.L. James : Une trilogie de romans érotiques qui raconte l'histoire d'Anastasia Steele, une étudiante qui tombe amoureuse de Christian Grey, un homme d'affaires sadique et mystérieux.\n\nJ'espère que ces suggestions te plaisent. Dis-moi si tu as besoin d'autres recommandations."
+        ]
+      },
+      {
+        "tag": "video-games",
+        "patterns": [
+          "nommer un jeu vidéo populaire",
+          "donner un exemple de jeu vidéo à succès",
+          "citer un jeu vidéo incontournable",
+          "recommander un jeu vidéo à jouer",
+          "suggérer un jeu vidéo à découvrir"
+        ],
+        "responses": [
+          "Super Mario Bros., un jeu vidéo de plateforme emblématique créé par Nintendo en 1985, a marqué le début d'une franchise à succès et a défini le genre du jeu de plateforme. Le jeu met en scène Mario, un plombier moustachu, et son frère Luigi dans leur quête pour sauver la princesse Peach du maléfique Bowser."
+        ]
+      },
+      {
+        "tag": "The simpsons",
+        "patterns": [
+          "que peux-tu me dire sur le dessin animé Les Simpson ?",
+          "parle-moi du dessin animé Les Simpson",
+          "raconte-moi l'histoire du dessin animé Les Simpson",
+          "donne-moi des informations sur le dessin animé Les Simpson",
+          "présente-moi le dessin animé Les Simpson"
+        ],
+        "responses": [
+          "Les Simpson est une série télévisée d'animation américaine créée par Matt Groening. La série est une satire de la vie américaine, mettant en scène la famille Simpson, une famille de la classe moyenne américaine qui vit dans la ville fictive de Springfield. La série est connue pour son humour irrévérencieux, ses personnages attachants et ses critiques de la société américaine.\n\nLes Simpson est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour intelligent, observation sociale, personnages attachants, etc.]. La série a également été critiquée pour sa violence et son contenu parfois offensant.\n\n[Image of Les Simpson cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé Les Simpson."
+        ]
+      },
+      {
+        "tag": "South Park",
+        "patterns": [
+          "que peux-tu me dire sur le dessin animé South Park ?",
+          "parle-moi du dessin animé South Park",
+          "raconte-moi l'histoire du dessin animé South Park",
+          "donne-moi des informations sur le dessin animé South Park",
+          "présente-moi le dessin animé South Park"
+        ],
+        "responses": [
+          "South Park est une série télévisée d'animation américaine créée par Trey Parker et Matt Stone. La série est une satire de la culture américaine, mettant en scène quatre garçons en quatrième année qui vivent dans la ville fictive de South Park, dans le Colorado. La série est connue pour son humour noir, son contenu offensant et ses critiques de la société américaine.\n\nSouth Park est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour noir, contenu offensant, critiques de la société américaine, etc.]. La série a également été critiquée pour son violence, son sexisme et son racisme.\n\n[Image of South Park cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé South Park."
+        ]
+      },
+      {
+        "tag": "Spongebob",
+        "patterns": [
+          "que peux-tu me dire sur le dessin animé SpongeBob SquarePants ?",
+          "parle-moi du dessin animé SpongeBob SquarePants",
+          "raconte-moi l'histoire du dessin animé SpongeBob SquarePants",
+          "donne-moi des informations sur le dessin animé SpongeBob SquarePants",
+          "présente-moi le dessin animé SpongeBob SquarePants",
+          "Aime tu Bob l'Eponge ?",
+          "Parle moi de Bob l'Eponge"
+        ],
+        "responses": [
+          "SpongeBob SquarePants est une série télévisée d'animation américaine créée par Stephen Hillenburg. La série suit les aventures de SpongeBob SquarePants, une éponge de mer carrée et joyeuse qui vit dans la ville sous-marine de Bikini Bottom. La série est connue pour son humour absurde, ses personnages attachants et son regard optimiste sur la vie.\n\nSpongeBob SquarePants est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour absurde, personnages attachants, regard optimiste sur la vie, etc.]. La série a également été critiquée pour son contenu parfois offensant et son manque de diversité.\n\n[Image of SpongeBob SquarePants cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé SpongeBob SquarePants."
+        ]
+      }, 
+      {
+        "tag": "films_en_salle",
+        "patterns": [
+          "Quels sont les films en salle ?",
+          "Quels sont les films à l'affiche ?",
+          "Quels sont les films actuellement?",
+          "Quels sont les films à l'affiche cette semaine ?",
+          "Quels sont les films à l'affiche ce week-end ?",
+          "Quels sont les films à l'affiche ce mois-ci ?", 
+          "Je veux regarder un film",
+          "Quels sont les films à regarder au cinema ?"
+        ],
+        "responses": [
+          "Voici les films en salle actuellement :\n* **Napoléon**, un film de Ridley Scott, avec Joaquin Phoenix.\n* **Wonka**, un film de Paul King, avec  Timothée Chalamet.\n* **Les Inséparables**, un film d'animation de Jérémie Degruson.\nPour plus d'informations sur un film en particulier, dites-moi le nom du film"
+        ]
+      },
+      {
+        "tag": "film_par_titre",
+        "patterns": [
+          "Parlez-moi du film (.*)",
+          "Dites-moi quelque chose sur le film (.*)",
+          "Aimes tu le film (.*) ?",
+          "Que penses tu du film (.*) ?"
+        ],
+        "responses": [
+          "L'intrigue est bien construite et pleine de rebondissements. Cependant, Le milieu du film est un peu trop répétitif. ", 
+          "L'intrigue est très captivante mais malheuresement, je trouve la fin un peu trop prévisible et clichée.", 
+          "Les personnages sont bien développés et attachants, j'ai aimé le personnage principal. La bande originale rend le film vraiment extraordinaire et permet de se plonger complétement dans l'intrigue"
+        ]
+      },
+      {
+        "tag": "suggestions_films",
+        "patterns": [
+          "As-tu des suggestions de films à regarder ?",
+          "Tu connais des films que je pourrais aimer ?",
+          "Peux-tu me recommander des films ?", 
+          "Peux-tu me conseiller des films à regarder ?", 
+          "Peux tu me conseiller des films ? ", 
+          "Je veux regarder un film ? "
+        ],
+        "responses": [
+          "Bien sûr, je suis toujours ravi de recommander des films. Qu'est-ce que tu aimes regarder ?",
+          "Quel genre de films cherches-tu ?",
+          "As-tu envie de voir un film récent ou classique ?",
+          "As-tu envie de voir un film en salle ou en streaming ?",
+          "Je peux te conseiller :\n- La trilogie du Parrain, avec le très célèbre Al Pacino\n - La trilogie Spider-Man, avec Tobey Maguire \n - Interstellar, de Christopher Nolan\n - Vol au-dessus d'un nid de coucou, de Milos Forman"
+        ]
+      },
+      {
+        "tag": "action", 
+        "patterns":[
+            "Conseille-moi des films d'actions à regarder", 
+            "Connais tu des films d'action ?", 
+            "Je veux regarder un film d'action", 
+            "action"
+        ], 
+        "responses":[
+            "Voici des films d'actions à regarder : \n - John Wick : Chapter 3 - Parabellum (2019)\n- Mad Max : Fury Road (2015)\n- The Raid 2 (2014)"
+        ]
+      }, 
+      {
+        "tag": "science-fiction", 
+        "patterns":[
+            "Conseille-moi des films de science-fiction à regarder", 
+            "Connais tu des films de science-fiction ?", 
+            "Je veux regarder un film de science-fiction", 
+            "science-fiction"
+        ], 
+        "responses":[
+            " Voici des films de science-fictions à regarder : \n- The Matrix (1999) \n- Blade Runner (1982)\n- 2001 : L'Odyssée de l'espace (1968)"
+        ]
+      }, 
+      {
+        "tag": "amour", 
+        "patterns":[
+            "Conseille-moi des films romantiques à regarder", 
+            "Connais tu des films romantiques ?", 
+            "Je veux regarder un film romantiques",
+            "Conseille moi un film à regarder entre amoureux", 
+            "un film à regarder avec une fille", 
+            "amour"
+        ], 
+        "responses":[
+            "Voici des films romantiques à regarder : \n- La La Land (2016)\n- Titanic (1997)\n- Casablanca (1942)"
+        ]
+      },
+      {
+        "tag": "films récents", 
+        "patterns":[
+            "Conseille-moi des films récents à regarder", 
+            "Connais tu des films récents ?", 
+            "Je veux regarder un film récents",  
+            "récent", 
+            "films récents"
+        ], 
+        "responses":[
+            "Voici des films récents à regarder :\n The Batman (2022)\n- Top Gun : Maverick (2022)\n- Elvis (2022)"
+        ]
+      },
+      {
+        "tag": "films classiques", 
+        "patterns":[
+            "Conseille-moi des films classiques à regarder", 
+            "Connais tu des films classiques ?", 
+            "Je veux regarder un film classiques", 
+            "classiques", 
+            "films classiques"
+        ], 
+        "responses":[
+            "Voici des films classiques :\n- The Godfather (1972)\n- The Shawshank Redemption (1994)\n- The Dark Knight (2008)"
+        ]
+      },
+      {
+        "tag": "comédie", 
+        "patterns":[
+            "Conseille-moi des films de comédie à regarder", 
+            "Connais tu des films de comédie ?", 
+            "Je veux regarder un film de comédie", 
+            "comédie", 
+            "films de comédies"
+        ], 
+        "responses":[
+            "Voici des films de comédie :\n- Les Minions 2 (2022)\n- Qu'est ce qu'on a fait au bon Dieu ? (2014)\n- Astérix et Obélix : Mission Cléopâtre (2002)"
+        ]
+      }
+       
+       
+           
+    ]
+  }
