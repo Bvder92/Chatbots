@@ -742,7 +742,7 @@
       {
         "tag": "film_par_titre",
         "patterns": [
-          "Parlez-moi du film (.*)",
+          "Parle-moi du film (.*)",
           "Dites-moi quelque chose sur le film (.*)",
           "Aimes tu le film (.*) ?",
           "Que penses tu du film (.*) ?"

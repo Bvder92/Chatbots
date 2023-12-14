@@ -10,7 +10,7 @@ class PostController extends Controller
     public function store(){
 
         $validated = request()->validate([
-            'content' => 'required|min:2|max:255'
+            'content' => 'required|min:2|max:500'
         ]);
         $validated['user_id'] = auth()->id();
 
@@ -48,7 +48,7 @@ class PostController extends Controller
         }
 
         $validated = request()->validate([
-            'content' => 'required|min:2|max:255'
+            'content' => 'required|min:2|max:500'
         ]);
 
         $id->update($validated);

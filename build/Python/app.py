@@ -83,12 +83,12 @@ def get_response(input, bot_name):
 
     # parsing message et génération réponse
     if prob.item() > 0.7:
-        if info_type:
-            for intent in intents['intents']:
-                if tag == intent["tag"]:
-                    if info_type in intent['responses']:
-                        return random.choice(intent['responses'][info_type])
-        else:
+        #if info_type:
+        #    for intent in intents['intents']:
+        #      if tag == intent["tag"]:
+        #            if info_type in intent['responses']:
+        #                return random.choice(intent['responses'][info_type])
+        #else:
             for intent in intents['intents']:
                 if tag == intent["tag"]:
                     return random.choice(intent['responses'])
