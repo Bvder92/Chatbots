@@ -65,7 +65,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); // lo
 Route::group(['prefix' => 'users/', 'as' => 'users.', 'middleware' => ['auth']], function () {
     Route::get('/{id}', [UserController::class, 'show'])->name('show');
     Route::get('/{id}/edit', [UserController::class, 'edit'])->name('edit');
-    Route::put('/{id}/', [UserController::class, 'update'])->name('update');
+    Route::put('/{id}', [UserController::class, 'update'])->name('update');
 });
 
 // Abonnements:

@@ -11,7 +11,7 @@
                     <p>
                         {{ message.message }}
                     </p>
-                    <p class="text-sm text-gray-500">{{ message.created_at }}</p>
+                    <p class="text-sm text-gray-500"><i class="ri-time-line"></i>{{ message.created_at }}</p>
                 </div>
             </div>
         </li>

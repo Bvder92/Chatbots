@@ -20,7 +20,7 @@
 
                     <div class="overflow-y-scroll h-full space-y-3 px-8">
                         @foreach ($users as $user)
-                            <div class="p-6 bg-normal rounded-lg flex items-center space-x-6">
+                            <div class="p-6 bg-normal rounded-lg flex items-center space-x-6 font-semibold text-lg">
 
                                 <div class="h-12 w-12"><img src="{{ $user->getImageURL() }}" alt="" class="rounded-full"></div>
                                 <span><a href="{{ route('chat.chatbox', $user) }}">{{ $user->name }}</a></span>

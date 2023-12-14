@@ -140,7 +140,7 @@
 
                             <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                                 Vous avez déjà un compte?
-                                <a href="#" class="text-gray-700 underline">Connection</a>.
+                                <a href="{{ route('login') }}" class="text-gray-700 underline">Connection</a>
                             </p>
                         </div>
                     </form>

@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
-    <div class="py-24 container-fluid ">
-        <div class="grid grid-cols-4">
-            <div class="">
+    <div class="pt-20 h-full">
+        <div class="grid grid-cols-4 h-full pb-12">
+            <div class="h-full">
                 <div class="fixed w-1/4 ">
-                    <div class="mx-4 shadow-lg rounded-xl">
+                    <div class=" mx-4 shadow-lg rounded-xl bg-normal">
                     @include('include.sidebar')
                     </div>
                 </div>
             </div>
 
-            <div class="container rounded-xl shadow-lg col-span-2">
-                <div class="grid grid-cols-1 gap-4 p-2 ">
+            <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden h-full">
+                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
 
                     @include('include.success-message')
                     @if ($editing ?? false)

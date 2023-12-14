@@ -11,14 +11,14 @@
             </div>
 
             <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden h-full">
-                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
-
-                    @include('include.success-message')
-
                     @if($feed ?? false)
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Feed </div>
                     @else
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Accueil</div>
+                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
+
+                    @include('include.success-message')
+
 
                     @endif
                     <div class="overflow-y-scroll h-full space-y-3">
