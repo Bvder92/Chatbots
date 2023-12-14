@@ -33,22 +33,22 @@ def infer_information_type(input):
     phrases = nltk.sent.tokenize(input)
 
     info_type_mapping = {
-        "quoi": "definition", 
-        "qu'est": "définition", 
-        "quand": "date", 
-        "où": "lieu", 
-        "qui": "personne", 
-        "pourquoi": "raison", 
+        "quoi": "definition",
+        "qu'est": "définition",
+        "quand": "date",
+        "où": "lieu",
+        "qui": "personne",
+        "pourquoi": "raison",
         "comment": "procédure"
     }
 
     info_type= None
-    for keyword in keywords: 
-        if keyword in info_type_mapping: 
+    for keyword in keywords:
+        if keyword in info_type_mapping:
             info_type = info_type_mapping[keyword]
             break
-    for phrases in phrases: 
-        if phrases.lower() in info_type_mapping: 
+    for phrases in phrases:
+        if phrases.lower() in info_type_mapping:
             info_type = info_type_mapping[phrase.lower()]
             break
     return info_type

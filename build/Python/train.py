@@ -1,3 +1,5 @@
+import sys
+import os
 import numpy as np
 import random
 import json
@@ -11,7 +13,11 @@ from nltk_utils import bag_of_words, tokenize, stem, is_question
 from model import NeuralNet
 #from transformers import pipeline
 
-with open('intents.json', 'r') as f:
+dossier = sys.argv[1]
+intents_path = os.path.join("intents", dossier)
+chemin_complet = os.path.abspath(intents_path)
+json_path = os.path.join(chemin_complet, 'intents.json')
+with open(json_path, 'r') as f:
     intents = json.load(f)
 
 all_words = []
@@ -28,7 +34,7 @@ def get_positive_examples(intents):
 
 def get_negative_examples(positive_examples):
     negative_examples = []
-    for question, tag in positive_examples: 
+    for question, tag in positive_examples:
         for _ in range(10):
             negative_example = generate_negative_example(question, all_words, tags)
             negative_examples.append(negative_example)
@@ -51,12 +57,12 @@ def generate_negative_example(question, all_words, tags):
         current_similarity = sentence_bleu(positive_question, new_question)
         if current_similarity > similarity:
             similarity = current_similarity
-        
+
     if similarity < 0.75:
         tag = random.choice(tags)
         return(new_question, tag)
     else:
-        return False 
+        return False
 
 
 for intent in intents['intents']:
@@ -172,15 +178,14 @@ data = {
 "all_words": all_words,
 "tags": tags
 }
- 
+
 positive_examples = get_positive_examples(intents)
 negative_examples = get_negative_examples(positive_examples)
 
     # Save the negative examples
 with open('data_negative.json', 'w') as f:
     json.dump(negative_examples, f)
-
-FILE = "data.pth"
+FILE = os.path.join(chemin_complet, 'data.pth')
 torch.save(data, FILE)
 
 print(f'Entrainement terminé. Modèle enregistré dans {FILE}')

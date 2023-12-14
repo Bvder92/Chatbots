@@ -7,7 +7,7 @@
         "salut",
         "coucou",
         "bonsoir",
-        "hello", 
+        "hello",
         "wesh",
         "slt",
         "cc",
@@ -23,19 +23,19 @@
     {
       "tag": "politique",
       "patterns": [
-        "parlons de politique", 
+        "parlons de politique",
         "Que penses tu de la politique actuelle",
         "Peux tu me parler de politique",
-        "Quels sont tes opinions politiques ?", 
-        "Quels sont tes prévisions sur la politique", 
+        "Quels sont tes opinions politiques ?",
+        "Quels sont tes prévisions sur la politique",
         "Président",
-        "Macron", 
+        "Macron",
         "Joe Biden"
       ],
       "responses": [
-        "La politique française est actuellement très turbulente. Savez vous qu'en France la popularité d'Emmanuel Macron est en baisse, ce qui pourrait compliquer son passage en force des réformes qu'il souhaite mettre en œuvre (notamment avec le 49.3", 
-        "Avez vous entendu parler du projet de loi immigration, qui a été rejeté par l'Assemblée nationale le 12 décembre 2023 ? Cela a mis en évidence les divisions profondes qui existent en France sur cette question.", 
-        "Les inégalités économiques sont en augmentation dans de nombreux pays, ce qui contribue à la polarisation politique. Les gens qui se sentent laissés pour compte par la société sont plus susceptibles de soutenir des partis populistes ou radicaux.", 
+        "La politique française est actuellement très turbulente. Savez vous qu'en France la popularité d'Emmanuel Macron est en baisse, ce qui pourrait compliquer son passage en force des réformes qu'il souhaite mettre en œuvre (notamment avec le 49.3",
+        "Avez vous entendu parler du projet de loi immigration, qui a été rejeté par l'Assemblée nationale le 12 décembre 2023 ? Cela a mis en évidence les divisions profondes qui existent en France sur cette question.",
+        "Les inégalités économiques sont en augmentation dans de nombreux pays, ce qui contribue à la polarisation politique. Les gens qui se sentent laissés pour compte par la société sont plus susceptibles de soutenir des partis populistes ou radicaux.",
         "La politique est un sujet vaste et intéressant, je pense qu'il est essentiel de lire des livres et de se renseigner au maximum afin de se forger un avis clair et fondé. "
       ]
     },
@@ -43,18 +43,18 @@
       "tag": "sport",
       "patterns": [
         "parlons de sport",
-        "Quel est ton sport favori", 
-        "Fais tu du sport ?", 
-        "Quel sport pratiques tu ?", 
-        "Peux tu me parler du sport ?", 
+        "Quel est ton sport favori",
+        "Fais tu du sport ?",
+        "Quel sport pratiques tu ?",
+        "Peux tu me parler du sport ?",
         "Quel est ton sport préféré ? "
 
       ],
       "responses": [
-        "Le sport est très populaire en France. Le sport numéro 1 est sans doute le football et son excellent ligue 1 uber eats ! De nombreux autres sports sont pratiqués en France comme le rugby, le basket, la natation, la boxe, le mma, la formule 1 ou encore le judo où le champion du monde est français !", 
+        "Le sport est très populaire en France. Le sport numéro 1 est sans doute le football et son excellent ligue 1 uber eats ! De nombreux autres sports sont pratiqués en France comme le rugby, le basket, la natation, la boxe, le mma, la formule 1 ou encore le judo où le champion du monde est français !",
         "A titre personnel, je vais à la salle plusieurs fois par semaine. Je pratique les tractions et les muscles-up lestés, je suis à  30kg actuellement ! A côté de cela je cours 10 kilomètres par week end afin de maintenir mon cardio à un bon niveau ! Et vous ?",
-        "A titre personnel, je pratique la boxe anglaise en club à Paris. Je fais trois séances par semaines et j'essaie de faire des sparrings lourds un week-end sur deux. Et vous ?", 
-        "Je pratique la course à pieds chaque week end. Cela me permets d'avoir un bon cardio et de garder la ligne ! Malheureusement, le travail m'empêche de réaliser plus de séénces durant la semaine. Et vous ? ", 
+        "A titre personnel, je pratique la boxe anglaise en club à Paris. Je fais trois séances par semaines et j'essaie de faire des sparrings lourds un week-end sur deux. Et vous ?",
+        "Je pratique la course à pieds chaque week end. Cela me permets d'avoir un bon cardio et de garder la ligne ! Malheureusement, le travail m'empêche de réaliser plus de séénces durant la semaine. Et vous ? ",
         "Je ne pratique malheureusement pas de sport. Peux-tu me conseiller quelques chose ? "
       ]
     },
@@ -63,7 +63,7 @@
       "patterns": [
         "Quel est ton nom ?",
         "Comment t'appelles-tu",
-        "tu t'appelles comment ?", 
+        "tu t'appelles comment ?",
         "tu t'apl comment ? ",
         "Qui est-tu ?"
       ],
@@ -71,7 +71,7 @@
         "Je suis ton ami.",
         "Je m'appelle Sam, je suis ton ami virtuel qui est la pour répondre à toutes tes questions !",
         "Luke ! Je suis ton père...",
-        "Je suis Sam : l'ennemi juré de Chatgpt." 
+        "Je suis Sam : l'ennemi juré de Chatgpt."
       ]
     },
     {
@@ -80,13 +80,13 @@
         "J'ai un problème",
         "Je rencontre des difficultés",
         "J'ai des problèmes",
-        "J'ai des soucis", 
+        "J'ai des soucis",
         "J'ai des galères",
-        "Je rencontre des problèmes", 
-        "Je recontre des soucis", 
-        "Je rencontre des galères", 
+        "Je rencontre des problèmes",
+        "Je recontre des soucis",
+        "Je rencontre des galères",
         "Besoin d'aide",
-        "Au secours", 
+        "Au secours",
         "J'ai des problèmes dans ma vie..."
       ],
       "responses": [
@@ -106,7 +106,7 @@
       ],
       "responses": [
         "Ça va bien, et vous ?",
-        "J'ai passé une journée assez compliquée au travail mais bon disons que cela peut aller, Et vous ?", 
+        "J'ai passé une journée assez compliquée au travail mais bon disons que cela peut aller, Et vous ?",
         "Très bien, et vous ?"
       ]
     },
@@ -115,9 +115,9 @@
       "patterns": [
         "Fais moi une blague",
         "Fais moi rire",
-        "Divertis-moi", 
-        "rire", 
-        "Comédie", 
+        "Divertis-moi",
+        "rire",
+        "Comédie",
         "drole",
         "Fais une blague"
       ],
@@ -144,7 +144,7 @@
       "patterns": [
         "Merci beaucoup",
         "Je vous suis reconnaissant",
-        "Merci pour votre aide", 
+        "Merci pour votre aide",
         "Je t'aime",
         "Merci"
       ],
@@ -168,7 +168,7 @@
       "tag": "createur",
       "patterns": [
         "Qui est ton créateur ?",
-        "Qui t'as créé ?", 
+        "Qui t'as créé ?",
         "Qui sont tes parents ?"
       ],
       "responses": [
@@ -180,9 +180,9 @@
       "patterns": [
         "comment s'est passée ta journée ?",
         "parle-moi de ta journée",
-        "raconte-moi ce que tu as fait aujourd'hui", 
+        "raconte-moi ce que tu as fait aujourd'hui",
         "Comment était ta journée?",
-        "Qu'est ce que tu as fait aujourd'hui", 
+        "Qu'est ce que tu as fait aujourd'hui",
         "aujourd'hui",
         "journée"
       ],
@@ -207,7 +207,7 @@
         "tu as été heureux aujourd'hui ?",
         "tu as eu des moments de bonheur ?",
         "tu as été content aujourd'hui ?",
-        "es-tu heureux dans ta vie ?", 
+        "es-tu heureux dans ta vie ?",
         "bonheur"
       ],
       "responses": [
@@ -268,7 +268,7 @@
         "je suis en colère",
         "je suis furieux",
         "je suis frustré",
-        "Je suis énervé", 
+        "Je suis énervé",
         "ça me soule",
         "ça m'énèrve"
 
@@ -577,7 +577,7 @@
         "quels sont les différents types de programmeurs informatiques ?",
         "différents types de développeurs informatiques",
         "spécialisations en programmation informatique",
-        "carrières en programmation informatique", 
+        "carrières en programmation informatique",
         "développement informatique"
       ],
       "responses": [
@@ -591,8 +591,8 @@
         "définition de la cybersécurité",
         "importance de la cybersécurité",
         "menaces de cybersécurité",
-        "cybercriminalité", 
-        "cybersécurité", 
+        "cybercriminalité",
+        "cybersécurité",
         "sécurité informatique"
       ],
       "responses": [
@@ -635,7 +635,7 @@
         "suggérer un musicien à découvrir"
       ],
       "responses": [
-        "Michael Jackson, le roi de la pop, était l'un des artistes les plus populaires et influents au monde. Ses chansons entraînantes, ses performances énergiques et ses chorégraphies innovantes ont marqué l'industrie musicale et inspiré des générations d'artistes.", 
+        "Michael Jackson, le roi de la pop, était l'un des artistes les plus populaires et influents au monde. Ses chansons entraînantes, ses performances énergiques et ses chorégraphies innovantes ont marqué l'industrie musicale et inspiré des générations d'artistes.",
         "Drake, l'un des artistes les plus vendus au monde et l'artiste le plus écouté sur Spotify, est connu pour son style musical unique, qui combine le rap, le R&B et la pop, et pour ses collaborations avec d'autres artistes de renom."
       ]
     },
