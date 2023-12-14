@@ -66,14 +66,14 @@ class CheckPostsCommand extends Command
                 $this->info('** Post has ' . count($comments) . ' comments.');
                 $this->info('** ' . count($botComments) . ' By bot Users.');
 
-                //si le post a des commentaires de bot:
+                //si le post a déjà des commentaires de bot: on annule
                 if (count($botComments) > 1) {
                     $this->info('*** Skipping... ***');
                     continue;
                 }
             }
             $bot = new ChatBotAPIController();
-            $response = $bot->getResponse($post->content);
+            $response = $bot->getResponse($post->content, $botUser->name);
             $comment->botStore($post, $response, User::find($post->user_id));
 
         }

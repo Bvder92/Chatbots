@@ -10,7 +10,39 @@ use Illuminate\Http\Request;
 class ChatBotAPIController extends Controller
 {
     // return
-    public function getResponse(string $message)
+    // public function getResponse(string $message)
+    // {
+    //     // Créer une instance du client Guzzle
+    //     $client = new Client();
+
+    //     // URL du service Python Flask
+    //     $url = 'python:5000/api/chatbot';
+
+    //     // Données à envoyer dans la requête POST
+    //     $data = [
+    //         'message' => $message,
+    //     ];
+
+    //     try {
+    //         // Effectuer la requête HTTP POST vers le service Python
+    //         $response = $client->post($url, [
+    //             'json' => $data, // Utiliser 'json' pour envoyer les données en JSON
+    //         ]);
+
+    //         // Récupérer le contenu de la réponse
+    //         $contenu = $response->getBody()->getContents();
+
+    //         $botResponse = json_decode($contenu, true);
+    //         $botResponse = $botResponse['response'] ?? "Erreur: aucune réponse";
+    //         return $botResponse;
+
+    //         // Exemple : retourner le contenu dans la réponse de votre Laravel
+    //     } catch (\Exception $e) {
+    //         // Gérer les erreurs, par exemple en renvoyant un message d'erreur
+    //         return response()->json(['err' => $e->getMessage()], 500);
+    //     }
+    // }
+    public function getResponse(string $message, string $bot_name)
     {
         // Créer une instance du client Guzzle
         $client = new Client();
@@ -21,6 +53,7 @@ class ChatBotAPIController extends Controller
         // Données à envoyer dans la requête POST
         $data = [
             'message' => $message,
+            'bot_name' => $bot_name,
         ];
 
         try {

@@ -40,7 +40,7 @@ class MessageSentListener implements ShouldQueue
             //usleep(300000);
             sleep(2);
             $bot = new ChatBotAPIController();
-            $answer = $bot->getResponse($this->message->message);
+            $answer = $bot->getResponse($this->message->message, $this->recipient->name);
 
             $message = Message::create([
                 'user_id' => $this->recipient->id,
