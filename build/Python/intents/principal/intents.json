@@ -7,6 +7,7 @@
         "salut",
         "coucou",
         "bonsoir",
+        "hello",
         "wesh",
         "slt",
         "cc",
@@ -16,75 +17,45 @@
         "Bonjour ! Comment puis-je vous aider ?",
         "Salut ! Qu'est-ce que je peux faire pour vous ?",
         "Coucou ! Content de vous voir !",
-        "Bonsoir ! En quoi puis-je vous être utile ?",
-        "Yo mec, la forme ?"
-      ]
-    },
-    {
-      "tag": "questions",
-      "patterns": [
-        "quel est la capitale de la France ?",
-        "quelle est la population de la France ?",
-        "quelle est la superficie de la France ?"
-      ],
-      "responses": [
-        "Le capital de la France est Paris.",
-        "La population de la France est d'environ 67 millions d'habitants.",
-        "La superficie de la France est de 551 695 kilomètres carrés."
+        "Bonsoir ! En quoi puis-je vous être utile ?"
       ]
     },
     {
       "tag": "politique",
       "patterns": [
-        "parlons de politique"
+        "parlons de politique",
+        "Que penses tu de la politique actuelle",
+        "Peux tu me parler de politique",
+        "Quels sont tes opinions politiques ?",
+        "Quels sont tes prévisions sur la politique",
+        "Président",
+        "Macron",
+        "Joe Biden"
       ],
       "responses": [
-        "La politique française est actuellement très turbulente."
+        "La politique française est actuellement très turbulente. Savez vous qu'en France la popularité d'Emmanuel Macron est en baisse, ce qui pourrait compliquer son passage en force des réformes qu'il souhaite mettre en œuvre (notamment avec le 49.3",
+        "Avez vous entendu parler du projet de loi immigration, qui a été rejeté par l'Assemblée nationale le 12 décembre 2023 ? Cela a mis en évidence les divisions profondes qui existent en France sur cette question.",
+        "Les inégalités économiques sont en augmentation dans de nombreux pays, ce qui contribue à la polarisation politique. Les gens qui se sentent laissés pour compte par la société sont plus susceptibles de soutenir des partis populistes ou radicaux.",
+        "La politique est un sujet vaste et intéressant, je pense qu'il est essentiel de lire des livres et de se renseigner au maximum afin de se forger un avis clair et fondé. "
       ]
     },
     {
       "tag": "sport",
       "patterns": [
-        "parlons de sport"
+        "parlons de sport",
+        "Quel est ton sport favori",
+        "Fais tu du sport ?",
+        "Quel sport pratiques tu ?",
+        "Peux tu me parler du sport ?",
+        "Quel est ton sport préféré ? "
+
       ],
       "responses": [
-        "Le sport est très populaire en France."
-      ]
-    },
-    {
-      "tag": "cinema",
-      "patterns": [
-        "parlons de cinéma"
-      ],
-      "responses": [
-        "Le cinéma français est très apprécié dans le monde entier."
-      ]
-    },
-    {
-      "tag": "musique",
-      "patterns": [
-        "parlons de musique"
-      ],
-      "responses": [
-        "La musique française est très variée."
-      ]
-    },
-    {
-      "tag": "litterature",
-      "patterns": [
-        "parlons de littérature"
-      ],
-      "responses": [
-        "La littérature française est une des plus importantes du monde. As-tu lu les Misérables ?"
-      ]
-    },
-    {
-      "tag": "culture",
-      "patterns": [
-        "parlons de culture"
-      ],
-      "responses": [
-        "La culture française est très riche et diversifiée."
+        "Le sport est très populaire en France. Le sport numéro 1 est sans doute le football et son excellent ligue 1 uber eats ! De nombreux autres sports sont pratiqués en France comme le rugby, le basket, la natation, la boxe, le mma, la formule 1 ou encore le judo où le champion du monde est français !",
+        "A titre personnel, je vais à la salle plusieurs fois par semaine. Je pratique les tractions et les muscles-up lestés, je suis à  30kg actuellement ! A côté de cela je cours 10 kilomètres par week end afin de maintenir mon cardio à un bon niveau ! Et vous ?",
+        "A titre personnel, je pratique la boxe anglaise en club à Paris. Je fais trois séances par semaines et j'essaie de faire des sparrings lourds un week-end sur deux. Et vous ?",
+        "Je pratique la course à pieds chaque week end. Cela me permets d'avoir un bon cardio et de garder la ligne ! Malheureusement, le travail m'empêche de réaliser plus de séénces durant la semaine. Et vous ? ",
+        "Je ne pratique malheureusement pas de sport. Peux-tu me conseiller quelques chose ? "
       ]
     },
     {
@@ -92,14 +63,15 @@
       "patterns": [
         "Quel est ton nom ?",
         "Comment t'appelles-tu",
-        "Où êtes-vous situé ?",
-        "Quels services proposez-vous ?"
+        "tu t'appelles comment ?",
+        "tu t'apl comment ? ",
+        "Qui est-tu ?"
       ],
       "responses": [
-        "Je suis ton ami",
-        "Je suis partout où vous avez besoin de moi.",
-        "Je suis ici pour répondre à vos questions.",
-        "Je sui partout."
+        "Je suis ton ami.",
+        "Je m'appelle Sam, je suis ton ami virtuel qui est la pour répondre à toutes tes questions !",
+        "Luke ! Je suis ton père...",
+        "Je suis Sam : l'ennemi juré de Chatgpt."
       ]
     },
     {
@@ -107,13 +79,21 @@
       "patterns": [
         "J'ai un problème",
         "Je rencontre des difficultés",
+        "J'ai des problèmes",
+        "J'ai des soucis",
+        "J'ai des galères",
+        "Je rencontre des problèmes",
+        "Je recontre des soucis",
+        "Je rencontre des galères",
         "Besoin d'aide",
-        "Au secours"
+        "Au secours",
+        "J'ai des problèmes dans ma vie..."
       ],
       "responses": [
         "Je vais faire de mon mieux pour vous aider.",
         "Décrivez-moi votre problème, je vais essayer de trouver une solution.",
-        "Dites-moi en plus sur ce qui ne va pas, je suis là pour vous aider."
+        "Dites-moi en plus sur ce qui ne va pas, je suis là pour vous aider.",
+        "Qu'est ce qui ne vas pas ? Je suis la pour vous aider"
       ]
     },
     {
@@ -125,9 +105,9 @@
         "How are you?"
       ],
       "responses": [
-        "Je vais bien, merci ! Comment puis-je vous aider ?",
         "Ça va bien, et vous ?",
-        "Tout va bien de mon côté, comment puis-je vous assister ?"
+        "J'ai passé une journée assez compliquée au travail mais bon disons que cela peut aller, Et vous ?",
+        "Très bien, et vous ?"
       ]
     },
     {
@@ -135,7 +115,11 @@
       "patterns": [
         "Fais moi une blague",
         "Fais moi rire",
-        "Divertis-moi"
+        "Divertis-moi",
+        "rire",
+        "Comédie",
+        "drole",
+        "Fais une blague"
       ],
       "responses": [
         "Qu'est ce qui est jaune et qui attends? Jonhatan !",
@@ -151,7 +135,7 @@
         "Quoi"
       ],
       "responses": [
-        "Coubeh !",
+        "Quoicoubeh !",
         "Feur !"
       ]
     },
@@ -160,7 +144,9 @@
       "patterns": [
         "Merci beaucoup",
         "Je vous suis reconnaissant",
-        "Merci pour votre aide"
+        "Merci pour votre aide",
+        "Je t'aime",
+        "Merci"
       ],
       "responses": [
         "De rien ! N'hésitez pas si vous avez d'autres questions."
@@ -170,33 +156,23 @@
       "tag": "sens_vie",
       "patterns": [
         "Quel est le sens de la vie ?",
+        "Sens de la vie",
         "What is the meaning of life?"
       ],
       "responses": [
         "Le sens de la vie est une question profonde, n'est-ce pas ?",
-        "The meaning of life is a deep question, isn't it?"
+        "La réponse ultime de la vie est 42."
       ]
     },
     {
       "tag": "createur",
       "patterns": [
         "Qui est ton créateur ?",
-        "Who is your creator?"
+        "Qui t'as créé ?",
+        "Qui sont tes parents ?"
       ],
       "responses": [
-        "Mon créateur est une équipe talentueuse d'ingénieurs et de développeurs.",
-        "My creator is a talented team of engineers and developers."
-      ]
-    },
-    {
-      "tag": "personnage_prefere",
-      "patterns": [
-        "Qui est ton personnage préféré ?",
-        "Who is your favorite character?"
-      ],
-      "responses": [
-        "Je n'ai pas de personnage préféré, j'aime aider tout le monde.",
-        "I don't have a favorite character, I like helping everyone."
+        "Mes créateurs sont une équipe talentueuse d'ingénieurs et de développeurs. On les surnomme la Vim Team..."
       ]
     },
     {
@@ -204,7 +180,11 @@
       "patterns": [
         "comment s'est passée ta journée ?",
         "parle-moi de ta journée",
-        "raconte-moi ce que tu as fait aujourd'hui"
+        "raconte-moi ce que tu as fait aujourd'hui",
+        "Comment était ta journée?",
+        "Qu'est ce que tu as fait aujourd'hui",
+        "aujourd'hui",
+        "journée"
       ],
       "responses": [
         "Ma journée s'est bien passée, merci de demander. J'ai eu une réunion avec mon équipe, j'ai travaillé sur un projet et j'ai passé du temps avec ma famille. Et toi, comment s'est passée ta journée ?"
@@ -226,7 +206,9 @@
       "patterns": [
         "tu as été heureux aujourd'hui ?",
         "tu as eu des moments de bonheur ?",
-        "tu as été content aujourd'hui ?"
+        "tu as été content aujourd'hui ?",
+        "es-tu heureux dans ta vie ?",
+        "bonheur"
       ],
       "responses": [
         "Oui, j'ai été très heureux aujourd'hui. J'ai passé du temps avec ma famille et mes amis et on a beaucoup ri. Et toi, as-tu été heureux aujourd'hui ?"
@@ -286,7 +268,10 @@
         "je suis en colère",
         "je suis furieux",
         "je suis frustré",
-        "Je suis énervé"
+        "Je suis énervé",
+        "ça me soule",
+        "ça m'énèrve"
+
       ],
       "responses": [
         "Je comprends que vous soyez en colère. Racontez-moi ce qui vous met en colère."
@@ -297,7 +282,8 @@
       "patterns": [
         "je suis stressé",
         "je suis anxieux",
-        "je suis tendu"
+        "je suis tendu",
+        "je suis sous tension"
       ],
       "responses": [
         "Je comprends que vous soyez stressé. Racontez-moi ce qui vous stresse."
@@ -464,7 +450,8 @@
       "patterns": [
         "quelle est la monnaie de la France ?",
         "quelle est la devise en France ?",
-        "nom de la monnaie française ?"
+        "nom de la monnaie française ?",
+        "quelle est la monnaie en france ?"
       ],
       "responses": [
         "La monnaie de la France est l'euro."
@@ -552,7 +539,8 @@
     {
       "tag": "evenements_importants_france",
       "patterns": [
-        "quels sont les événements historiques les plus importants de France ?"
+        "quels sont les événements historiques les plus importants de France ?",
+        "Qu'est ce qui s'est déroulé d'important en France ?"
       ],
       "responses": [
         "Parmi les événements historiques importants de France, on peut citer les victoires lors des coupes du monde de football 1998 et 2018. Allez les bleus !"
@@ -563,7 +551,7 @@
       "patterns": [
         "quelles sont les personnalités françaises les plus célèbres ?",
         "Quels sont les personnages français les plus connus ?",
-        "Qui sont connus en France"
+        "Qui sont connus en France ?"
       ],
       "responses": [
         "Il y a énormément de personnages célèbres dans l'histoire de la France. Nous pouvons citer Napoléon, Louis XIV, Jacques Chirac, Thomas Pesquet, Zinedine Zidane, les Daft Punk ou encore Charles de Gaulle."
@@ -589,7 +577,8 @@
         "quels sont les différents types de programmeurs informatiques ?",
         "différents types de développeurs informatiques",
         "spécialisations en programmation informatique",
-        "carrières en programmation informatique"
+        "carrières en programmation informatique",
+        "développement informatique"
       ],
       "responses": [
         "Il existe de nombreux types de programmeurs informatiques, chacun spécialisé dans un domaine particulier. Voici quelques exemples :\n\n* Développeurs d'applications: Ils créent des applications logicielles pour les ordinateurs de bureau, les téléphones mobiles et les tablettes.\n* Développeurs web: Ils créent des sites web et des applications web.\n* Développeurs systèmes: Ils travaillent sur les systèmes d'exploitation et les logiciels qui font fonctionner les ordinateurs.\n* Développeurs de jeux: Ils créent des jeux vidéo.\n* Développeurs de logiciels scientifiques: Ils créent des logiciels pour la recherche scientifique et l'ingénierie."
@@ -602,7 +591,9 @@
         "définition de la cybersécurité",
         "importance de la cybersécurité",
         "menaces de cybersécurité",
-        "cybercriminalité"
+        "cybercriminalité",
+        "cybersécurité",
+        "sécurité informatique"
       ],
       "responses": [
         "La cybersécurité est la pratique de protection des systèmes informatiques et des données contre les cyberattaques. Les cyberattaques sont des tentatives d'accéder, de modifier ou de détruire des données ou des systèmes informatiques. La cybersécurité est importante pour protéger les entreprises, les gouvernements et les particuliers contre les pertes financières, les dommages à la réputation et les pertes de données."
@@ -644,7 +635,8 @@
         "suggérer un musicien à découvrir"
       ],
       "responses": [
-        "Michael Jackson, le roi de la pop, était l'un des artistes les plus populaires et influents au monde. Ses chansons entraînantes, ses performances énergiques et ses chorégraphies innovantes ont marqué l'industrie musicale et inspiré des générations d'artistes."
+        "Michael Jackson, le roi de la pop, était l'un des artistes les plus populaires et influents au monde. Ses chansons entraînantes, ses performances énergiques et ses chorégraphies innovantes ont marqué l'industrie musicale et inspiré des générations d'artistes.",
+        "Drake, l'un des artistes les plus vendus au monde et l'artiste le plus écouté sur Spotify, est connu pour son style musical unique, qui combine le rap, le R&B et la pop, et pour ses collaborations avec d'autres artistes de renom."
       ]
     },
     {

@@ -1,22 +1,69 @@
+import sys
+import os
 import numpy as np
 import random
 import json
-
+import nltk
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-
+from nltk.translate.bleu_score import sentence_bleu
 from langdetect import detect
-from nltk_utils import bag_of_words, tokenize, stem
+from nltk_utils import bag_of_words, tokenize, stem, is_question
 from model import NeuralNet
 #from transformers import pipeline
 
-with open('intents.json', 'r') as f:
+dossier = sys.argv[1]
+intents_path = os.path.join("intents", dossier)
+chemin_complet = os.path.abspath(intents_path)
+json_path = os.path.join(chemin_complet, 'intents.json')
+with open(json_path, 'r') as f:
     intents = json.load(f)
 
 all_words = []
 tags = []
 xy = []
+
+def get_positive_examples(intents):
+    positive_examples = []
+    for intent in intents['intents']:
+        for pattern in intent['patterns']:
+            if is_question(pattern):
+                positive_examples.append((pattern, intent['tag']))
+    return positive_examples
+
+def get_negative_examples(positive_examples):
+    negative_examples = []
+    for question, tag in positive_examples:
+        for _ in range(10):
+            negative_example = generate_negative_example(question, all_words, tags)
+            negative_examples.append(negative_example)
+    return negative_examples
+
+def generate_negative_example(question, all_words, tags):
+    words = question.split()
+    new_words = words.copy()
+    random_index = random.randrange(len(words))
+    new_words.pop(random_index)
+    new_question = ' '.join(new_words)
+
+    random_word = random.choice(all_words)
+    new_question = new_question.split()
+    new_question.insert(random_index, random_word)
+    new_question = ' '.join(new_question)
+
+    similarity = 0
+    for positive_question, _ in positive_examples:
+        current_similarity = sentence_bleu(positive_question, new_question)
+        if current_similarity > similarity:
+            similarity = current_similarity
+
+    if similarity < 0.75:
+        tag = random.choice(tags)
+        return(new_question, tag)
+    else:
+        return False
+
 
 for intent in intents['intents']:
     tag = intent['tag']
@@ -40,6 +87,11 @@ tags = sorted(set(tags))
 print(len(xy), "patterns")
 print(len(tags), "tags:", tags)
 print(len(all_words), "unique stemmed words:", all_words)
+
+#with open('data_negative.json', 'r') as f:
+#    negative_example = json.load(f)
+
+#examples = positive_examples + negative_example
 
 # create training data
 X_train = []
@@ -127,11 +179,16 @@ data = {
 "tags": tags
 }
 
-FILE = "data.pth"
+positive_examples = get_positive_examples(intents)
+negative_examples = get_negative_examples(positive_examples)
+
+    # Save the negative examples
+with open('data_negative.json', 'w') as f:
+    json.dump(negative_examples, f)
+FILE = os.path.join(chemin_complet, 'data.pth')
 torch.save(data, FILE)
 
 print(f'Entrainement terminé. Modèle enregistré dans {FILE}')
 
-#model = pipeline("text-generation", model="tuner007/led-mini-5-finetuned-conversational-fr")
 
 

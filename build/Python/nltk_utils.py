@@ -10,13 +10,37 @@ import re
 french_stopwords = set(stopwords.words('french'))
 filtre_stopfr = lambda text: [token for token in text if token.lower() not in french_stopwords]
 
+def is_question(sentence):
+  question_words = ["est-ce que", "sais-tu", "connais-tu","as-tu", "quel", "qui", "où", "quand", "comment", "pourquoi"]
+  for word in question_words:
+    if word in sentence:
+      return True
+  else:
+    return False
 
+def is_request(sentence):
+  if "qui" in sentence or "quoi" in sentence or "comment" in sentence or "quand" in sentence or "où" in sentence:
+    return True
+  else:
+    return False
+
+def is_statement(sentence):
+  if not is_question(sentence) and not is_request(sentence):
+    return True
+  else:
+    return False
+
+def detect_intent(sentence):
+  if is_question(sentence) :
+    if is_request(sentence):
+      return "request"
+    else:
+      return "question"
+  else:
+    return "statement"
 
 def tokenize(sentence, language='english'):
-    """
-    split sentence into array of words/tokens
-    a token can be a word or punctuation character, or number
-    """
+
     if language=="french":
         return filtre_stopfr(nltk.word_tokenize(sentence, language='french'))
     elif language == 'english':
@@ -26,13 +50,6 @@ def tokenize(sentence, language='english'):
         return nltk.word_tokenize(sentence, language="english")
 
 def stem(word, language='english'):
-    """
-    stemming = find the root form of the word
-    examples:
-    words = ["organize", "organizes", "organizing"]
-    words = [stem(w) for w in words]
-    -> ["organ", "organ", "organ"]
-    """
     if language =="french":
         stemmer = FrenchStemmer()
     elif language=="english":
@@ -71,7 +88,4 @@ def bag_of_words(tokenized_sentence, words, language="english"):
 
 
 
-#a = "Qu'est ce qui est jaune et qui attends ? Jonathan"
-#print(a)
-#a = tokenize(a)
-#print(a)
+
