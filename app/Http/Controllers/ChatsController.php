@@ -22,6 +22,15 @@ class ChatsController extends Controller
     {
         $user = Auth::user();
 
+        if(request()->has('search')){
+            //$users = $posts->where('content', 'like', '%' . request()->get('search', '') . '%');
+            $users = User::where('name', 'like', '%' . request()->get('search', '') . '%');
+            return view('chat.index', [
+                'users'=> $users,
+                'page' => 'chat',
+            ]);
+        }
+
         $users = User::whereIn('id', function ($query) use ($user) {
             $query->select('user_id')
             ->from('messages')
@@ -38,7 +47,10 @@ class ChatsController extends Controller
             });
         }
 
-        return view('chat.index', compact('users') );
+        return view('chat.index', [
+            'users'=> $users,
+            'page'=> 'chat',
+        ]);
     }
     public function chatbox($recipient_id)
     {

@@ -1,17 +1,17 @@
 <template>
-  <div class="p-4 rounded-lg">
+  <div class="p-4 space-x-4 rounded-lg">
     <input
       id="btn-input"
       type="text"
       name="message"
-      class=""
-      placeholder="Type your message here..."
+      class="w-5/6 resize-none border-x-0 border-t-0 border-gray-500 px-0 align-top sm:text-sm bg-inherit"
+      placeholder="Tapez votre message..."
       v-model="newMessage"
       @keyup.enter="sendMessage"
     />
     <span class="input-group-btn">
-      <button class="btn-primary" id="btn-chat" @click="sendMessage">
-        Send
+      <button class="btn-primary rounded-full" id="btn-chat" @click="sendMessage">
+        <i class="ri-send-plane-2-line"></i>
       </button>
     </span>
   </div>
