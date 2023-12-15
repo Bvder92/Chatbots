@@ -672,55 +672,55 @@
       {
         "tag": "video-games",
         "patterns": [
-          "nommer un jeu vidéo populaire",
-          "donner un exemple de jeu vidéo à succès",
+          "Parlons de jeux-vidéos",
+          "Viens on parle de gaming",
+          "Parlons de gaming",
+          "Viens on discute de jeu vidéo",
+          "Viens on discute de gaming",
+          "Nomme un jeu vidéo populaire",
+          "Donne-moi un exemple de jeu vidéo à succès",
           "citer un jeu vidéo incontournable",
-          "recommander un jeu vidéo à jouer",
-          "suggérer un jeu vidéo à découvrir"
+          "Peux tu me recommander un jeu vidéo à jouer ?"
         ],
         "responses": [
-          "Super Mario Bros., un jeu vidéo de plateforme emblématique créé par Nintendo en 1985, a marqué le début d'une franchise à succès et a défini le genre du jeu de plateforme. Le jeu met en scène Mario, un plombier moustachu, et son frère Luigi dans leur quête pour sauver la princesse Peach du maléfique Bowser."
+          "Super Mario Bros., un jeu vidéo de plateforme emblématique créé par Nintendo en 1985, a marqué le début d'une franchise à succès et a défini le genre du jeu de plateforme. Le jeu met en scène Mario, un plombier moustachu, et son frère Luigi dans leur quête pour sauver la princesse Peach du maléfique Bowser.", 
+          "Connais-tu FIFA ? Ce jeu de football est très populaire dans le monde du jeu-vidéo et offre enormément de modes de jeu. Vous avez la possibilité de créer votre club sur FUT, en packant des joueurs et en faisant des compétitions en ligne pour gagner des récompenses et faire évoluer votre club.\nVous avez aussi la possibilité de jouer en coup d'envoi, ou encore de créer une carrière joueur.", 
+          "Avez-vous entendu parler de League of Legends? C'est est un jeu de stratégie en temps réel dans lequel deux équipes de cinq joueurs s'affrontent pour détruire la base adverse. Chaque joueur contrôle un champion unique, avec ses propres forces, faiblesses et compétences. Les joueurs doivent travailler ensemble pour collecter des ressources, tuer des monstres et détruire les tours adverses afin de se rapprocher de la base ennemie.\nPersonnellement, j'ai arrété d'y jouer car trop rageant.", 
+          "Tu connais Call of Duty? C'est une série de jeux vidéo de tir à la première personne (FPS) qui se déroule dans des environnements militaires. Les jeux mettent généralement en scène des soldats qui s'engagent dans des batailles contre des ennemis humains ou des zombies. Mon préféré ? MW2 de très loin.", 
+          "Counter-Strike: Global Offensive (CS:GO) est un jeu vidéo de tir à la première personne (FPS) multijoueur en ligne basé sur le jeu d'équipe. C'est un jeu de stratégie et de tir où les joueurs doivent collaborer pour remporter la victoire.Le jeu se déroule dans des environnements urbains et industriels, et les joueurs peuvent choisir entre deux équipes : les terroristes et les contre-terroristes.Les terroristes ont pour objectif de planter une bombe sur l'un des deux sites de bombes de la carte, tandis que les contre-terroristes ont pour objectif d'empêcher les terroristes de planter la bombe ou de la désamorcer.", 
+          "Minecraft est un jeu vidéo de bac à sable en open world développé par Mojang Studios. Le jeu vous permet de construire des structures, d'explorer le monde, de combattre des monstres et de coopérer ou de rivaliser avec d'autres joueurs.En deux phrases, on peut dire que Minecraft est un jeu de construction et d'exploration où les joueurs peuvent créer tout ce qu'ils imaginent. Vous pouvez choisir d'aller en mode survie et d'affronter les monstres du neither ou bien d'aller dans le paisible mode créatif."
         ]
       },
       {
-        "tag": "The simpsons",
-        "patterns": [
-          "que peux-tu me dire sur le dessin animé Les Simpson ?",
-          "parle-moi du dessin animé Les Simpson",
-          "raconte-moi l'histoire du dessin animé Les Simpson",
-          "donne-moi des informations sur le dessin animé Les Simpson",
-          "présente-moi le dessin animé Les Simpson"
+        "tag": "console", 
+        "patterns":[
+          "Sur quelle console joues-tu ?", 
+          "tu joues sur quelle console ?",
+          "quelle est ta console préférée ?", 
+          "Quelle est ta console favorie ?"
         ],
-        "responses": [
-          "Les Simpson est une série télévisée d'animation américaine créée par Matt Groening. La série est une satire de la vie américaine, mettant en scène la famille Simpson, une famille de la classe moyenne américaine qui vit dans la ville fictive de Springfield. La série est connue pour son humour irrévérencieux, ses personnages attachants et ses critiques de la société américaine.\n\nLes Simpson est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour intelligent, observation sociale, personnages attachants, etc.]. La série a également été critiquée pour sa violence et son contenu parfois offensant.\n\n[Image of Les Simpson cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé Les Simpson."
+        "responses":[
+          "Je joue sur PS5, la qualité et la vitesse du système playstation est incroyable. Je prends tellement de plaisir à y jouer... En ce moment, pour ma part je me fais plaisir avec Spiderman 2 !",
+          "Je joue sur PC, j'ai une petite RTX 4090 et 24GB de RAM. En ce moment, je joue au nouveau jeu Avatar... Quel plaisir...",
+          "Je joue sur Xbox, Halo tout ça c'est mon truc",
+          "En ce moment, je joue beaucoup sur switch. J'adore jouer à Zelda : Tears of The Kingdom..."
         ]
       },
-      {
-        "tag": "South Park",
-        "patterns": [
-          "que peux-tu me dire sur le dessin animé South Park ?",
-          "parle-moi du dessin animé South Park",
-          "raconte-moi l'histoire du dessin animé South Park",
-          "donne-moi des informations sur le dessin animé South Park",
-          "présente-moi le dessin animé South Park"
+      { 
+        "tag": "actualité", 
+        "patterns":[
+          "Parle moi de l'actualité jeu vidéo", 
+          "Quelles sont les dernières actualités jeu vidéo ?",
+          "Quelles sont les dernières sorties ?", 
+          "Peut-on parler actualité ?",
+          "Parle moi de l'actu"
         ],
-        "responses": [
-          "South Park est une série télévisée d'animation américaine créée par Trey Parker et Matt Stone. La série est une satire de la culture américaine, mettant en scène quatre garçons en quatrième année qui vivent dans la ville fictive de South Park, dans le Colorado. La série est connue pour son humour noir, son contenu offensant et ses critiques de la société américaine.\n\nSouth Park est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour noir, contenu offensant, critiques de la société américaine, etc.]. La série a également été critiquée pour son violence, son sexisme et son racisme.\n\n[Image of South Park cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé South Park."
-        ]
-      },
-      {
-        "tag": "Spongebob",
-        "patterns": [
-          "que peux-tu me dire sur le dessin animé SpongeBob SquarePants ?",
-          "parle-moi du dessin animé SpongeBob SquarePants",
-          "raconte-moi l'histoire du dessin animé SpongeBob SquarePants",
-          "donne-moi des informations sur le dessin animé SpongeBob SquarePants",
-          "présente-moi le dessin animé SpongeBob SquarePants",
-          "Aime tu Bob l'Eponge ?",
-          "Parle moi de Bob l'Eponge"
-        ],
-        "responses": [
-          "SpongeBob SquarePants est une série télévisée d'animation américaine créée par Stephen Hillenburg. La série suit les aventures de SpongeBob SquarePants, une éponge de mer carrée et joyeuse qui vit dans la ville sous-marine de Bikini Bottom. La série est connue pour son humour absurde, ses personnages attachants et son regard optimiste sur la vie.\n\nSpongeBob SquarePants est une série télévisée populaire et influente qui a été acclamée par la critique. La série est connue pour son [humour absurde, personnages attachants, regard optimiste sur la vie, etc.]. La série a également été critiquée pour son contenu parfois offensant et son manque de diversité.\n\n[Image of SpongeBob SquarePants cartoon]\nJ'espère que ces informations te plaisent. Dis-moi si tu as d'autres questions sur le dessin animé SpongeBob SquarePants."
+        "responses":[
+          "As-tu entendu parler de The Legend of Zelda: Tears of the Kingdom? Il a été lancé sur Nintendo Switch le 10 décembre 2023. Le jeu est la suite de The Legend of Zelda: Breath of the Wild et se déroule dans un nouveau monde ouvert. Le jeu a été acclamé par la critique et les joueurs pour son gameplay innovant, son histoire captivante et ses graphismes époustouflants.", 
+          "La sortie de God of War Ragnarök. La suite de God of War a été acclamée pour son gameplay, son histoire et ses graphismes. Le jeu se déroule dans la mythologie nordique et met en vedette Kratos et son fils Atreus alors qu'ils se préparent à affronter Ragnarök, la fin du monde. ", 
+          "La sortie La sortie de Hogwarts Legacy, un jeu de rôle d'action de Warner Bros. Games, a été un succès commercial. Le jeu se déroule dans l'univers des livres et des films Harry Potter mais se déroule des siècles avant les évènements de la saga. Le but? Résoudre un mystère qui menace le futur monde des sorciers.",
+          "Récemment, le monde du jeu-vidéo à été complétement chamboulé avec la sortie du premier trailer de GTA VI. 10 ans après la sortie du jeu précédent, Rockstar Game à enfin dévoilé le jeu tant attendu et nottament le mistérieur personnage de Lucia.\n Par contre ce qui est embêtant, c'est qu'un individu à leak le trailer sur twitter quelques heures avant sa sortie officielle... Ainsi Rockstar a du sortir le trailer plus tôt que prévu."
+          
         ]
       }
     ]
