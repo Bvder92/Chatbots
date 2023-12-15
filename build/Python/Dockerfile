@@ -16,13 +16,13 @@ RUN pip install flask
 
 RUN pip install requests
 
-Run pip install wikipedia
+RUN pip install wikipedia
 
-Run pip install wikipedia-api
+RUN pip install wikipedia-api
 
 RUN pip install scikit-learn
 
-Run pip install spacy
+RUN pip install spacy
 
 RUN python -m spacy download fr_core_news_sm
 
@@ -36,21 +36,23 @@ COPY nltk_utils.py .
 
 COPY app.py .
 
+#COPY chatold.py .
+
 COPY wiki2.py .
 
 RUN python3 train.py principal
 
-RUN python3 train.py gamer
+#RUN python3 train.py gamer
 
 RUN python3 train.py cinema
 
-RUN python3 train.py manga
+#RUN python3 train.py manga
 
 RUN python3 train.py ecoloGPT
 
 #RUN python3 train.py foot
 
-#CMD ["python3", "app.py"]
+CMD ["python3", "app.py"]
 
 #CMD ["python3", "wiki2.py"]
 

@@ -3,42 +3,62 @@ from flask import jsonify, request
 import random
 import json
 import torch
+import spacy 
 from langdetect import detect
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize, is_question, detect_intent, is_request
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 import requests
 import os
 
 app = Flask(__name__)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+nlp = spacy.load("fr_core_news_sm")
 
 def infer_information_type(input):
+    if not isinstance(input, str):
+        input = str(input)  # Convert input to string if it's not already
     detected_language = detect(input)
+    '''
     keywords = tokenize(input, language=detected_language)
-    phrases = nltk.sent.tokenize(input)
+    if not keywords:
+        return None
+    phrases = nltk.sent_tokenize(input)
+    if not phrases: 
+        return None
+    '''
+    doc = nlp(input)
 
     info_type_mapping = {
-        "quoi": "definition",
-        "qu'est": "définition",
-        "quand": "date",
-        "où": "lieu",
-        "qui": "personne",
-        "pourquoi": "raison",
-        "comment": "procédure"
+       "définition": ["qu'est-ce que", "qu'est-ce qu'", "qu'est", "c'est quoi"],
+        "date": ["quand"],
+        "lieu": ["où"],
+        "personne": ["qui"],
+        "raison": ["pourquoi"],
+        "procédure": ["comment"]
     }
 
-    info_type= None
+    '''
     for keyword in keywords:
         if keyword in info_type_mapping:
             info_type = info_type_mapping[keyword]
             break
-    for phrases in phrases:
-        if phrases.lower() in info_type_mapping:
+    for phrase in phrases:
+        if phrase.lower() in info_type_mapping:
             info_type = info_type_mapping[phrase.lower()]
             break
     return info_type
+    '''
+    for token in doc:
+        for info_type, triggers in info_type_mapping.items():
+            for trigger in triggers:
+                if trigger in token.text.lower():
+                    return info_type
+    return None
 
+vectorizer = TfidfVectorizer()
 
 def get_response(input, bot_name):
 
@@ -62,8 +82,6 @@ def get_response(input, bot_name):
 
     bot_name = "Sam"
 
-
-    # blabla nltk
     detected_language = detect(input)
     input = tokenize(input, language=detected_language)
     X = bag_of_words(input, all_words, language=detected_language)
@@ -79,21 +97,26 @@ def get_response(input, bot_name):
     prob = probs[0][predicted.item()]
 
     # Appel a info type pour améliorer les réponses
-    info_type = infer_information_type(user_message)
-
-    # parsing message et génération réponse
-    if prob.item() > 0.7:
-        #if info_type:
-        #    for intent in intents['intents']:
-        #      if tag == intent["tag"]:
-        #            if info_type in intent['responses']:
-        #                return random.choice(intent['responses'][info_type])
-        #else:
-            for intent in intents['intents']:
-                if tag == intent["tag"]:
-                    return random.choice(intent['responses'])
+    '''
+    tfidf = vectorizer.fit_transform(input)
+    similarity = cosine_similarity(tfidf[-1], tfidf)
+    index = similarity.argsort()[0][-2]
+    max_similarity = similarity.flatten().max()
+    '''
+    #if max_similarity > 0.3:
+    info_type = infer_information_type(input)
+    if prob.item() > 0.75:
+        for intent in intents['intents']:
+            if tag == intent['tag']:
+                responses = intent['responses']
+                if info_type is not None and info_type in responses:
+                    response = random.choice(responses[info_type])
+                else : 
+                    response = random.choice(intent['responses'])
+                return response 
     else:
-        return "Je n'ai pas bien compris..."
+            return "Je ne comprends pas... Pouvez-vous reformuler ?"
+
 
 
 @app.route('/api/chatbot', methods=['POST'])
@@ -101,15 +124,6 @@ def chatbot_endpoint():
     data = request.get_json()
     user_message = data['message']
     bot_name = data['bot_name']
-
-    #is_question = is_question(user_message)
-    # if is_question:
-    #     intent = detect_intent(question)
-    # #if intent == "question":
-    # #    extract = get_wikipedia_info(user_message)
-    # #if extract is not None :
-    # #    bot_response = extract
-    # else:
     bot_response = get_response(user_message, bot_name)
     return jsonify({'response': bot_response})
 
