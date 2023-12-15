@@ -1,4 +1,3 @@
-import spacy
 from flask import Flask
 from flask import jsonify, request
 import random
