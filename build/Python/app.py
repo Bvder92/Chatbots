@@ -11,6 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
 import os
+import re 
 
 app = Flask(__name__)
 
@@ -21,14 +22,6 @@ def infer_information_type(input):
     if not isinstance(input, str):
         input = str(input)  # Convert input to string if it's not already
     detected_language = detect(input)
-    '''
-    keywords = tokenize(input, language=detected_language)
-    if not keywords:
-        return None
-    phrases = nltk.sent_tokenize(input)
-    if not phrases: 
-        return None
-    '''
     doc = nlp(input)
 
     info_type_mapping = {
@@ -40,17 +33,6 @@ def infer_information_type(input):
         "procédure": ["comment"]
     }
 
-    '''
-    for keyword in keywords:
-        if keyword in info_type_mapping:
-            info_type = info_type_mapping[keyword]
-            break
-    for phrase in phrases:
-        if phrase.lower() in info_type_mapping:
-            info_type = info_type_mapping[phrase.lower()]
-            break
-    return info_type
-    '''
     for token in doc:
         for info_type, triggers in info_type_mapping.items():
             for trigger in triggers:
@@ -59,6 +41,15 @@ def infer_information_type(input):
     return None
 
 vectorizer = TfidfVectorizer()
+
+def extract_movie_or_manga_name(input):
+    pattern = r"(du (manga|film) [^?]+)"
+    match = re.search(pattern, input, re.IGNORECASE)
+    if match: 
+        return match.group(0)
+    else:
+        return None
+
 
 def get_response(input, bot_name):
 
@@ -96,15 +87,17 @@ def get_response(input, bot_name):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    # Appel a info type pour améliorer les réponses
-    '''
-    tfidf = vectorizer.fit_transform(input)
-    similarity = cosine_similarity(tfidf[-1], tfidf)
-    index = similarity.argsort()[0][-2]
-    max_similarity = similarity.flatten().max()
-    '''
-    #if max_similarity > 0.3:
+    
     info_type = infer_information_type(input)
+    extract = extract_movie_or_manga_name(input)
+    if extract : 
+        random_number = random.randint(0, 1)
+        if random_number == 1 : 
+            return "Je trouve que {extract} est captivant et nous plonge dans un monde riche et passionnant. Les personnages sont bien développés et attachants, l'histoire est fluide et pleine de rebondissements, et je trouve les images magnifiques. Je recommande {extract} à tous les fans du genre."
+        else : 
+            return "{extract} est une oeuvre audacieuse qui ne manquera pas de vous surprendre. L'histoire est unique et bien construite, les personnages sont complexes et intéressants, et je trouve l'image complétement novatrice. Je recommande cela à tous ceux cherchant quelque chose de nouveau."
+
+
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent['tag']:

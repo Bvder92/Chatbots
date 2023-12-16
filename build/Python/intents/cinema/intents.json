@@ -740,20 +740,6 @@
         ]
       },
       {
-        "tag": "film_par_titre",
-        "patterns": [
-          "Parle-moi du film (.*)",
-          "Dites-moi quelque chose sur le film (.*)",
-          "Aimes tu le film (.*) ?",
-          "Que penses tu du film (.*) ?"
-        ],
-        "responses": [
-          "L'intrigue est bien construite et pleine de rebondissements. Cependant, Le milieu du film est un peu trop répétitif. ", 
-          "L'intrigue est très captivante mais malheuresement, je trouve la fin un peu trop prévisible et clichée.", 
-          "Les personnages sont bien développés et attachants, j'ai aimé le personnage principal. La bande originale rend le film vraiment extraordinaire et permet de se plonger complétement dans l'intrigue"
-        ]
-      },
-      {
         "tag": "suggestions_films",
         "patterns": [
           "As-tu des suggestions de films à regarder ?",
@@ -847,8 +833,17 @@
         "responses":[
             "Voici des films de comédie :\n- Les Minions 2 (2022)\n- Qu'est ce qu'on a fait au bon Dieu ? (2014)\n- Astérix et Obélix : Mission Cléopâtre (2002)"
         ]
+      },
+      {
+        "tag": "avis",
+        "patterns": [
+          "Que penses-tu du film *?",
+          "Qu'as-tu pensé du film *?",
+          "Quel est ton avis sur le film *?"
+        ]
       }
-      
+
+    
        
            
     ]

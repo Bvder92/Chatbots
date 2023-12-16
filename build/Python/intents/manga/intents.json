@@ -750,12 +750,13 @@
       ]
     },
     {
-      "tag": "avis_manga",
+      "tag": "avis",
       "patterns": [
-        "Que penses tu de ce manga ?"
-      ],
-      "responses": [
-        "..."
+        "Que penses-tu du manga *?",
+        "Qu'as-tu pensé du manga *?",
+        "Quel est ton avis sur le manga *?",
+        "Qu'as-tu pensé du film *?",
+        "Que penses-tu du film *?"
       ]
     }
   ]

@@ -42,15 +42,15 @@ COPY wiki2.py .
 
 RUN python3 train.py principal
 
-#RUN python3 train.py gamer
+RUN python3 train.py gamer
 
 RUN python3 train.py cinema
 
-#RUN python3 train.py manga
+RUN python3 train.py manga
 
 RUN python3 train.py ecoloGPT
 
-#RUN python3 train.py foot
+RUN python3 train.py foot
 
 CMD ["python3", "app.py"]
 
