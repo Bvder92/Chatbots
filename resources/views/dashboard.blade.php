@@ -15,7 +15,7 @@
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Feed </div>
                     @else
                     <div class="px-8 pt-8 text-2xl font-bold w-full"> Accueil</div>
-                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
+                <div class="overflow-hidden  gap-4 p-2 h-full">
 
                     @include('include.success-message')
 

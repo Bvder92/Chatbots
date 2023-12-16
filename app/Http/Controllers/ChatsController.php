@@ -22,21 +22,18 @@ class ChatsController extends Controller
     {
         $user = Auth::user();
 
-        if(request()->has('search')){
+        if (request()->has('search')) {
             //$users = $posts->where('content', 'like', '%' . request()->get('search', '') . '%');
-            $users = User::where('name', 'like', '%' . request()->get('search', '') . '%');
-            return view('chat.index', [
-                'users'=> $users,
-                'page' => 'chat',
-            ]);
+            $search = request()->get('search', '');
+            $users = User::where('name', 'like', '%' . $search . '%')->get();
+        } else {
+            $users = User::whereIn('id', function ($query) use ($user) {
+                $query->select('user_id')
+                    ->from('messages')
+                    ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
+                    ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
+            })->get();
         }
-
-        $users = User::whereIn('id', function ($query) use ($user) {
-            $query->select('user_id')
-            ->from('messages')
-            ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
-            ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
-        })->get();
 
         // suppression de l'utilisateur actuel:
         $userToRemove = $users->where('id', $user->id)->first();
@@ -48,15 +45,15 @@ class ChatsController extends Controller
         }
 
         return view('chat.index', [
-            'users'=> $users,
-            'page'=> 'chat',
+            'users' => $users,
+            'page' => 'chat',
         ]);
     }
     public function chatbox($recipient_id)
     {
         $user = Auth::user();
         $recipient = User::find($recipient_id);
-        return view('chat.chatbox', ['recipient'=> $recipient, 'user' => $user]);
+        return view('chat.chatbox', ['recipient' => $recipient, 'user' => $user]);
     }
 
     public function fetchMessages($recipient_id)
@@ -71,7 +68,7 @@ class ChatsController extends Controller
         // })->get();
 
         $first = DB::table('messages')->where('user_id', $user->id)->where('recipient_id', $recipient_id);
-        $second = DB::table('messages')->where('user_id', $recipient_id)->where('recipient_id', $user->id)->union($first)->orderBy('created_at','asc');
+        $second = DB::table('messages')->where('user_id', $recipient_id)->where('recipient_id', $user->id)->union($first)->orderBy('created_at', 'asc');
         $second = $second->get();
         return $second;
 
@@ -90,8 +87,8 @@ class ChatsController extends Controller
     {
 
         $validated = $request->validate([
-            'recipient'=> 'required',
-            'message'=> 'required',
+            'recipient' => 'required',
+            'message' => 'required',
         ]);
 
         $user = Auth::user();
@@ -104,7 +101,7 @@ class ChatsController extends Controller
         ]);
 
         broadcast(new MessageSent($user, $recipient, $message))->toOthers();
-        return ['status' => 'Message Sent!' /* 'user' => $user, 'recipient' => $recipientId, 'msg'=> $text */ ] ;
+        return ['status' => 'Message Sent!' /* 'user' => $user, 'recipient' => $recipientId, 'msg'=> $text */];
     }
 }
 

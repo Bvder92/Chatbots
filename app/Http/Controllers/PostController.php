@@ -16,7 +16,7 @@ class PostController extends Controller
 
         Post::create($validated);
 
-        return redirect()->route('dashboard')->with('success', ' Votre Post à bien été publié!');
+        return redirect()->route('dashboard')->with('success', 'Votre Post a bien été publié!');
     }
 
     public function show(Post $id){
@@ -67,6 +67,6 @@ class PostController extends Controller
         }
         $id->delete();
 
-        return redirect()->route('dashboard')->with('success', ' Votre Post à bien été supprimé!');
+        return redirect()->route('dashboard')->with('success', 'Votre Post a bien été supprimé!');
     }
 }

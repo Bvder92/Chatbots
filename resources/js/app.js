@@ -10,6 +10,7 @@ import { createApp } from 'vue';
 import ExampleComponent from './components/ExampleComponent.vue';
 import ChatMessages from './components/ChatMessages.vue';
 import ChatForm from './components/ChatForm.vue';
+import CloseSuccessButton from './components/CloseSuccesButton.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -66,16 +67,13 @@ const app = createApp({
                 console.log(response.data);
             });
         },
-        dismissAlert(){
-            const alert = document.getElementById("alert-3");
-            alert.style.display = 'none';
-        },
     }
 });
 
 app.component('example-component', ExampleComponent);
 app.component('chat-messages', ChatMessages);
 app.component('chat-form', ChatForm);
+app.component('close-success-button', CloseSuccessButton);
 
 
 /**

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="pt-20">
+    <div class="pt-20 h-full">
         <div class="grid grid-cols-4 h-full pb-12">
             <div class="h-full">
                 <div class="fixed w-1/4 ">
@@ -11,7 +11,7 @@
             </div>
 
             <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden">
-                <div class="overflow-hidden grid grid-cols-1 gap-4 p-2 h-full">
+                <div class="overflow-hidden gap-4 p-2 h-full">
 
                     @include('include.success-message')
 
