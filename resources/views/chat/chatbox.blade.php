@@ -35,7 +35,7 @@
                     </div>
                     <div class="bg-normal mt-auto rounded-lg m-4">
                         {{--  <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form> --}}
-                        <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}" :recipient={{ $recipient }} ></chat-form>
+                        <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}" :recipient="{{ $recipient }}" ></chat-form>
                     </div>
                 </div>
             </div>
