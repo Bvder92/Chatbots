@@ -43,8 +43,9 @@ def infer_information_type(input):
 vectorizer = TfidfVectorizer()
 
 def extract_movie_or_manga_name(input):
+    input_str = str(input)
     pattern = r"(du (manga|film) [^?]+)"
-    match = re.search(pattern, input, re.IGNORECASE)
+    match = re.search(pattern, input_str, re.IGNORECASE)
     if match: 
         return match.group(0)
     else:
@@ -96,7 +97,7 @@ def get_response(input, bot_name):
             return "Je trouve que {extract} est captivant et nous plonge dans un monde riche et passionnant. Les personnages sont bien développés et attachants, l'histoire est fluide et pleine de rebondissements, et je trouve les images magnifiques. Je recommande {extract} à tous les fans du genre."
         else : 
             return "{extract} est une oeuvre audacieuse qui ne manquera pas de vous surprendre. L'histoire est unique et bien construite, les personnages sont complexes et intéressants, et je trouve l'image complétement novatrice. Je recommande cela à tous ceux cherchant quelque chose de nouveau."
-
+    '''
 
     if prob.item() > 0.75:
         for intent in intents['intents']:
@@ -109,6 +110,24 @@ def get_response(input, bot_name):
                 return response 
     else:
             return "Je ne comprends pas... Pouvez-vous reformuler ?"
+    '''
+    matched_intent = None
+    for intent in intents['intents']:
+        if tag == intent['tag']:
+            matched_intent = intent
+            break
+    if matched_intent:
+        responses = matched_intent['responses']
+        if info_type is not None and info_type in responses:
+            response = random.choice(responses[info_type])
+        else : 
+            response = random.choice(intent['responses'])
+            return response 
+    generic_responses = [
+        "Je suis heureux d'entendre cela !",
+        "C'est intéressant !"
+    ]
+    return random.choice(generic_responses)
 
 
 

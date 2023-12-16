@@ -752,11 +752,15 @@
     {
       "tag": "avis",
       "patterns": [
-        "Que penses-tu du manga *?",
-        "Qu'as-tu pensé du manga *?",
-        "Quel est ton avis sur le manga *?",
-        "Qu'as-tu pensé du film *?",
-        "Que penses-tu du film *?"
+        "Que penses-tu du manga ?",
+        "Qu'as-tu pensé du manga ?",
+        "Quel est ton avis sur le manga ?",
+        "Qu'as-tu pensé du film ?",
+        "Que penses-tu du film ?"
+      ],
+      "responses":[
+        "Je trouve que c'est captivant et cela nous plonge dans un monde riche et passionnant. Les personnages sont bien développés et attachants, l'histoire est fluide et pleine de rebondissements, et je trouve les images magnifiques. Je recommanderai cela à tous les fans du genre.",
+        "C'est une oeuvre audacieuse qui ne manquera pas de vous surprendre. L'histoire est unique et bien construite, les personnages sont complexes et intéressants, et je trouve l'image complétement novatrice. Je recommande cela à tous ceux cherchant quelque chose de nouveau."
       ]
     }
   ]
