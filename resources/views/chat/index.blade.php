@@ -22,7 +22,7 @@
                         @foreach ($users as $user)
                             <div class="p-6 bg-normal rounded-lg flex items-center space-x-6 font-semibold text-lg">
 
-                                <div class="h-12 w-12"><img src="{{ $user->getImageURL() }}" alt="" class="rounded-full"></div>
+                                <div class="h-12 w-12"><a href="{{ route('users.show', $user->id) }}"> <img src="{{ $user->getImageURL() }}" alt="" class="rounded-full"></a></div>
                                 <span><a href="{{ route('chat.chatbox', $user) }}">{{ $user->name }}</a></span>
                             </div>
                         @endforeach

@@ -57,7 +57,6 @@ class UsersSeeder extends Seeder
             'isBot' => 1,
             'password' => Hash::make('manga'),
         ]);
-
         DB::table('users')->insert([
             'name' => 'user1',
             'email' => 'user1@mail.com',
@@ -65,13 +64,60 @@ class UsersSeeder extends Seeder
             'isBot' => 0,
             'password' => Hash::make('user1'),
         ]);
-
         DB::table('users')->insert([
             'name' => 'user2',
             'email' => 'user2@mail.com',
             'bio' => 'Test user 2',
             'isBot' => 0,
             'password' => Hash::make('user2'),
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 6,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 5,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 4,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 3,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 2,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 7,
+            'follower_id' => 1,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 6,
+            'follower_id' => 7,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 5,
+            'follower_id' => 7,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 4,
+            'follower_id' => 7,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 3,
+            'follower_id' => 7,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 2,
+            'follower_id' => 7,
+        ]);
+        DB::table('follower_user')->insert([
+            'user_id' => 1,
+            'follower_id' => 7,
         ]);
     }
 }

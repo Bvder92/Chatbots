@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PostEvent;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class PostController extends Controller
         ]);
         $validated['user_id'] = auth()->id();
 
-        Post::create($validated);
+        $post = Post::create($validated);
+        broadcast(new PostEvent($post) )->toOthers();
 
         return redirect()->route('dashboard')->with('success', 'Votre Post a bien été publié!');
     }

@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\MessageSent' => [
             'App\Listeners\MessageSentListener',
         ],
+        'App\Events\PostEvent' => [
+            'App\Listeners\PostEventListener',
+        ],
     ];
 
     /**

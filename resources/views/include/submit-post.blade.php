@@ -37,7 +37,7 @@
                 <button type="submit" name="submit"
                     class="btn-primary">Connexion</button>
             </form>
-        <div class="m-4 text-sm">Pas encore de compte? <a href="{{ route('register') }}">Inscription</a></div>
+        <div class="m-4 text-sm text-gray-700">Pas encore de compte? <a href="{{ route('register') }}">Inscription</a></div>
         </div>
     </div>
 @endguest

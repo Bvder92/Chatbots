@@ -73,7 +73,7 @@
 
                                 </div>
                                 <div class="">
-                                    <button class="btn-primary">Message</button>
+                                        <a href="{{ route('chat.chatbox', $user->id) }}"><button class="btn-primary">Message</button></a>
                                 </div>
                             </div>
                         @endif

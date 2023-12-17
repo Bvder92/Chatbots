@@ -4,7 +4,7 @@
 
 @layer components{
     .btn-primary {
-       @apply px-3 py-1.5 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300 text-sm font-semibold rounded-xl
+       @apply px-3 py-2 text-white bg-sky-600 hover:bg-sky-700 active:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-400 text-sm font-semibold rounded-lg
     }
 
     .bg-gradient{

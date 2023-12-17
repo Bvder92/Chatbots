@@ -27,12 +27,13 @@ class ChatsController extends Controller
             $search = request()->get('search', '');
             $users = User::where('name', 'like', '%' . $search . '%')->get();
         } else {
-            $users = User::whereIn('id', function ($query) use ($user) {
-                $query->select('user_id')
-                    ->from('messages')
-                    ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
-                    ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
-            })->get();
+            // $users = User::whereIn('id', function ($query) use ($user) {
+            //     $query->select('user_id')
+            //         ->from('messages')
+            //         ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
+            //         ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
+            // })->get();
+            $users = $user->followings()->get();
         }
 
         // suppression de l'utilisateur actuel:

@@ -1,44 +1,9 @@
 @extends('layouts.app')
 @section('content')
-    {{-- <div class="container">
-    <div class="row justify-center">
-        <div class="mb-6">
-            <form class=" mt-5" action="" method="post">
-                <h3 class="text-center text-dark">Register</h3>
-                <div class="form-group">
-                    <label for="email" class="text-dark">Email:</label><br>
-                    <input type="email" name="email" id="email" class="form-control">
-                </div>
-                <div class="form-group mt-3">
-                    <label for="password" class="text-dark">Password:</label><br>
-                    <input type="text" name="password" id="password" class="form-control">
-                </div>
-                <div class="form-group mt-3">
-                    <label for="confirm-password" class="text-dark">Confirm Password:</label><br>
-                    <input type="text" name="confirm-password" id="confirm-password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="remember-me" class="text-dark"></label><br>
-                    <input type="submit" name="submit" class="btn btn-dark btn-md" value="submit">
-                </div>
-                <div class="text-right mt-2">
-                    <a href="/login" class="text-dark">Login here</a>
-                </div>
-            </form>
-        </div>
-    </div>
-</div> --}}
 
-    <section class="bg-white">
-        <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-            <aside class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
-                <img alt="Pattern"
-                    src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                    class="absolute inset-0 h-full w-full object-cover" />
-            </aside>
-
+        <div class="h-full pt-20 flex items-center justify-center">
             <main class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
-                <div class="max-w-xl lg:max-w-3xl">
+                <div class="relative max-w-xl lg:max-w-3xl bg-normal rounded-xl p-10">
                     {{-- <img src="{{ asset('logo.png') }}" alt="logo" class="h-8 sm:h-10"> --}}
 
                     <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
@@ -61,78 +26,55 @@
                                 class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                         </div> --}}
 
-                        <div class="col-span-6 sm:col-span-6">
+                        <div class="col-span-6 sm:col-span-6 px-6">
                             <label for="name" class="block text-sm font-medium text-gray-700">
                                 Nom
                             </label>
 
                             <input type="text" id="name" name="name"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
+                                class=" border-2 border-gray-400 border-t-0 border-x-0 bg-inherit w-full" />
                             @error('name')
                                 <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
                             @enderror
                         </div>
 
-                        <div class="col-span-6">
+                        <div class="col-span-6 px-6">
                             <label for="email" class="block text-sm font-medium text-gray-700">
                                 Email
                             </label>
 
                             <input type="email" id="email" name="email"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
+                                class=" border-2 border-gray-400 border-t-0 border-x-0 bg-inherit w-full" />
                             @error('email')
                                 <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
                             @enderror
                         </div>
 
-                        <div class="col-span-3 sm:col-span-3">
+                        <div class="col-span-3 sm:col-span-3 pl-6 pr-2">
                             <label for="password" class="block text-sm font-medium text-gray-700">
                                 Mot de Passe
                             </label>
 
                             <input type="password" id="password" name="password"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
+                                class=" border-2 border-gray-400 border-t-0 border-x-0 bg-inherit w-full" />
                             @error('password')
                                 <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
                             @enderror
                         </div>
 
-                        <div class="col-span-3 sm:col-span-3">
+                        <div class="col-span-3 sm:col-span-3 pr-6 pl-2">
                             <label for="password_confirmation" class="block text-sm font-medium text-gray-700">
                                 Confirmer le mot de passe
                             </label>
 
                             <input type="password" id="password_confirmation" name="password_confirmation"
-                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
+                                class=" border-2 border-gray-400 border-t-0 border-x-0 bg-inherit w-full" />
                             @error('password_confirmation')
                                 <span class="text-red-700 my-1 pl-12"> {{ $message }} </span>
                             @enderror
                         </div>
 
-                        {{-- <div class="col-span-6">
-                            <label for="MarketingAccept" class="flex gap-4">
-                                <input type="checkbox" id="MarketingAccept" name="marketing_accept"
-                                    class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm" />
-
-                                <span class="text-sm text-gray-700">
-                                    I want to receive emails about events, product updates and
-                                    company announcements.
-                                </span>
-                            </label>
-                        </div>
-
-                        <div class="col-span-6">
-                            <p class="text-sm text-gray-500">
-                                By creating an account, you agree to our
-                                <a href="#" class="text-gray-700 underline">
-                                    terms and conditions
-                                </a>
-                                and
-                                <a href="#" class="text-gray-700 underline">privacy policy</a>.
-                            </p>
-                        </div> --}}
-
-                        <div class="mt-6 col-span-6 sm:flex sm:items-center sm:gap-4">
+                        <div class="mt-6 col-span-6 sm:flex sm:items-center sm:gap-4 justify-center">
                             <button type="submit"
                                 class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                                 Valider
@@ -147,5 +89,4 @@
                 </div>
             </main>
         </div>
-    </section>
 @endsection

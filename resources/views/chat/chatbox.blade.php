@@ -5,10 +5,9 @@
 <script>
     window.recipientId = {{ $recipient->id }}; // on le met dans une globale JS
     console.log('RecipientId: ');
-    if(window.recipientId == ""){
+    if (window.recipientId == "") {
         console.log('empty!');
-    }
-    else{
+    } else {
         console.log(window.recipientId);
     }
 </script>
@@ -26,16 +25,24 @@
             </div>
 
             <div class="container rounded-xl shadow-lg col-span-2 bg-clear overflow-hidden h-full">
-                <div class="overflow-hidden h-full flex flex-col">
+                <div class="overflow-hidden h-full flex flex-col space-y-2 p-4">
 
                     <div class="font-bold text-lg m-4">Discussion</div>
 
-                    <div class="bg-normal overflow-hidden rounded-lg m-4 flex-grow">
-                        <chat-messages :messages="messages" :recipient="{{ $recipient }}" :user="{{ $user }}"></chat-messages>
+                    <div class="p-6 bg-normal rounded-lg flex items-center space-x-6 font-semibold text-lg mx-4">
+                        <div class="h-12 w-12">
+                            <a href="{{ route('users.show', $recipient->id) }}"><img src="{{ $recipient->getImageURL() }}" alt="" class="rounded-full"></a>
+                        </div>
+                        <span><a href="{{ route('users.show', $recipient->id) }}">{{ $recipient->name }}</a></span>
                     </div>
-                    <div class="bg-normal mt-auto rounded-lg m-4">
+                    <div class="bg-normal overflow-hidden rounded-lg mx-4 flex-grow">
+                        <chat-messages :messages="messages" :recipient="{{ $recipient }}"
+                            :user="{{ $user }}"></chat-messages>
+                    </div>
+                    <div class="bg-normal rounded-lg mx-4 mb-4">
                         {{--  <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}" ></chat-form> --}}
-                        <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}" :recipient="{{ $recipient }}" ></chat-form>
+                        <chat-form v-on:messagesent="addMessage" :sender="{{ Auth::user() }}"
+                            :recipient="{{ $recipient }}"></chat-form>
                     </div>
                 </div>
             </div>
@@ -45,7 +52,7 @@
 @endsection
 
 
- {{-- <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+{{-- <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 <div class="chat">

@@ -1,7 +1,6 @@
 @if (session()->has('success'))
-@php
-    $success = strval(session('success'));
-@endphp
+
     <div>
+        {{-- <close-success-button :message=""></close-success-button> --}}
     </div>
 @endif

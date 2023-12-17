@@ -50,15 +50,6 @@ class MessageSentListener implements ShouldQueue
 
             broadcast(new MessageSent($this->recipient, $this->sender, $message));
             return ['status' => 'Message Sent!'];
-
-            // $chatsController = new ChatsController();
-            // $request = new Request([
-            //     'recipient' => $this->recipient,
-            //     'message' => $answer,
-            //     'user' => $this->sender,
-            // ]);
-
-            // $chatsController->sendMessage($request);
         }
     }
 }
