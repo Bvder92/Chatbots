@@ -42,16 +42,6 @@ def infer_information_type(input):
 
 vectorizer = TfidfVectorizer()
 
-def extract_movie_or_manga_name(input):
-    input_str = str(input)
-    pattern = r"(du (manga|film) [^?]+)"
-    match = re.search(pattern, input_str, re.IGNORECASE)
-    if match: 
-        return match.group(0)
-    else:
-        return None
-
-
 def get_response(input, bot_name):
 
     path_to_intent = os.path.join('intents', bot_name, 'intents.json')
@@ -90,13 +80,6 @@ def get_response(input, bot_name):
 
     
     info_type = infer_information_type(input)
-    extract = extract_movie_or_manga_name(input)
-    if extract : 
-        random_number = random.randint(0, 1)
-        if random_number == 1 : 
-            return "Je trouve que {extract} est captivant et nous plonge dans un monde riche et passionnant. Les personnages sont bien développés et attachants, l'histoire est fluide et pleine de rebondissements, et je trouve les images magnifiques. Je recommande {extract} à tous les fans du genre."
-        else : 
-            return "{extract} est une oeuvre audacieuse qui ne manquera pas de vous surprendre. L'histoire est unique et bien construite, les personnages sont complexes et intéressants, et je trouve l'image complétement novatrice. Je recommande cela à tous ceux cherchant quelque chose de nouveau."
     '''
 
     if prob.item() > 0.75:
