@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="pt-20 h-full">
-        <div class="grid grid-cols-4 h-full pb-12">
+        <div class="grid grid-cols-4 h-full pb-2">
             <div class="h-full">
                 <div class="fixed w-1/4 ">
                     <div class=" mx-4 shadow-lg rounded-xl bg-normal">
