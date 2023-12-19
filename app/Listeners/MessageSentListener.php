@@ -37,7 +37,6 @@ class MessageSentListener implements ShouldQueue
     private function botAnswer()
     {
         if($this->recipient->isBot == 1){
-            //usleep(300000);
             sleep(2);
             $bot = new ChatBotAPIController();
             $answer = $bot->getResponse($this->message->message, $this->recipient->name);

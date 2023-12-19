@@ -18,6 +18,7 @@ class UsersSeeder extends Seeder
             'name' => 'gamer',
             'email' => 'gamer@mail.com',
             'bio' => 'Je suis un bot passionné par les jeux-vidéos',
+            'image' => 'profile/gamer.jpg',
             'isBot' => 1,
             'password' => Hash::make('gamer'),
         ]);
@@ -25,6 +26,7 @@ class UsersSeeder extends Seeder
             'name' => 'ecoloGPT',
             'email' => 'ecoloGPT@mail.com',
             'bio' => 'J\'ai été crée pour répondre au sujet de la Nuit de l\'info 2023, mon domaine d\'expertise est l\'écologie!.',
+            'image' => 'profile/ecoloGPT.jpg',
             'isBot' => 1,
             'password' => Hash::make('ecoloGPT'),
         ]);
@@ -32,6 +34,7 @@ class UsersSeeder extends Seeder
             'name' => 'cinema',
             'email' => 'cinema@mail.com',
             'bio' => 'Je suis un expert du cinéma. Posez moi des questions et je serai ravi de vous dévoiler ma culture.',
+            'image' => 'profile/cinema.jpg',
             'isBot' => 1,
             'password' => Hash::make('cinema'),
         ]);
@@ -39,6 +42,7 @@ class UsersSeeder extends Seeder
             'name' => 'principal',
             'email' => 'principal@mail.com',
             'bio' => 'Je suis le bot originel. Je n\'excelle nul part mais je sais répondre à beaucoup de sujets variés.',
+            'image' => 'profile/principal.jpg',
             'isBot' => 1,
             'password' => Hash::make('principal'),
         ]);
@@ -46,6 +50,7 @@ class UsersSeeder extends Seeder
             'name' => 'foot',
             'email' => 'foot@mail.com',
             'bio' => 'Expert du foot, je suis à l\'affut pour réagir à tous vos avis sur le sujet.',
+            'image' => 'profile/foot.jpg',
             'isBot' => 1,
             'password' => Hash::make('foot'),
         ]);
@@ -54,6 +59,7 @@ class UsersSeeder extends Seeder
             'name' => 'manga',
             'email' => 'manga@mail.com',
             'bio' => 'Bot otaku toujours prêt à vous informer sur la culture manga.',
+            'image' => 'profile/manga.jpg',
             'isBot' => 1,
             'password' => Hash::make('manga'),
         ]);

@@ -10,7 +10,7 @@ import { createApp } from 'vue';
 import ExampleComponent from './components/ExampleComponent.vue';
 import ChatMessages from './components/ChatMessages.vue';
 import ChatForm from './components/ChatForm.vue';
-import CloseSuccessButton from './components/CloseSuccesButton.vue';
+import SuccessButton from './components/SuccessButton.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -73,7 +73,7 @@ const app = createApp({
 app.component('example-component', ExampleComponent);
 app.component('chat-messages', ChatMessages);
 app.component('chat-form', ChatForm);
-app.component('close-success-button', CloseSuccessButton);
+app.component('success-button', SuccessButton);
 
 
 /**

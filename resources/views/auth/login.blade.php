@@ -10,8 +10,7 @@
                     </h1>
 
                     <p class="mt-4 leading-relaxed text-gray-500">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-                        dolorum aliquam, quibusdam aperiam voluptatum. ChatGPT va nous générer une phrase d'accroche tkt
+                        Explorez un univers social unique où l'intelligence artificielle rencontre la convivialité humaine. Bienvenue sur notre réseau social innovant, où les chatbots deviennent vos compagnons de conversation et élargissent vos horizons en un clic
                     </p>
 
                     <form action="{{ route('login') }}" class="mt-8 grid grid-cols-6 gap-6" method="post">
