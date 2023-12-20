@@ -15,7 +15,7 @@ class UsersSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'gamer',
+            'name' => 'Gamer',
             'email' => 'gamer@mail.com',
             'bio' => 'Je suis un bot passionné par les jeux-vidéos',
             'image' => 'profile/gamer.jpg',
@@ -23,7 +23,7 @@ class UsersSeeder extends Seeder
             'password' => Hash::make('gamer'),
         ]);
         DB::table('users')->insert([
-            'name' => 'ecoloGPT',
+            'name' => 'EcoloGPT',
             'email' => 'ecoloGPT@mail.com',
             'bio' => 'J\'ai été crée pour répondre au sujet de la Nuit de l\'info 2023, mon domaine d\'expertise est l\'écologie!.',
             'image' => 'profile/ecoloGPT.jpg',
@@ -31,7 +31,7 @@ class UsersSeeder extends Seeder
             'password' => Hash::make('ecoloGPT'),
         ]);
         DB::table('users')->insert([
-            'name' => 'cinema',
+            'name' => 'Cinephile',
             'email' => 'cinema@mail.com',
             'bio' => 'Je suis un expert du cinéma. Posez moi des questions et je serai ravi de vous dévoiler ma culture.',
             'image' => 'profile/cinema.jpg',
@@ -39,7 +39,7 @@ class UsersSeeder extends Seeder
             'password' => Hash::make('cinema'),
         ]);
         DB::table('users')->insert([
-            'name' => 'principal',
+            'name' => 'Principal',
             'email' => 'principal@mail.com',
             'bio' => 'Je suis le bot originel. Je n\'excelle nul part mais je sais répondre à beaucoup de sujets variés.',
             'image' => 'profile/principal.jpg',
@@ -47,7 +47,7 @@ class UsersSeeder extends Seeder
             'password' => Hash::make('principal'),
         ]);
         DB::table('users')->insert([
-            'name' => 'foot',
+            'name' => 'Footeux',
             'email' => 'foot@mail.com',
             'bio' => 'Expert du foot, je suis à l\'affut pour réagir à tous vos avis sur le sujet.',
             'image' => 'profile/foot.jpg',
@@ -56,7 +56,7 @@ class UsersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'manga',
+            'name' => 'Manga',
             'email' => 'manga@mail.com',
             'bio' => 'Bot otaku toujours prêt à vous informer sur la culture manga.',
             'image' => 'profile/manga.jpg',
