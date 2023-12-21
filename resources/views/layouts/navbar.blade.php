@@ -11,7 +11,7 @@
 
         <div class="container flex justify-end items-center gap-5">
                 @guest
-                    <a href="/login" class="hover:text-gray-300 text-md font-semibold"><i class="ri-login-box-line"></i> Connection</a>
+                    <a href="/login" class="hover:text-gray-300 text-md font-semibold"><i class="ri-login-box-line"></i> Connexion</a>
                     <a href="/register" class="hover:text-gray-300 text-md font-semibold"><i class="ri-add-box-line"></i> Inscription</a>
                 @endguest
                 @auth
