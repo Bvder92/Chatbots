@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class ChatsController extends Controller
 {
-    //Add the below functions
     public function __construct()
     {
         $this->middleware('auth');
@@ -23,16 +22,9 @@ class ChatsController extends Controller
         $user = Auth::user();
 
         if (request()->has('search')) {
-            //$users = $posts->where('content', 'like', '%' . request()->get('search', '') . '%');
             $search = request()->get('search', '');
             $users = User::where('name', 'like', '%' . $search . '%')->get();
         } else {
-            // $users = User::whereIn('id', function ($query) use ($user) {
-            //     $query->select('user_id')
-            //         ->from('messages')
-            //         ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
-            //         ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
-            // })->get();
             $users = $user->followings()->get();
         }
 
@@ -61,27 +53,11 @@ class ChatsController extends Controller
     {
         $user = Auth::user();
 
-        // $users = User::whereIn('id', function ($query) use ($user) {
-        //     $query->select('user_id')
-        //     ->from('messages')
-        //     ->where('recipient_id', $user->id) // l'utilisateur est l'envoyeur
-        //     ->orwhere('user_id', $user->id); // l'utilisateur est le receveur
-        // })->get();
-
         $first = DB::table('messages')->where('user_id', $user->id)->where('recipient_id', $recipient_id);
         $second = DB::table('messages')->where('user_id', $recipient_id)->where('recipient_id', $user->id)->union($first)->orderBy('created_at', 'asc');
         $second = $second->get();
         return $second;
 
-        // messages sent by User to recipient:
-        //$sentMessages = $user->sentMessages()->where('recipient_id', $recipient_id)->with('sender', 'recipient')->get();
-
-        // messages received by User from recipient:
-        //$receivedMessages = $user->receivedMessages()->where('user_id', $recipient_id)->with('sender', 'recipient')->get();
-
-        //$merged = $sentMessages->merge($receivedMessages);
-        //return $merged->sortBy('updated_at');
-        //return $merged;
     }
 
     public function sendMessage(Request $request)

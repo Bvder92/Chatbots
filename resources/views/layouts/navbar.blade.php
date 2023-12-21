@@ -3,7 +3,6 @@
     <div class="container flex w-inherit mx-auto">
 
         <div class="container flex justify-start items-center gap-2">
-            {{-- <img src="{{ asset('logo.png') }}" alt="Logo" class="h-8 w-8 mr-2"> --}}
             <div class="text-lg pb-1"><i class="ri-robot-2-line"></i></div>
             <div class="text-lg font-bold"> {{ config('app.name') }} </div>
             <div class="text-md pl-2 font-semibold"><a href="/" class="hover:text-gray-300">Accueil</a></div>

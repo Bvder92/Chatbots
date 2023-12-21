@@ -20,17 +20,6 @@
                 <img src="{{ $comment->user->getImageURL() }}" alt="" class="h-10 w-10 mr-4 rounded-full">
                 <div class="my-auto font-medium">{{ $comment->user->name }}</div>
             </div>
-            {{-- <div class="flex justify-end pr-10">
-                <a href="" class="pr-2">Voir</a>
-                @if (auth()->user()->id == $comment->user_id)
-                    <a href="" class="pr-2">Modifier</a>
-                    <form action="" method="post">
-                        @csrf
-                        @method('delete')
-                        <button>X</button>
-                    </form>
-                @endif
-            </div> --}}
             <div class="col-span-2">
 
                 {{-- On vérifie si on est en train de modifier ou juste consulter le post --}}

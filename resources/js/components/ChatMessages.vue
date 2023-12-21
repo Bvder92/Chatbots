@@ -3,11 +3,6 @@
         <li class="" v-for="message in messages" :key="message.id">
             <div :class="['flex', message.recipient_id !== recipient.id ? 'justify-start' : 'justify-end']">
                 <div class="bg-white p-4 rounded-lg">
-                    <!-- <div :class="['', message.recipient_id !== recipient_id ? 'text-left' : 'text-right']">
-                        <div>
-                        <img :src="[ user.image ]" alt="">
-                        </div>
-                    </div> -->
                     <p>
                         {{ message.message }}
                     </p>

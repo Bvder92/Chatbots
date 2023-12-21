@@ -1,6 +1,3 @@
-{{-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> --}}
-
 <div class="pt-16 bg-inherit overflow-y-scroll">
     <div class="w-full px-4 mx-auto">
         <div class=" flex flex-col min-w-0 break-words w-full mb-6 shadow-xl rounded-lg mt-16">
